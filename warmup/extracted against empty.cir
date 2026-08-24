@@ -1,0 +1,3175 @@
+* Extracted by KLayout with SKY130 LVS runset on : 17/08/2026 11:38
+
+* cell adder_demo
+.SUBCKT adder_demo
+* cell instance $1 r0 *1 86.44,87.53
+X$1 VPWR VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $2 r0 *1 86.44,57.53
+X$2 VPWR VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $3 r0 *1 56.44,27.53
+X$3 VPWR VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $4 r0 *1 56.44,57.53
+X$4 VPWR VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $5 r0 *1 26.44,87.53
+X$5 VPWR VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $6 r0 *1 56.44,87.53
+X$6 VPWR VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $7 r0 *1 26.44,27.53
+X$7 VPWR VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $8 r0 *1 86.44,27.53
+X$8 VPWR VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $9 r0 *1 69.92,48.96
+X$9 VGND \$353 \$56 \$252 \$220 \$343 VPWR VPWR VGND sky130_fd_sc_hd__and4bb_2
+* cell instance $10 m0 *1 69.92,54.4
+X$10 VPWR \$348 \$354 \$216 VGND VPWR \$351 VGND sky130_fd_sc_hd__and3_2
+* cell instance $11 r180 *1 35.88,65.28
+X$11 VGND \$275 \$376 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_16
+* cell instance $12 r0 *1 31.74,48.96
+X$12 VGND clk \$275 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_16
+* cell instance $13 m90 *1 29.9,27.2
+X$13 VGND \$111 B \$14 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $14 m90 *1 29.9,70.72
+X$14 VGND \$426 A \$13 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $15 m90 *1 29.9,32.64
+X$15 VGND \$236 \$14 \$120 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $16 m0 *1 36.34,38.08
+X$16 VGND \$92 \$32 \$67 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $17 m0 *1 29.9,81.6
+X$17 VGND \$473 \$118 \$83 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $18 m0 *1 29.9,43.52
+X$18 VGND \$59 \$41 \$22 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $19 r180 *1 26.22,70.72
+X$19 VGND \$422 \$33 \$210 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $20 r180 *1 26.22,32.64
+X$20 VGND \$162 \$120 \$42 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $21 r180 *1 22.08,32.64
+X$21 VGND \$289 \$67 \$160 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $22 r180 *1 26.22,76.16
+X$22 VGND \$388 \$210 \$20 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $23 r0 *1 25.76,76.16
+X$23 VGND \$464 \$45 \$23 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $24 r0 *1 25.76,65.28
+X$24 VGND \$397 \$83 \$45 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $25 r0 *1 39.56,70.72
+X$25 VGND \$415 \$23 \$33 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $26 m0 *1 29.9,59.84
+X$26 VGND \$368 \$13 \$118 en VPWR \$I1508 VGND sky130_fd_sc_hd__mux2_1
+* cell instance $27 r180 *1 34.04,21.76
+X$27 VGND \$44 \$42 \$41 en VPWR \$I1506 VGND sky130_fd_sc_hd__mux2_1
+* cell instance $28 m0 *1 36.34,76.16
+X$28 VGND rst_n \$210 \$376 \$422 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $29 m0 *1 26.22,32.64
+X$29 VGND rst_n \$42 \$57 \$162 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $30 m0 *1 26.22,38.08
+X$30 VGND rst_n \$160 \$57 \$289 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $31 m0 *1 36.34,32.64
+X$31 VGND rst_n \$41 \$57 \$44 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $32 m0 *1 26.22,76.16
+X$32 VGND rst_n \$23 \$376 \$464 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $33 m0 *1 26.22,70.72
+X$33 VGND rst_n \$45 \$376 \$397 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $34 m0 *1 36.34,70.72
+X$34 VGND rst_n \$33 \$376 \$415 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $35 r180 *1 35.88,27.2
+X$35 VGND rst_n \$67 \$57 \$92 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $36 r0 *1 29.9,21.76
+X$36 VGND rst_n \$22 \$57 \$59 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $37 m0 *1 36.34,27.2
+X$37 VGND \$142 \$22 \$32 en VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+* cell instance $38 r0 *1 29.9,76.16
+X$38 VGND rst_n \$83 \$376 \$473 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $39 r0 *1 29.9,70.72
+X$39 VGND rst_n \$13 \$376 \$426 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $40 r0 *1 29.9,65.28
+X$40 VGND rst_n \$118 \$376 \$368 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $41 r0 *1 29.9,38.08
+X$41 VGND rst_n \$32 \$57 \$142 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $42 r0 *1 29.9,32.64
+X$42 VGND rst_n \$120 \$57 \$236 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $43 r0 *1 29.9,59.84
+X$43 VGND rst_n \$20 \$376 \$388 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $44 r0 *1 29.9,27.2
+X$44 VGND rst_n \$14 \$57 \$111 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+* cell instance $45 m0 *1 79.12,27.2
+X$45 VPWR VPWR \$55 \$83 VGND \$42 VGND sky130_fd_sc_hd__nand2_2
+* cell instance $46 r180 *1 61.64,27.2
+X$46 VPWR VPWR \$105 \$74 VGND \$73 VGND sky130_fd_sc_hd__nand2_2
+* cell instance $47 r0 *1 80.96,27.2
+X$47 VPWR VPWR \$179 \$13 VGND \$14 VGND sky130_fd_sc_hd__nand2_2
+* cell instance $48 m0 *1 69.92,32.64
+X$48 VGND \$80 \$37 \$220 VPWR VPWR VGND sky130_fd_sc_hd__xor2_2
+* cell instance $49 r0 *1 68.54,32.64
+X$49 VGND \$261 \$217 \$252 VPWR VPWR VGND sky130_fd_sc_hd__xor2_2
+* cell instance $50 r0 *1 68.54,27.2
+X$50 VGND \$120 \$118 \$89 VPWR VPWR VGND sky130_fd_sc_hd__xor2_2
+* cell instance $51 r0 *1 74.98,27.2
+X$51 VGND \$48 \$125 \$343 VPWR VPWR VGND sky130_fd_sc_hd__xor2_2
+* cell instance $52 m0 *1 75.9,32.64
+X$52 VPWR \$51 VPWR \$61 \$83 \$42 VGND \$215 VGND sky130_fd_sc_hd__a31o_2
+* cell instance $53 m0 *1 62.56,27.2
+X$53 VPWR \$197 VPWR \$102 \$23 \$22 VGND \$153 VGND sky130_fd_sc_hd__a31o_2
+* cell instance $54 r180 *1 69.92,27.2
+X$54 VGND \$73 \$39 \$123 \$74 VPWR VPWR VGND sky130_fd_sc_hd__a21boi_2
+* cell instance $55 m0 *1 75.9,27.2
+X$55 VPWR \$80 VPWR \$89 \$13 \$14 VGND \$146 VGND sky130_fd_sc_hd__a31o_2
+* cell instance $56 r180 *1 65.78,32.64
+X$56 VPWR \$123 VPWR \$261 \$49 \$52 VGND \$197 VGND sky130_fd_sc_hd__a31o_2
+* cell instance $57 r180 *1 69.92,32.64
+X$57 VGND \$38 \$216 \$39 \$130 VPWR VPWR VGND sky130_fd_sc_hd__o21bai_2
+* cell instance $58 m0 *1 69.92,27.2
+X$58 VGND \$143 \$89 \$179 VPWR VPWR VGND sky130_fd_sc_hd__xnor2_2
+* cell instance $59 r0 *1 62.56,27.2
+X$59 VGND \$348 \$123 \$105 VPWR VPWR VGND sky130_fd_sc_hd__xnor2_2
+* cell instance $60 m0 *1 73.6,38.08
+X$60 VPWR \$257 VPWR VGND \$83 \$42 VGND sky130_fd_sc_hd__or2_2
+* cell instance $61 r180 *1 72.22,16.32
+X$61 \$I1159 \$15 VPWR VGND \$13 \$14 VGND sky130_fd_sc_hd__or2_2
+* cell instance $62 r0 *1 77.74,32.64
+X$62 VPWR \$74 VPWR VGND \$210 \$67 VGND sky130_fd_sc_hd__or2_2
+* cell instance $63 r0 *1 63.02,21.76
+X$63 VPWR \$61 VPWR VGND \$45 \$41 VGND sky130_fd_sc_hd__or2_2
+* cell instance $64 r0 *1 65.32,21.76
+X$64 VPWR \$49 VPWR \$48 \$37 \$80 VGND \$51 VGND sky130_fd_sc_hd__a31o_2
+* cell instance $65 r0 *1 68.54,21.76
+X$65 VGND \$52 \$49 \$56 VPWR VPWR VGND sky130_fd_sc_hd__xor2_2
+* cell instance $66 r0 *1 69.92,16.32
+X$66 VPWR VPWR \$22 \$23 \$21 VGND VGND sky130_fd_sc_hd__and2_2
+* cell instance $67 m90 *1 69.92,16.32
+X$67 VPWR VGND \$21 VPWR \$52 \$28 VGND sky130_fd_sc_hd__nor2_2
+* cell instance $68 m90 *1 65.32,32.64
+X$68 VPWR VGND \$170 VPWR \$48 \$215 VGND sky130_fd_sc_hd__nor2_2
+* cell instance $69 m90 *1 68.54,32.64
+X$69 VPWR VPWR VGND \$217 \$21 \$52 \$49 VGND sky130_fd_sc_hd__a21o_2
+* cell instance $70 m90 *1 69.92,38.08
+X$70 \$I498 VGND \$32 VPWR \$317 \$33 VGND sky130_fd_sc_hd__nor2_2
+* cell instance $71 m0 *1 59.34,32.64
+X$71 VPWR VGND \$160 VPWR \$130 \$20 VGND sky130_fd_sc_hd__nor2_2
+* cell instance $72 m0 *1 79.12,32.64
+X$72 VPWR VGND \$41 VPWR \$170 \$45 VGND sky130_fd_sc_hd__nor2_2
+* cell instance $73 r180 *1 67.16,38.08
+X$73 VPWR VGND \$317 VPWR \$261 \$153 VGND sky130_fd_sc_hd__nor2_2
+* cell instance $74 r0 *1 83.26,27.2
+X$74 VPWR VGND \$38 VPWR \$36 \$130 VGND sky130_fd_sc_hd__nor2_2
+* cell instance $75 r0 *1 57.5,27.2
+X$75 VPWR VGND \$22 VPWR \$28 \$23 VGND sky130_fd_sc_hd__nor2_2
+* cell instance $76 m90 *1 77.74,32.64
+X$76 VPWR VPWR \$41 \$45 \$215 VGND VGND sky130_fd_sc_hd__and2_2
+* cell instance $77 m0 *1 67.16,21.76
+X$77 VPWR VPWR \$160 \$20 \$38 VGND VGND sky130_fd_sc_hd__and2_2
+* cell instance $78 r180 *1 67.16,21.76
+X$78 VPWR \$102 VPWR VGND \$33 \$32 VGND sky130_fd_sc_hd__or2_2
+* cell instance $79 r180 *1 75.9,21.76
+X$79 VGND \$354 \$39 \$36 VPWR VPWR VGND sky130_fd_sc_hd__xnor2_2
+* cell instance $80 r180 *1 69.92,38.08
+X$80 VPWR VPWR \$179 \$15 \$316 VGND VGND sky130_fd_sc_hd__and2_2
+* cell instance $81 r180 *1 73.6,38.08
+X$81 VPWR VPWR VGND \$125 \$55 \$80 \$37 VGND sky130_fd_sc_hd__a21bo_2
+* cell instance $82 r0 *1 69.92,38.08
+X$82 \$I498 VPWR \$32 \$33 \$153 VGND VGND sky130_fd_sc_hd__and2_2
+* cell instance $83 r0 *1 59.8,27.2
+X$83 VPWR VPWR \$120 \$118 \$146 VGND VGND sky130_fd_sc_hd__and2_2
+* cell instance $84 r0 *1 74.98,21.76
+X$84 VPWR VPWR \$257 \$55 \$37 VGND VGND sky130_fd_sc_hd__and2_2
+* cell instance $85 r0 *1 77.74,21.76
+X$85 VPWR VPWR \$73 \$210 VGND \$67 VGND sky130_fd_sc_hd__nand2_2
+* cell instance $86 m0 *1 61.64,70.72
+X$86 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $87 m0 *1 87.4,59.84
+X$87 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $88 m0 *1 87.4,65.28
+X$88 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $89 m0 *1 61.64,59.84
+X$89 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $90 m0 *1 87.4,70.72
+X$90 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $91 m0 *1 87.4,81.6
+X$91 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $92 m0 *1 87.4,87.04
+X$92 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $93 m0 *1 61.64,87.04
+X$93 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $94 m0 *1 61.64,65.28
+X$94 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $95 m0 *1 61.64,54.4
+X$95 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $96 m0 *1 87.4,54.4
+X$96 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $97 m0 *1 87.4,76.16
+X$97 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $98 m0 *1 61.64,81.6
+X$98 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $99 m0 *1 61.64,76.16
+X$99 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $100 m0 *1 87.4,21.76
+X$100 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $101 m0 *1 35.88,59.84
+X$101 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $102 m0 *1 35.88,54.4
+X$102 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $103 m0 *1 35.88,65.28
+X$103 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $104 m0 *1 35.88,32.64
+X$104 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $105 m0 *1 61.64,16.32
+X$105 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $106 m0 *1 35.88,43.52
+X$106 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $107 m0 *1 35.88,38.08
+X$107 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $108 m0 *1 35.88,48.96
+X$108 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $109 r0 *1 30.82,43.52
+X$109 VGND \$275 \$57 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_16
+* cell instance $110 m0 *1 61.64,27.2
+X$110 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $111 m0 *1 87.4,27.2
+X$111 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $112 m0 *1 35.88,21.76
+X$112 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $113 m0 *1 87.4,32.64
+X$113 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $114 m0 *1 61.64,32.64
+X$114 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $115 m0 *1 61.64,43.52
+X$115 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $116 m0 *1 87.4,43.52
+X$116 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $117 m0 *1 61.64,48.96
+X$117 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $118 m0 *1 87.4,48.96
+X$118 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $119 m0 *1 61.64,38.08
+X$119 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $120 m0 *1 87.4,38.08
+X$120 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $121 m0 *1 61.64,21.76
+X$121 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $122 m0 *1 35.88,27.2
+X$122 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $123 m0 *1 35.88,70.72
+X$123 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $124 m0 *1 87.4,16.32
+X$124 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $125 m0 *1 35.88,87.04
+X$125 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $126 m0 *1 35.88,76.16
+X$126 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $127 m0 *1 35.88,81.6
+X$127 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $128 r0 *1 74.52,48.96
+X$128 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $129 r0 *1 48.76,43.52
+X$129 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $130 r0 *1 48.76,81.6
+X$130 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $131 r0 *1 23,10.88
+X$131 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $132 r0 *1 23,76.16
+X$132 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $133 r0 *1 74.52,87.04
+X$133 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $134 r0 *1 23,21.76
+X$134 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $135 r0 *1 74.52,81.6
+X$135 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $136 r0 *1 74.52,76.16
+X$136 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $137 r0 *1 23,16.32
+X$137 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $138 r0 *1 48.76,59.84
+X$138 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $139 r0 *1 48.76,48.96
+X$139 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $140 r0 *1 35.88,10.88
+X$140 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $141 m0 *1 35.88,16.32
+X$141 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $142 r0 *1 23,27.2
+X$142 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $143 r0 *1 23,48.96
+X$143 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $144 r0 *1 74.52,38.08
+X$144 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $145 r0 *1 35.88,87.04
+X$145 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $146 r0 *1 48.76,38.08
+X$146 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $147 r0 *1 48.76,87.04
+X$147 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $148 r0 *1 74.52,43.52
+X$148 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $149 r180 *1 74.52,48.96
+X$149 VGND S \$351 \$353 \$316 \$143 VPWR VPWR VGND sky130_fd_sc_hd__and4bb_2
+* cell instance $150 r0 *1 74.52,32.64
+X$150 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $151 r0 *1 61.64,87.04
+X$151 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $152 r0 *1 48.76,70.72
+X$152 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $153 r0 *1 48.76,32.64
+X$153 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $154 r0 *1 48.76,76.16
+X$154 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $155 r0 *1 74.52,10.88
+X$155 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $156 r0 *1 23,54.4
+X$156 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $157 r0 *1 74.52,27.2
+X$157 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $158 r0 *1 74.52,21.76
+X$158 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $159 r0 *1 23,65.28
+X$159 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $160 r0 *1 74.52,65.28
+X$160 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $161 r0 *1 74.52,16.32
+X$161 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $162 r0 *1 23,59.84
+X$162 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $163 r0 *1 48.76,54.4
+X$163 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $164 r0 *1 23,81.6
+X$164 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $165 r0 *1 87.4,87.04
+X$165 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $166 r0 *1 87.4,10.88
+X$166 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $167 r0 *1 74.52,54.4
+X$167 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $168 r0 *1 23,70.72
+X$168 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $169 r0 *1 48.76,65.28
+X$169 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $170 r0 *1 48.76,27.2
+X$170 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $171 r0 *1 23,38.08
+X$171 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $172 r0 *1 23,43.52
+X$172 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $173 r0 *1 48.76,21.76
+X$173 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $174 r0 *1 48.76,10.88
+X$174 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $175 r0 *1 48.76,16.32
+X$175 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $176 r0 *1 61.64,10.88
+X$176 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $177 r0 *1 23,32.64
+X$177 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $178 r0 *1 74.52,59.84
+X$178 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $179 r0 *1 74.52,70.72
+X$179 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $180 r0 *1 23,87.04
+X$180 VPWR VGND sky130_fd_sc_hd__tapvpwrvgnd_1
+* cell instance $181 r0 *1 56.44,89.76
+X$181 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $182 r0 *1 56.44,84.32
+X$182 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $183 r0 *1 86.44,46.24
+X$183 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $184 r0 *1 86.44,40.8
+X$184 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $185 r0 *1 86.44,68
+X$185 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $186 r0 *1 86.44,51.68
+X$186 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $187 r0 *1 56.44,78.88
+X$187 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $188 r0 *1 86.44,57.12
+X$188 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $189 r0 *1 86.44,62.56
+X$189 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $190 r0 *1 26.44,51.68
+X$190 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $191 r0 *1 26.44,57.12
+X$191 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $192 r0 *1 26.44,62.56
+X$192 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $193 r0 *1 26.44,68
+X$193 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $194 r0 *1 26.44,84.32
+X$194 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $195 r0 *1 26.44,73.44
+X$195 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $196 r0 *1 26.44,78.88
+X$196 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $197 r0 *1 26.44,89.76
+X$197 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $198 r0 *1 56.44,68
+X$198 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $199 r0 *1 56.44,62.56
+X$199 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $200 r0 *1 56.44,57.12
+X$200 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $201 r0 *1 56.44,51.68
+X$201 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $202 r0 *1 26.44,46.24
+X$202 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $203 r0 *1 26.44,29.92
+X$203 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $204 r0 *1 26.44,24.48
+X$204 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $205 r0 *1 26.44,13.6
+X$205 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $206 r0 *1 26.44,19.04
+X$206 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $207 r0 *1 26.44,35.36
+X$207 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $208 r0 *1 26.44,40.8
+X$208 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $209 r0 *1 86.44,29.92
+X$209 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $210 r0 *1 86.44,19.04
+X$210 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $211 r0 *1 86.44,24.48
+X$211 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $212 r0 *1 86.44,73.44
+X$212 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $213 r0 *1 56.44,35.36
+X$213 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $214 r0 *1 56.44,73.44
+X$214 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $215 r0 *1 56.44,29.92
+X$215 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $216 r0 *1 56.44,19.04
+X$216 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $217 r0 *1 56.44,13.6
+X$217 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $218 r0 *1 56.44,46.24
+X$218 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $219 r0 *1 86.44,13.6
+X$219 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $220 r0 *1 86.44,84.32
+X$220 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $221 r0 *1 86.44,78.88
+X$221 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $222 r0 *1 56.44,40.8
+X$222 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $223 r0 *1 86.44,89.76
+X$223 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $224 r0 *1 86.44,35.36
+X$224 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $225 r0 *1 56.44,24.48
+X$225 VPWR VIA_via2_3_2000_480_1_6_320_320
+* cell instance $226 r0 *1 26.44,73.44
+X$226 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $227 r0 *1 56.44,40.8
+X$227 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $228 r0 *1 56.44,57.12
+X$228 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $229 r0 *1 26.44,57.12
+X$229 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $230 r0 *1 26.44,57.53
+X$230 VPWR VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $231 r0 *1 56.44,46.24
+X$231 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $232 r0 *1 26.44,68
+X$232 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $233 r0 *1 26.44,84.32
+X$233 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $234 r0 *1 26.44,89.76
+X$234 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $235 r0 *1 26.44,78.88
+X$235 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $236 r0 *1 56.44,35.36
+X$236 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $237 r0 *1 56.44,51.68
+X$237 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $238 r0 *1 86.44,19.04
+X$238 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $239 r0 *1 86.44,13.6
+X$239 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $240 r0 *1 26.44,62.56
+X$240 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $241 r0 *1 86.44,89.76
+X$241 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $242 r0 *1 86.44,57.12
+X$242 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $243 r0 *1 86.44,68
+X$243 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $244 r0 *1 86.44,62.56
+X$244 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $245 r0 *1 26.44,13.6
+X$245 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $246 r0 *1 86.44,51.68
+X$246 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $247 r0 *1 56.44,29.92
+X$247 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $248 r0 *1 56.44,24.48
+X$248 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $249 r0 *1 56.44,13.6
+X$249 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $250 r0 *1 56.44,19.04
+X$250 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $251 r0 *1 26.44,51.68
+X$251 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $252 r0 *1 86.44,29.92
+X$252 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $253 r0 *1 26.44,19.04
+X$253 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $254 r0 *1 26.44,24.48
+X$254 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $255 r0 *1 26.44,29.92
+X$255 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $256 r0 *1 86.44,84.32
+X$256 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $257 r0 *1 26.44,35.36
+X$257 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $258 r0 *1 86.44,73.44
+X$258 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $259 r0 *1 86.44,78.88
+X$259 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $260 r0 *1 26.44,46.24
+X$260 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $261 r0 *1 86.44,24.48
+X$261 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $262 r0 *1 56.44,84.32
+X$262 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $263 r0 *1 56.44,89.76
+X$263 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $264 r0 *1 86.44,40.8
+X$264 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $265 r0 *1 86.44,46.24
+X$265 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $266 r0 *1 56.44,68
+X$266 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $267 r0 *1 56.44,73.44
+X$267 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $268 r0 *1 56.44,78.88
+X$268 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $269 r0 *1 26.44,40.8
+X$269 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $270 r0 *1 56.44,62.56
+X$270 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $271 r0 *1 86.44,35.36
+X$271 VPWR VIA_via4_5_2000_480_1_5_400_400
+* cell instance $272 r0 *1 56.44,19.04
+X$272 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $273 r0 *1 86.44,35.36
+X$273 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $274 r0 *1 56.44,89.76
+X$274 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $275 r0 *1 56.44,29.92
+X$275 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $276 r0 *1 56.44,24.48
+X$276 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $277 r0 *1 56.44,62.56
+X$277 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $278 r0 *1 56.44,57.12
+X$278 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $279 r0 *1 56.44,51.68
+X$279 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $280 r0 *1 56.44,46.24
+X$280 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $281 r0 *1 56.44,78.88
+X$281 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $282 r0 *1 56.44,40.8
+X$282 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $283 r0 *1 56.44,35.36
+X$283 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $284 r0 *1 26.44,24.48
+X$284 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $285 r0 *1 56.44,73.44
+X$285 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $286 r0 *1 56.44,84.32
+X$286 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $287 r0 *1 26.44,13.6
+X$287 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $288 r0 *1 26.44,19.04
+X$288 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $289 r0 *1 26.44,29.92
+X$289 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $290 r0 *1 26.44,35.36
+X$290 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $291 r0 *1 26.44,40.8
+X$291 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $292 r0 *1 26.44,46.24
+X$292 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $293 r0 *1 86.44,24.48
+X$293 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $294 r0 *1 86.44,29.92
+X$294 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $295 r0 *1 86.44,46.24
+X$295 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $296 r0 *1 86.44,13.6
+X$296 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $297 r0 *1 86.44,73.44
+X$297 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $298 r0 *1 26.44,68
+X$298 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $299 r0 *1 26.44,62.56
+X$299 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $300 r0 *1 86.44,78.88
+X$300 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $301 r0 *1 26.44,57.12
+X$301 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $302 r0 *1 26.44,89.76
+X$302 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $303 r0 *1 26.44,84.32
+X$303 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $304 r0 *1 26.44,78.88
+X$304 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $305 r0 *1 26.44,51.68
+X$305 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $306 r0 *1 56.44,68
+X$306 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $307 r0 *1 56.44,13.6
+X$307 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $308 r0 *1 86.44,89.76
+X$308 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $309 r0 *1 86.44,84.32
+X$309 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $310 r0 *1 86.44,51.68
+X$310 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $311 r0 *1 86.44,19.04
+X$311 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $312 r0 *1 86.44,68
+X$312 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $313 r0 *1 86.44,62.56
+X$313 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $314 r0 *1 86.44,57.12
+X$314 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $315 r0 *1 86.44,40.8
+X$315 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $316 r0 *1 26.44,73.44
+X$316 VPWR VIA_via3_4_2000_480_1_5_400_400
+* cell instance $317 m90 *1 89.7,87.04
+X$317 \$I57 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $318 m90 *1 89.7,27.2
+X$318 \$I56 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $319 m90 *1 89.7,21.76
+X$319 \$I55 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $320 m90 *1 89.7,70.72
+X$320 \$I54 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $321 m90 *1 89.7,16.32
+X$321 \$I53 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $322 m90 *1 89.7,10.88
+X$322 \$I52 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $323 m90 *1 89.7,81.6
+X$323 \$I51 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $324 m90 *1 89.7,76.16
+X$324 \$I50 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $325 m90 *1 89.7,54.4
+X$325 \$I49 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $326 m90 *1 89.7,65.28
+X$326 \$I48 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $327 m90 *1 89.7,59.84
+X$327 \$I47 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $328 m90 *1 89.7,38.08
+X$328 \$I46 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $329 m90 *1 89.7,43.52
+X$329 \$I45 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $330 m90 *1 89.7,48.96
+X$330 \$I44 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $331 m90 *1 89.7,32.64
+X$331 \$I43 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $332 m0 *1 10.12,76.16
+X$332 \$I42 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $333 m0 *1 10.12,87.04
+X$333 \$I41 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $334 m0 *1 10.12,81.6
+X$334 \$I40 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $335 m0 *1 10.12,43.52
+X$335 \$I39 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $336 m0 *1 10.12,65.28
+X$336 \$I38 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $337 m0 *1 10.12,59.84
+X$337 \$I37 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $338 m0 *1 10.12,54.4
+X$338 \$I36 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $339 m0 *1 10.12,32.64
+X$339 \$I35 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $340 m0 *1 10.12,38.08
+X$340 \$I34 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $341 m0 *1 10.12,48.96
+X$341 \$I33 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $342 m0 *1 10.12,16.32
+X$342 \$I32 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $343 r0 *1 10.12,10.88
+X$343 \$I32 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $344 m0 *1 10.12,27.2
+X$344 \$I31 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $345 m0 *1 10.12,21.76
+X$345 \$I30 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $346 m0 *1 10.12,70.72
+X$346 \$I29 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $347 r180 *1 89.7,38.08
+X$347 \$I43 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $348 r180 *1 89.7,43.52
+X$348 \$I46 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $349 r180 *1 89.7,16.32
+X$349 \$I52 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $350 r180 *1 89.7,48.96
+X$350 \$I45 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $351 r180 *1 89.7,32.64
+X$351 \$I56 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $352 r180 *1 89.7,70.72
+X$352 \$I48 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $353 r180 *1 89.7,81.6
+X$353 \$I50 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $354 r180 *1 89.7,76.16
+X$354 \$I54 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $355 r180 *1 89.7,87.04
+X$355 \$I51 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $356 r180 *1 89.7,54.4
+X$356 \$I44 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $357 r180 *1 89.7,27.2
+X$357 \$I55 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $358 r180 *1 89.7,21.76
+X$358 \$I53 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $359 r180 *1 89.7,59.84
+X$359 \$I49 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $360 r180 *1 89.7,65.28
+X$360 \$I47 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $361 r0 *1 10.12,32.64
+X$361 \$I34 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $362 r0 *1 10.12,38.08
+X$362 \$I39 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $363 r0 *1 10.12,87.04
+X$363 \$I12 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $364 r0 *1 10.12,43.52
+X$364 \$I33 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $365 r0 *1 10.12,16.32
+X$365 \$I30 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $366 r0 *1 10.12,48.96
+X$366 \$I36 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $367 r0 *1 10.12,81.6
+X$367 \$I41 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $368 r0 *1 10.12,21.76
+X$368 \$I31 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $369 r0 *1 10.12,70.72
+X$369 \$I42 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $370 r0 *1 10.12,54.4
+X$370 \$I37 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $371 r0 *1 10.12,59.84
+X$371 \$I38 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $372 r0 *1 10.12,65.28
+X$372 \$I29 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $373 r0 *1 10.12,27.2
+X$373 \$I35 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $374 r0 *1 10.12,76.16
+X$374 \$I40 VGND VPWR VGND sky130_fd_sc_hd__decap_3
+* cell instance $375 r0 *1 34.73,72.25
+X$375 \$13 VIA_M1M2_PR
+* cell instance $376 r0 *1 33.35,58.65
+X$376 \$13 VIA_M1M2_PR
+* cell instance $377 r0 *1 78.89,15.13
+X$377 \$13 VIA_M1M2_PR
+* cell instance $378 r0 *1 82.11,45.39
+X$378 \$13 VIA_M1M2_PR
+* cell instance $379 r0 *1 81.65,28.39
+X$379 \$13 VIA_M1M2_PR
+* cell instance $380 r0 *1 81.65,25.67
+X$380 \$13 VIA_M1M2_PR
+* cell instance $381 r0 *1 78.89,25.67
+X$381 \$13 VIA_M1M2_PR
+* cell instance $382 r0 *1 33.35,45.39
+X$382 \$13 VIA_M1M2_PR
+* cell instance $383 r0 *1 27.83,71.91
+X$383 \$13 VIA_L1M1_PR_MR
+* cell instance $384 r0 *1 71.99,15.13
+X$384 \$13 VIA_L1M1_PR_MR
+* cell instance $385 r0 *1 77.74,26.01
+X$385 \$13 VIA_L1M1_PR_MR
+* cell instance $386 r0 *1 38.87,72.25
+X$386 \$13 VIA_L1M1_PR_MR
+* cell instance $387 r0 *1 81.65,28.39
+X$387 \$13 VIA_L1M1_PR_MR
+* cell instance $388 r0 *1 32.43,58.65
+X$388 \$13 VIA_L1M1_PR_MR
+* cell instance $389 r0 *1 27.83,28.22
+X$389 \$14 VIA_M2M3_PR
+* cell instance $390 r0 *1 38.87,28.22
+X$390 \$14 VIA_M2M3_PR
+* cell instance $391 r0 *1 80.27,28.22
+X$391 \$14 VIA_M2M3_PR
+* cell instance $392 r0 *1 27.83,28.39
+X$392 \$14 VIA_M1M2_PR
+* cell instance $393 r0 *1 28.75,28.39
+X$393 \$14 VIA_M1M2_PR
+* cell instance $394 r0 *1 38.87,27.71
+X$394 \$14 VIA_M1M2_PR
+* cell instance $395 r0 *1 80.27,15.47
+X$395 \$14 VIA_M1M2_PR
+* cell instance $396 r0 *1 80.27,26.69
+X$396 \$14 VIA_M1M2_PR
+* cell instance $397 r0 *1 80.27,28.05
+X$397 \$14 VIA_M1M2_PR
+* cell instance $398 r0 *1 28.75,33.83
+X$398 \$14 VIA_M1M2_PR
+* cell instance $399 r0 *1 27.37,33.83
+X$399 \$14 VIA_L1M1_PR_MR
+* cell instance $400 r0 *1 38.87,27.71
+X$400 \$14 VIA_L1M1_PR_MR
+* cell instance $401 r0 *1 27.83,28.39
+X$401 \$14 VIA_L1M1_PR_MR
+* cell instance $402 r0 *1 82.11,28.39
+X$402 \$14 VIA_L1M1_PR_MR
+* cell instance $403 r0 *1 71.07,15.47
+X$403 \$14 VIA_L1M1_PR_MR
+* cell instance $404 r0 *1 77.97,26.69
+X$404 \$14 VIA_L1M1_PR_MR
+* cell instance $405 r0 *1 69.23,36.89
+X$405 \$15 VIA_M1M2_PR
+* cell instance $406 r0 *1 69.23,15.47
+X$406 \$15 VIA_M1M2_PR
+* cell instance $407 r0 *1 70.15,15.47
+X$407 \$15 VIA_L1M1_PR_MR
+* cell instance $408 r0 *1 68.77,36.89
+X$408 \$15 VIA_L1M1_PR_MR
+* cell instance $409 r0 *1 60.49,31.62
+X$409 \$20 VIA_M2M3_PR
+* cell instance $410 r0 *1 39.79,31.62
+X$410 \$20 VIA_M2M3_PR
+* cell instance $411 r0 *1 24.15,69.02
+X$411 \$20 VIA_M2M3_PR
+* cell instance $412 r0 *1 39.79,69.02
+X$412 \$20 VIA_M2M3_PR
+* cell instance $413 r0 *1 24.15,74.97
+X$413 \$20 VIA_M1M2_PR
+* cell instance $414 r0 *1 62.33,19.89
+X$414 \$20 VIA_M1M2_PR
+* cell instance $415 r0 *1 61.87,31.45
+X$415 \$20 VIA_M1M2_PR
+* cell instance $416 r0 *1 60.49,31.45
+X$416 \$20 VIA_M1M2_PR
+* cell instance $417 r0 *1 39.79,60.35
+X$417 \$20 VIA_M1M2_PR
+* cell instance $418 r0 *1 68.31,20.57
+X$418 \$20 VIA_L1M1_PR_MR
+* cell instance $419 r0 *1 60.49,31.45
+X$419 \$20 VIA_L1M1_PR_MR
+* cell instance $420 r0 *1 24.15,74.97
+X$420 \$20 VIA_L1M1_PR_MR
+* cell instance $421 r0 *1 38.87,60.35
+X$421 \$20 VIA_L1M1_PR_MR
+* cell instance $422 r0 *1 69.69,30.43
+X$422 \$21 VIA_M1M2_PR
+* cell instance $423 r0 *1 67.39,30.43
+X$423 \$21 VIA_M1M2_PR
+* cell instance $424 r0 *1 67.39,33.83
+X$424 \$21 VIA_M1M2_PR
+* cell instance $425 r0 *1 66.93,33.83
+X$425 \$21 VIA_L1M1_PR_MR
+* cell instance $426 r0 *1 71.99,17.85
+X$426 \$21 VIA_L1M1_PR_MR
+* cell instance $427 r0 *1 69.69,17.51
+X$427 \$21 VIA_L1M1_PR_MR
+* cell instance $428 r0 *1 69.69,17.51
+X$428 \$21 VIA_M1M2_PR
+* cell instance $429 r0 *1 38.87,25.67
+X$429 \$22 VIA_M1M2_PR
+* cell instance $430 r0 *1 57.73,24.99
+X$430 \$22 VIA_M1M2_PR
+* cell instance $431 r0 *1 64.63,17.17
+X$431 \$22 VIA_M1M2_PR
+* cell instance $432 r0 *1 38.41,42.33
+X$432 \$22 VIA_M1M2_PR
+* cell instance $433 r0 *1 64.63,26.69
+X$433 \$22 VIA_M1M2_PR
+* cell instance $434 r0 *1 57.73,28.39
+X$434 \$22 VIA_M1M2_PR
+* cell instance $435 r0 *1 57.73,23.63
+X$435 \$22 VIA_M1M2_PR
+* cell instance $436 r0 *1 64.63,24.99
+X$436 \$22 VIA_M1M2_PR
+* cell instance $437 r0 *1 38.87,23.63
+X$437 \$22 VIA_M1M2_PR
+* cell instance $438 r0 *1 38.87,23.63
+X$438 \$22 VIA_L1M1_PR_MR
+* cell instance $439 r0 *1 38.87,25.67
+X$439 \$22 VIA_L1M1_PR_MR
+* cell instance $440 r0 *1 31.97,42.33
+X$440 \$22 VIA_L1M1_PR_MR
+* cell instance $441 r0 *1 70.15,17.51
+X$441 \$22 VIA_L1M1_PR_MR
+* cell instance $442 r0 *1 64.63,26.69
+X$442 \$22 VIA_L1M1_PR_MR
+* cell instance $443 r0 *1 57.73,28.39
+X$443 \$22 VIA_L1M1_PR_MR
+* cell instance $444 r0 *1 63.25,16.83
+X$444 \$23 VIA_M1M2_PR
+* cell instance $445 r0 *1 34.73,75.65
+X$445 \$23 VIA_M1M2_PR
+* cell instance $446 r0 *1 32.89,77.01
+X$446 \$23 VIA_M1M2_PR
+* cell instance $447 r0 *1 39.79,72.25
+X$447 \$23 VIA_M1M2_PR
+* cell instance $448 r0 *1 39.79,73.95
+X$448 \$23 VIA_M1M2_PR
+* cell instance $449 r0 *1 58.19,26.69
+X$449 \$23 VIA_M1M2_PR
+* cell instance $450 r0 *1 58.19,71.23
+X$450 \$23 VIA_M1M2_PR
+* cell instance $451 r0 *1 58.19,28.39
+X$451 \$23 VIA_M1M2_PR
+* cell instance $452 r0 *1 63.25,26.69
+X$452 \$23 VIA_M1M2_PR
+* cell instance $453 r0 *1 35.19,75.65
+X$453 \$23 VIA_L1M1_PR_MR
+* cell instance $454 r0 *1 27.83,77.01
+X$454 \$23 VIA_L1M1_PR_MR
+* cell instance $455 r0 *1 42.09,72.25
+X$455 \$23 VIA_L1M1_PR_MR
+* cell instance $456 r0 *1 42.09,71.23
+X$456 \$23 VIA_L1M1_PR_MR
+* cell instance $457 r0 *1 71.07,17.51
+X$457 \$23 VIA_L1M1_PR_MR
+* cell instance $458 r0 *1 35.19,73.95
+X$458 \$23 VIA_L1M1_PR_MR
+* cell instance $459 r0 *1 64.17,26.69
+X$459 \$23 VIA_L1M1_PR_MR
+* cell instance $460 r0 *1 58.65,28.39
+X$460 \$23 VIA_L1M1_PR_MR
+* cell instance $461 r0 *1 89.93,16.66
+X$461 S VIA_M2M3_PR
+* cell instance $462 r0 *1 89.93,47.77
+X$462 S VIA_M1M2_PR
+* cell instance $463 r0 *1 73.37,47.77
+X$463 S VIA_L1M1_PR_MR
+* cell instance $464 r0 *1 61.41,17.51
+X$464 \$28 VIA_M1M2_PR
+* cell instance $465 r0 *1 61.41,28.05
+X$465 \$28 VIA_M1M2_PR
+* cell instance $466 r0 *1 59.57,28.05
+X$466 \$28 VIA_L1M1_PR_MR
+* cell instance $467 r0 *1 68.31,17.51
+X$467 \$28 VIA_L1M1_PR_MR
+* cell instance $468 r0 *1 41.63,39.61
+X$468 \$32 VIA_M1M2_PR
+* cell instance $469 r0 *1 41.63,37.57
+X$469 \$32 VIA_M1M2_PR
+* cell instance $470 r0 *1 46.69,26.01
+X$470 \$32 VIA_M1M2_PR
+* cell instance $471 r0 *1 46.69,21.25
+X$471 \$32 VIA_M1M2_PR
+* cell instance $472 r0 *1 41.63,26.01
+X$472 \$32 VIA_M1M2_PR
+* cell instance $473 r0 *1 38.87,37.57
+X$473 \$32 VIA_L1M1_PR_MR
+* cell instance $474 r0 *1 38.41,26.01
+X$474 \$32 VIA_L1M1_PR_MR
+* cell instance $475 r0 *1 69.23,39.27
+X$475 \$32 VIA_L1M1_PR_MR
+* cell instance $476 r0 *1 66.01,20.91
+X$476 \$32 VIA_L1M1_PR_MR
+* cell instance $477 r0 *1 38.87,39.61
+X$477 \$32 VIA_L1M1_PR_MR
+* cell instance $478 r0 *1 70.15,39.27
+X$478 \$32 VIA_L1M1_PR_MR
+* cell instance $479 r0 *1 67.62,21.42
+X$479 \$33 VIA_M3M4_PR
+* cell instance $480 r0 *1 67.39,21.42
+X$480 \$33 VIA_M2M3_PR
+* cell instance $481 r0 *1 23.69,69.7
+X$481 \$33 VIA_M2M3_PR
+* cell instance $482 r0 *1 67.85,39.1
+X$482 \$33 VIA_M2M3_PR
+* cell instance $483 r0 *1 41.63,69.7
+X$483 \$33 VIA_M2M3_PR
+* cell instance $484 r0 *1 67.62,39.1
+X$484 \$33 VIA_M3M4_PR
+* cell instance $485 r0 *1 23.69,69.53
+X$485 \$33 VIA_M1M2_PR
+* cell instance $486 r0 *1 41.63,71.23
+X$486 \$33 VIA_M1M2_PR
+* cell instance $487 r0 *1 41.63,70.21
+X$487 \$33 VIA_M1M2_PR
+* cell instance $488 r0 *1 48.07,70.21
+X$488 \$33 VIA_M1M2_PR
+* cell instance $489 r0 *1 67.85,39.95
+X$489 \$33 VIA_M1M2_PR
+* cell instance $490 r0 *1 67.85,39.27
+X$490 \$33 VIA_M1M2_PR
+* cell instance $491 r0 *1 48.07,39.27
+X$491 \$33 VIA_M1M2_PR
+* cell instance $492 r0 *1 67.39,20.91
+X$492 \$33 VIA_M1M2_PR
+* cell instance $493 r0 *1 66.93,20.57
+X$493 \$33 VIA_L1M1_PR_MR
+* cell instance $494 r0 *1 68.31,39.27
+X$494 \$33 VIA_L1M1_PR_MR
+* cell instance $495 r0 *1 41.63,71.23
+X$495 \$33 VIA_L1M1_PR_MR
+* cell instance $496 r0 *1 45.31,70.21
+X$496 \$33 VIA_L1M1_PR_MR
+* cell instance $497 r0 *1 23.69,69.53
+X$497 \$33 VIA_L1M1_PR_MR
+* cell instance $498 r0 *1 71.07,39.27
+X$498 \$33 VIA_L1M1_PR_MR
+* cell instance $499 r0 *1 83.95,20.57
+X$499 \$36 VIA_M1M2_PR
+* cell instance $500 r0 *1 83.95,27.71
+X$500 \$36 VIA_M1M2_PR
+* cell instance $501 r0 *1 74.29,20.57
+X$501 \$36 VIA_L1M1_PR_MR
+* cell instance $502 r0 *1 83.95,27.71
+X$502 \$36 VIA_L1M1_PR_MR
+* cell instance $503 r0 *1 70.15,36.55
+X$503 \$37 VIA_M1M2_PR
+* cell instance $504 r0 *1 70.15,31.45
+X$504 \$37 VIA_M1M2_PR
+* cell instance $505 r0 *1 77.05,21.25
+X$505 \$37 VIA_M1M2_PR
+* cell instance $506 r0 *1 77.05,22.27
+X$506 \$37 VIA_M1M2_PR
+* cell instance $507 r0 *1 70.15,21.25
+X$507 \$37 VIA_M1M2_PR
+* cell instance $508 r0 *1 66.93,22.27
+X$508 \$37 VIA_M1M2_PR
+* cell instance $509 r0 *1 66.93,21.25
+X$509 \$37 VIA_M1M2_PR
+* cell instance $510 r0 *1 66.93,22.27
+X$510 \$37 VIA_L1M1_PR_MR
+* cell instance $511 r0 *1 70.15,36.55
+X$511 \$37 VIA_L1M1_PR_MR
+* cell instance $512 r0 *1 77.05,22.27
+X$512 \$37 VIA_L1M1_PR_MR
+* cell instance $513 r0 *1 71.07,32.13
+X$513 \$38 VIA_M1M2_PR
+* cell instance $514 r0 *1 71.07,19.89
+X$514 \$38 VIA_M1M2_PR
+* cell instance $515 r0 *1 71.07,28.73
+X$515 \$38 VIA_M1M2_PR
+* cell instance $516 r0 *1 69.69,31.45
+X$516 \$38 VIA_L1M1_PR_MR
+* cell instance $517 r0 *1 83.49,28.39
+X$517 \$38 VIA_L1M1_PR_MR
+* cell instance $518 r0 *1 69.23,19.89
+X$518 \$38 VIA_L1M1_PR_MR
+* cell instance $519 r0 *1 68.77,31.45
+X$519 \$39 VIA_M1M2_PR
+* cell instance $520 r0 *1 68.77,20.57
+X$520 \$39 VIA_M1M2_PR
+* cell instance $521 r0 *1 68.77,25.33
+X$521 \$39 VIA_M1M2_PR
+* cell instance $522 r0 *1 67.85,31.45
+X$522 \$39 VIA_L1M1_PR_MR
+* cell instance $523 r0 *1 68.31,25.33
+X$523 \$39 VIA_L1M1_PR_MR
+* cell instance $524 r0 *1 71.99,20.57
+X$524 \$39 VIA_L1M1_PR_MR
+* cell instance $525 r0 *1 18.63,30.26
+X$525 en VIA_M2M3_PR
+* cell instance $526 r0 *1 23.23,74.63
+X$526 en VIA_M1M2_PR
+* cell instance $527 r0 *1 31.05,80.07
+X$527 en VIA_M1M2_PR
+* cell instance $528 r0 *1 23.23,72.25
+X$528 en VIA_M1M2_PR
+* cell instance $529 r0 *1 30.59,72.93
+X$529 en VIA_M1M2_PR
+* cell instance $530 r0 *1 31.05,71.57
+X$530 en VIA_M1M2_PR
+* cell instance $531 r0 *1 29.67,77.69
+X$531 en VIA_M1M2_PR
+* cell instance $532 r0 *1 29.67,36.55
+X$532 en VIA_M1M2_PR
+* cell instance $533 r0 *1 33.81,41.99
+X$533 en VIA_M1M2_PR
+* cell instance $534 r0 *1 28.29,23.97
+X$534 en VIA_M1M2_PR
+* cell instance $535 r0 *1 18.63,28.73
+X$535 en VIA_M1M2_PR
+* cell instance $536 r0 *1 39.33,23.97
+X$536 en VIA_M1M2_PR
+* cell instance $537 r0 *1 33.81,36.55
+X$537 en VIA_M1M2_PR
+* cell instance $538 r0 *1 39.33,25.67
+X$538 en VIA_M1M2_PR
+* cell instance $539 r0 *1 29.67,34.17
+X$539 en VIA_M1M2_PR
+* cell instance $540 r0 *1 18.63,31.11
+X$540 en VIA_M1M2_PR
+* cell instance $541 r0 *1 18.63,34.17
+X$541 en VIA_M1M2_PR
+* cell instance $542 r0 *1 29.67,68.51
+X$542 en VIA_M1M2_PR
+* cell instance $543 r0 *1 31.05,58.31
+X$543 en VIA_M1M2_PR
+* cell instance $544 r0 *1 33.81,58.31
+X$544 en VIA_M1M2_PR
+* cell instance $545 r0 *1 29.67,66.81
+X$545 en VIA_M1M2_PR
+* cell instance $546 r0 *1 28.29,20.23
+X$546 en VIA_M1M2_PR
+* cell instance $547 r0 *1 28.29,28.05
+X$547 en VIA_M1M2_PR
+* cell instance $548 r0 *1 30.59,20.23
+X$548 en VIA_L1M1_PR_MR
+* cell instance $549 r0 *1 39.33,25.67
+X$549 en VIA_L1M1_PR_MR
+* cell instance $550 r0 *1 18.63,31.11
+X$550 en VIA_L1M1_PR_MR
+* cell instance $551 r0 *1 26.45,28.73
+X$551 en VIA_L1M1_PR_MR
+* cell instance $552 r0 *1 22.77,31.11
+X$552 en VIA_L1M1_PR_MR
+* cell instance $553 r0 *1 26.45,34.17
+X$553 en VIA_L1M1_PR_MR
+* cell instance $554 r0 *1 39.33,36.55
+X$554 en VIA_L1M1_PR_MR
+* cell instance $555 r0 *1 33.35,41.99
+X$555 en VIA_L1M1_PR_MR
+* cell instance $556 r0 *1 29.21,77.69
+X$556 en VIA_L1M1_PR_MR
+* cell instance $557 r0 *1 32.89,80.07
+X$557 en VIA_L1M1_PR_MR
+* cell instance $558 r0 *1 42.55,72.25
+X$558 en VIA_L1M1_PR_MR
+* cell instance $559 r0 *1 26.91,72.25
+X$559 en VIA_L1M1_PR_MR
+* cell instance $560 r0 *1 32.89,58.31
+X$560 en VIA_L1M1_PR_MR
+* cell instance $561 r0 *1 29.21,66.81
+X$561 en VIA_L1M1_PR_MR
+* cell instance $562 r0 *1 23.23,69.19
+X$562 en VIA_L1M1_PR_MR
+* cell instance $563 r0 *1 23.23,74.63
+X$563 en VIA_L1M1_PR_MR
+* cell instance $564 r0 *1 45.31,30.26
+X$564 \$41 VIA_M2M3_PR
+* cell instance $565 r0 *1 32.43,30.26
+X$565 \$41 VIA_M2M3_PR
+* cell instance $566 r0 *1 76.13,28.9
+X$566 \$41 VIA_M2M3_PR
+* cell instance $567 r0 *1 66.01,25.5
+X$567 \$41 VIA_M2M3_PR
+* cell instance $568 r0 *1 67.39,25.5
+X$568 \$41 VIA_M2M3_PR
+* cell instance $569 r0 *1 67.39,28.9
+X$569 \$41 VIA_M2M3_PR
+* cell instance $570 r0 *1 78.89,28.9
+X$570 \$41 VIA_M2M3_PR
+* cell instance $571 r0 *1 78.89,30.77
+X$571 \$41 VIA_M1M2_PR
+* cell instance $572 r0 *1 76.13,33.49
+X$572 \$41 VIA_M1M2_PR
+* cell instance $573 r0 *1 32.43,41.99
+X$573 \$41 VIA_M1M2_PR
+* cell instance $574 r0 *1 66.01,22.27
+X$574 \$41 VIA_M1M2_PR
+* cell instance $575 r0 *1 32.43,21.25
+X$575 \$41 VIA_M1M2_PR
+* cell instance $576 r0 *1 45.31,30.43
+X$576 \$41 VIA_M1M2_PR
+* cell instance $577 r0 *1 79.81,31.45
+X$577 \$41 VIA_L1M1_PR_MR
+* cell instance $578 r0 *1 77.51,33.83
+X$578 \$41 VIA_L1M1_PR_MR
+* cell instance $579 r0 *1 31.97,21.25
+X$579 \$41 VIA_L1M1_PR_MR
+* cell instance $580 r0 *1 32.43,41.99
+X$580 \$41 VIA_L1M1_PR_MR
+* cell instance $581 r0 *1 45.31,30.43
+X$581 \$41 VIA_L1M1_PR_MR
+* cell instance $582 r0 *1 64.17,22.61
+X$582 \$41 VIA_L1M1_PR_MR
+* cell instance $583 r0 *1 81.19,26.01
+X$583 \$42 VIA_M1M2_PR
+* cell instance $584 r0 *1 34.27,29.41
+X$584 \$42 VIA_M1M2_PR
+* cell instance $585 r0 *1 34.27,20.57
+X$585 \$42 VIA_M1M2_PR
+* cell instance $586 r0 *1 76.59,36.89
+X$586 \$42 VIA_M1M2_PR
+* cell instance $587 r0 *1 76.59,34.51
+X$587 \$42 VIA_M1M2_PR
+* cell instance $588 r0 *1 24.15,29.41
+X$588 \$42 VIA_M1M2_PR
+* cell instance $589 r0 *1 37.49,34.51
+X$589 \$42 VIA_M1M2_PR
+* cell instance $590 r0 *1 34.27,32.13
+X$590 \$42 VIA_M1M2_PR
+* cell instance $591 r0 *1 24.15,31.45
+X$591 \$42 VIA_M1M2_PR
+* cell instance $592 r0 *1 37.49,32.13
+X$592 \$42 VIA_M1M2_PR
+* cell instance $593 r0 *1 80.27,34.51
+X$593 \$42 VIA_M1M2_PR
+* cell instance $594 r0 *1 80.27,32.13
+X$594 \$42 VIA_M1M2_PR
+* cell instance $595 r0 *1 81.19,32.13
+X$595 \$42 VIA_M1M2_PR
+* cell instance $596 r0 *1 35.19,32.13
+X$596 \$42 VIA_L1M1_PR_MR
+* cell instance $597 r0 *1 77.97,32.13
+X$597 \$42 VIA_L1M1_PR_MR
+* cell instance $598 r0 *1 24.15,31.45
+X$598 \$42 VIA_L1M1_PR_MR
+* cell instance $599 r0 *1 31.51,20.57
+X$599 \$42 VIA_L1M1_PR_MR
+* cell instance $600 r0 *1 74.75,36.89
+X$600 \$42 VIA_L1M1_PR_MR
+* cell instance $601 r0 *1 80.27,26.01
+X$601 \$42 VIA_L1M1_PR_MR
+* cell instance $602 r0 *1 37.95,19.89
+X$602 \$44 VIA_M1M2_PR
+* cell instance $603 r0 *1 37.95,31.11
+X$603 \$44 VIA_M1M2_PR
+* cell instance $604 r0 *1 37.95,31.11
+X$604 \$44 VIA_L1M1_PR_MR
+* cell instance $605 r0 *1 33.81,19.89
+X$605 \$44 VIA_L1M1_PR_MR
+* cell instance $606 r0 *1 62.79,22.78
+X$606 \$45 VIA_M2M3_PR
+* cell instance $607 r0 *1 41.17,47.94
+X$607 \$45 VIA_M2M3_PR
+* cell instance $608 r0 *1 75.67,34.34
+X$608 \$45 VIA_M2M3_PR
+* cell instance $609 r0 *1 81.65,34.34
+X$609 \$45 VIA_M2M3_PR
+* cell instance $610 r0 *1 63.02,34.34
+X$610 \$45 VIA_M3M4_PR
+* cell instance $611 r0 *1 63.02,22.78
+X$611 \$45 VIA_M3M4_PR
+* cell instance $612 r0 *1 63.02,47.94
+X$612 \$45 VIA_M3M4_PR
+* cell instance $613 r0 *1 75.67,33.83
+X$613 \$45 VIA_M1M2_PR
+* cell instance $614 r0 *1 35.19,76.67
+X$614 \$45 VIA_M1M2_PR
+* cell instance $615 r0 *1 35.19,68.51
+X$615 \$45 VIA_M1M2_PR
+* cell instance $616 r0 *1 41.17,68.51
+X$616 \$45 VIA_M1M2_PR
+* cell instance $617 r0 *1 35.19,67.49
+X$617 \$45 VIA_M1M2_PR
+* cell instance $618 r0 *1 81.65,31.45
+X$618 \$45 VIA_M1M2_PR
+* cell instance $619 r0 *1 62.79,22.61
+X$619 \$45 VIA_M1M2_PR
+* cell instance $620 r0 *1 76.59,33.83
+X$620 \$45 VIA_L1M1_PR_MR
+* cell instance $621 r0 *1 80.27,31.45
+X$621 \$45 VIA_L1M1_PR_MR
+* cell instance $622 r0 *1 28.29,76.67
+X$622 \$45 VIA_L1M1_PR_MR
+* cell instance $623 r0 *1 35.19,68.51
+X$623 \$45 VIA_L1M1_PR_MR
+* cell instance $624 r0 *1 27.83,66.47
+X$624 \$45 VIA_L1M1_PR_MR
+* cell instance $625 r0 *1 63.25,22.61
+X$625 \$45 VIA_L1M1_PR_MR
+* cell instance $626 r0 *1 73.83,28.05
+X$626 \$48 VIA_M1M2_PR
+* cell instance $627 r0 *1 73.83,26.69
+X$627 \$48 VIA_M1M2_PR
+* cell instance $628 r0 *1 62.33,22.95
+X$628 \$48 VIA_M1M2_PR
+* cell instance $629 r0 *1 66.93,26.69
+X$629 \$48 VIA_M1M2_PR
+* cell instance $630 r0 *1 66.47,22.61
+X$630 \$48 VIA_M1M2_PR
+* cell instance $631 r0 *1 62.33,33.49
+X$631 \$48 VIA_M1M2_PR
+* cell instance $632 r0 *1 63.25,33.49
+X$632 \$48 VIA_L1M1_PR_MR
+* cell instance $633 r0 *1 75.67,28.39
+X$633 \$48 VIA_L1M1_PR_MR
+* cell instance $634 r0 *1 66.47,22.61
+X$634 \$48 VIA_L1M1_PR_MR
+* cell instance $635 r0 *1 65.55,22.78
+X$635 \$49 VIA_M2M3_PR
+* cell instance $636 r0 *1 71.53,22.78
+X$636 \$49 VIA_M2M3_PR
+* cell instance $637 r0 *1 71.53,22.95
+X$637 \$49 VIA_M1M2_PR
+* cell instance $638 r0 *1 65.55,33.49
+X$638 \$49 VIA_M1M2_PR
+* cell instance $639 r0 *1 65.55,32.13
+X$639 \$49 VIA_M1M2_PR
+* cell instance $640 r0 *1 65.55,22.95
+X$640 \$49 VIA_M1M2_PR
+* cell instance $641 r0 *1 65.55,33.49
+X$641 \$49 VIA_L1M1_PR_MR
+* cell instance $642 r0 *1 64.17,32.13
+X$642 \$49 VIA_L1M1_PR_MR
+* cell instance $643 r0 *1 65.55,22.95
+X$643 \$49 VIA_L1M1_PR_MR
+* cell instance $644 r0 *1 64.17,24.82
+X$644 \$51 VIA_M2M3_PR
+* cell instance $645 r0 *1 76.59,24.82
+X$645 \$51 VIA_M2M3_PR
+* cell instance $646 r0 *1 76.59,30.77
+X$646 \$51 VIA_M1M2_PR
+* cell instance $647 r0 *1 64.17,23.29
+X$647 \$51 VIA_M1M2_PR
+* cell instance $648 r0 *1 76.13,30.77
+X$648 \$51 VIA_L1M1_PR_MR
+* cell instance $649 r0 *1 68.31,22.61
+X$649 \$51 VIA_L1M1_PR_MR
+* cell instance $650 r0 *1 68.31,18.19
+X$650 \$52 VIA_M1M2_PR
+* cell instance $651 r0 *1 68.31,23.97
+X$651 \$52 VIA_M1M2_PR
+* cell instance $652 r0 *1 63.71,32.13
+X$652 \$52 VIA_M1M2_PR
+* cell instance $653 r0 *1 63.71,33.15
+X$653 \$52 VIA_M1M2_PR
+* cell instance $654 r0 *1 63.71,23.97
+X$654 \$52 VIA_M1M2_PR
+* cell instance $655 r0 *1 66.01,33.15
+X$655 \$52 VIA_L1M1_PR_MR
+* cell instance $656 r0 *1 63.71,32.13
+X$656 \$52 VIA_L1M1_PR_MR
+* cell instance $657 r0 *1 70.15,23.29
+X$657 \$52 VIA_L1M1_PR_MR
+* cell instance $658 r0 *1 68.31,18.19
+X$658 \$52 VIA_L1M1_PR_MR
+* cell instance $659 r0 *1 77.51,36.55
+X$659 \$55 VIA_M1M2_PR
+* cell instance $660 r0 *1 77.51,22.95
+X$660 \$55 VIA_M1M2_PR
+* cell instance $661 r0 *1 77.51,25.33
+X$661 \$55 VIA_M1M2_PR
+* cell instance $662 r0 *1 72.445,36.89
+X$662 \$55 VIA_L1M1_PR_MR
+* cell instance $663 r0 *1 76.13,22.95
+X$663 \$55 VIA_L1M1_PR_MR
+* cell instance $664 r0 *1 79.81,25.33
+X$664 \$55 VIA_L1M1_PR_MR
+* cell instance $665 r0 *1 72.91,49.47
+X$665 \$56 VIA_M1M2_PR
+* cell instance $666 r0 *1 73.37,23.29
+X$666 \$56 VIA_M1M2_PR
+* cell instance $667 r0 *1 73.83,23.29
+X$667 \$56 VIA_L1M1_PR_MR
+* cell instance $668 r0 *1 72.91,49.47
+X$668 \$56 VIA_L1M1_PR_MR
+* cell instance $669 r0 *1 33.81,28.73
+X$669 \$57 VIA_M1M2_PR
+* cell instance $670 r0 *1 31.51,23.29
+X$670 \$57 VIA_M1M2_PR
+* cell instance $671 r0 *1 33.81,26.35
+X$671 \$57 VIA_M1M2_PR
+* cell instance $672 r0 *1 31.51,28.73
+X$672 \$57 VIA_M1M2_PR
+* cell instance $673 r0 *1 31.51,35.87
+X$673 \$57 VIA_M1M2_PR
+* cell instance $674 r0 *1 31.51,44.03
+X$674 \$57 VIA_M1M2_PR
+* cell instance $675 r0 *1 31.51,39.61
+X$675 \$57 VIA_M1M2_PR
+* cell instance $676 r0 *1 31.51,32.13
+X$676 \$57 VIA_M1M2_PR
+* cell instance $677 r0 *1 31.51,34.17
+X$677 \$57 VIA_M1M2_PR
+* cell instance $678 r0 *1 33.81,34.17
+X$678 \$57 VIA_M1M2_PR
+* cell instance $679 r0 *1 33.81,31.11
+X$679 \$57 VIA_M1M2_PR
+* cell instance $680 r0 *1 30.13,23.29
+X$680 \$57 VIA_L1M1_PR_MR
+* cell instance $681 r0 *1 37.49,44.03
+X$681 \$57 VIA_L1M1_PR_MR
+* cell instance $682 r0 *1 36.57,31.11
+X$682 \$57 VIA_L1M1_PR_MR
+* cell instance $683 r0 *1 35.65,26.01
+X$683 \$57 VIA_L1M1_PR_MR
+* cell instance $684 r0 *1 30.13,34.17
+X$684 \$57 VIA_L1M1_PR_MR
+* cell instance $685 r0 *1 30.13,39.61
+X$685 \$57 VIA_L1M1_PR_MR
+* cell instance $686 r0 *1 26.45,31.45
+X$686 \$57 VIA_L1M1_PR_MR
+* cell instance $687 r0 *1 26.45,36.55
+X$687 \$57 VIA_L1M1_PR_MR
+* cell instance $688 r0 *1 30.13,28.73
+X$688 \$57 VIA_L1M1_PR_MR
+* cell instance $689 r0 *1 31.97,22.61
+X$689 \$59 VIA_M1M2_PR
+* cell instance $690 r0 *1 31.97,41.65
+X$690 \$59 VIA_M1M2_PR
+* cell instance $691 r0 *1 30.13,41.65
+X$691 \$59 VIA_L1M1_PR_MR
+* cell instance $692 r0 *1 31.51,22.61
+X$692 \$59 VIA_L1M1_PR_MR
+* cell instance $693 r0 *1 66.93,24.14
+X$693 \$61 VIA_M2M3_PR
+* cell instance $694 r0 *1 77.05,24.14
+X$694 \$61 VIA_M2M3_PR
+* cell instance $695 r0 *1 77.05,31.45
+X$695 \$61 VIA_M1M2_PR
+* cell instance $696 r0 *1 66.93,23.63
+X$696 \$61 VIA_M1M2_PR
+* cell instance $697 r0 *1 77.05,31.45
+X$697 \$61 VIA_L1M1_PR_MR
+* cell instance $698 r0 *1 65.09,23.63
+X$698 \$61 VIA_L1M1_PR_MR
+* cell instance $699 r0 *1 34.73,58.14
+X$699 rst_n VIA_M2M3_PR
+* cell instance $700 r0 *1 36.57,77.01
+X$700 rst_n VIA_M1M2_PR
+* cell instance $701 r0 *1 36.57,75.31
+X$701 rst_n VIA_M1M2_PR
+* cell instance $702 r0 *1 36.57,71.57
+X$702 rst_n VIA_M1M2_PR
+* cell instance $703 r0 *1 34.73,31.79
+X$703 rst_n VIA_M1M2_PR
+* cell instance $704 r0 *1 34.73,33.49
+X$704 rst_n VIA_M1M2_PR
+* cell instance $705 r0 *1 34.73,37.23
+X$705 rst_n VIA_M1M2_PR
+* cell instance $706 r0 *1 34.73,38.93
+X$706 rst_n VIA_M1M2_PR
+* cell instance $707 r0 *1 34.73,66.13
+X$707 rst_n VIA_M1M2_PR
+* cell instance $708 r0 *1 36.57,66.13
+X$708 rst_n VIA_M1M2_PR
+* cell instance $709 r0 *1 34.73,60.69
+X$709 rst_n VIA_M1M2_PR
+* cell instance $710 r0 *1 36.57,69.87
+X$710 rst_n VIA_M1M2_PR
+* cell instance $711 r0 *1 34.73,28.05
+X$711 rst_n VIA_M1M2_PR
+* cell instance $712 r0 *1 34.73,22.61
+X$712 rst_n VIA_M1M2_PR
+* cell instance $713 r0 *1 34.73,26.69
+X$713 rst_n VIA_M1M2_PR
+* cell instance $714 r0 *1 79.35,26.18
+X$714 \$67 VIA_M2M3_PR
+* cell instance $715 r0 *1 35.65,26.18
+X$715 \$67 VIA_M2M3_PR
+* cell instance $716 r0 *1 79.35,22.95
+X$716 \$67 VIA_M1M2_PR
+* cell instance $717 r0 *1 25.07,26.69
+X$717 \$67 VIA_M1M2_PR
+* cell instance $718 r0 *1 25.07,31.79
+X$718 \$67 VIA_M1M2_PR
+* cell instance $719 r0 *1 35.65,36.89
+X$719 \$67 VIA_M1M2_PR
+* cell instance $720 r0 *1 79.81,33.15
+X$720 \$67 VIA_M1M2_PR
+* cell instance $721 r0 *1 35.65,24.99
+X$721 \$67 VIA_M1M2_PR
+* cell instance $722 r0 *1 26.91,24.99
+X$722 \$67 VIA_L1M1_PR_MR
+* cell instance $723 r0 *1 38.41,36.89
+X$723 \$67 VIA_L1M1_PR_MR
+* cell instance $724 r0 *1 19.55,31.79
+X$724 \$67 VIA_L1M1_PR_MR
+* cell instance $725 r0 *1 26.91,26.69
+X$725 \$67 VIA_L1M1_PR_MR
+* cell instance $726 r0 *1 79.35,22.95
+X$726 \$67 VIA_L1M1_PR_MR
+* cell instance $727 r0 *1 78.89,33.49
+X$727 \$67 VIA_L1M1_PR_MR
+* cell instance $728 r0 *1 78.43,25.67
+X$728 \$73 VIA_M1M2_PR
+* cell instance $729 r0 *1 78.43,23.97
+X$729 \$73 VIA_M1M2_PR
+* cell instance $730 r0 *1 69.69,25.67
+X$730 \$73 VIA_L1M1_PR_MR
+* cell instance $731 r0 *1 78.43,23.97
+X$731 \$73 VIA_L1M1_PR_MR
+* cell instance $732 r0 *1 60.49,26.01
+X$732 \$73 VIA_L1M1_PR_MR
+* cell instance $733 r0 *1 78.43,33.83
+X$733 \$74 VIA_M1M2_PR
+* cell instance $734 r0 *1 78.43,26.35
+X$734 \$74 VIA_M1M2_PR
+* cell instance $735 r0 *1 79.81,33.83
+X$735 \$74 VIA_L1M1_PR_MR
+* cell instance $736 r0 *1 61.41,26.01
+X$736 \$74 VIA_L1M1_PR_MR
+* cell instance $737 r0 *1 66.93,26.01
+X$737 \$74 VIA_L1M1_PR_MR
+* cell instance $738 r0 *1 71.53,36.55
+X$738 \$80 VIA_M1M2_PR
+* cell instance $739 r0 *1 71.53,25.33
+X$739 \$80 VIA_M1M2_PR
+* cell instance $740 r0 *1 71.53,31.11
+X$740 \$80 VIA_M1M2_PR
+* cell instance $741 r0 *1 67.39,24.99
+X$741 \$80 VIA_M1M2_PR
+* cell instance $742 r0 *1 67.39,22.27
+X$742 \$80 VIA_M1M2_PR
+* cell instance $743 r0 *1 76.13,25.33
+X$743 \$80 VIA_L1M1_PR_MR
+* cell instance $744 r0 *1 67.39,22.27
+X$744 \$80 VIA_L1M1_PR_MR
+* cell instance $745 r0 *1 71.53,31.11
+X$745 \$80 VIA_L1M1_PR_MR
+* cell instance $746 r0 *1 70.61,36.55
+X$746 \$80 VIA_L1M1_PR_MR
+* cell instance $747 r0 *1 28.75,80.41
+X$747 \$83 VIA_M1M2_PR
+* cell instance $748 r0 *1 28.75,78.37
+X$748 \$83 VIA_M1M2_PR
+* cell instance $749 r0 *1 80.73,34.17
+X$749 \$83 VIA_M1M2_PR
+* cell instance $750 r0 *1 77.05,37.23
+X$750 \$83 VIA_M1M2_PR
+* cell instance $751 r0 *1 77.05,34.17
+X$751 \$83 VIA_M1M2_PR
+* cell instance $752 r0 *1 77.05,32.13
+X$752 \$83 VIA_M1M2_PR
+* cell instance $753 r0 *1 80.73,26.35
+X$753 \$83 VIA_M1M2_PR
+* cell instance $754 r0 *1 27.83,65.79
+X$754 \$83 VIA_M1M2_PR
+* cell instance $755 r0 *1 29.21,65.79
+X$755 \$83 VIA_M1M2_PR
+* cell instance $756 r0 *1 28.29,37.57
+X$756 \$83 VIA_M1M2_PR
+* cell instance $757 r0 *1 77.51,32.13
+X$757 \$83 VIA_L1M1_PR_MR
+* cell instance $758 r0 *1 73.83,37.23
+X$758 \$83 VIA_L1M1_PR_MR
+* cell instance $759 r0 *1 79.81,26.01
+X$759 \$83 VIA_L1M1_PR_MR
+* cell instance $760 r0 *1 38.87,78.37
+X$760 \$83 VIA_L1M1_PR_MR
+* cell instance $761 r0 *1 31.97,80.41
+X$761 \$83 VIA_L1M1_PR_MR
+* cell instance $762 r0 *1 28.29,65.79
+X$762 \$83 VIA_L1M1_PR_MR
+* cell instance $763 r0 *1 72.91,26.01
+X$763 \$89 VIA_M1M2_PR
+* cell instance $764 r0 *1 72.91,28.05
+X$764 \$89 VIA_M1M2_PR
+* cell instance $765 r0 *1 72.91,26.01
+X$765 \$89 VIA_L1M1_PR_MR
+* cell instance $766 r0 *1 77.05,26.01
+X$766 \$89 VIA_L1M1_PR_MR
+* cell instance $767 r0 *1 72.91,28.05
+X$767 \$89 VIA_L1M1_PR_MR
+* cell instance $768 r0 *1 36.57,25.67
+X$768 \$92 VIA_M1M2_PR
+* cell instance $769 r0 *1 36.57,35.87
+X$769 \$92 VIA_M1M2_PR
+* cell instance $770 r0 *1 36.57,35.87
+X$770 \$92 VIA_L1M1_PR_MR
+* cell instance $771 r0 *1 34.27,25.67
+X$771 \$92 VIA_L1M1_PR_MR
+* cell instance $772 r0 *1 65.09,20.57
+X$772 \$102 VIA_M1M2_PR
+* cell instance $773 r0 *1 65.09,26.01
+X$773 \$102 VIA_M1M2_PR
+* cell instance $774 r0 *1 65.09,20.57
+X$774 \$102 VIA_L1M1_PR_MR
+* cell instance $775 r0 *1 63.71,26.01
+X$775 \$102 VIA_L1M1_PR_MR
+* cell instance $776 r0 *1 64.17,25.33
+X$776 \$105 VIA_M1M2_PR
+* cell instance $777 r0 *1 64.17,28.39
+X$777 \$105 VIA_M1M2_PR
+* cell instance $778 r0 *1 64.17,28.39
+X$778 \$105 VIA_L1M1_PR_MR
+* cell instance $779 r0 *1 60.95,25.33
+X$779 \$105 VIA_L1M1_PR_MR
+* cell instance $780 r0 *1 31.51,28.05
+X$780 \$111 VIA_L1M1_PR_MR
+* cell instance $781 r0 *1 29.67,27.71
+X$781 \$111 VIA_L1M1_PR_MR
+* cell instance $782 r0 *1 38.87,80.41
+X$782 \$118 VIA_M1M2_PR
+* cell instance $783 r0 *1 58.65,48.11
+X$783 \$118 VIA_M1M2_PR
+* cell instance $784 r0 *1 40.71,48.11
+X$784 \$118 VIA_M1M2_PR
+* cell instance $785 r0 *1 59.11,28.39
+X$785 \$118 VIA_M1M2_PR
+* cell instance $786 r0 *1 40.71,65.79
+X$786 \$118 VIA_M1M2_PR
+* cell instance $787 r0 *1 38.87,67.49
+X$787 \$118 VIA_M1M2_PR
+* cell instance $788 r0 *1 40.71,58.99
+X$788 \$118 VIA_M1M2_PR
+* cell instance $789 r0 *1 32.43,80.41
+X$789 \$118 VIA_L1M1_PR_MR
+* cell instance $790 r0 *1 60.95,28.39
+X$790 \$118 VIA_L1M1_PR_MR
+* cell instance $791 r0 *1 31.97,58.99
+X$791 \$118 VIA_L1M1_PR_MR
+* cell instance $792 r0 *1 38.87,67.49
+X$792 \$118 VIA_L1M1_PR_MR
+* cell instance $793 r0 *1 38.87,65.79
+X$793 \$118 VIA_L1M1_PR_MR
+* cell instance $794 r0 *1 38.87,28.73
+X$794 \$120 VIA_M1M2_PR
+* cell instance $795 r0 *1 23.69,33.49
+X$795 \$120 VIA_M1M2_PR
+* cell instance $796 r0 *1 38.87,33.15
+X$796 \$120 VIA_M1M2_PR
+* cell instance $797 r0 *1 23.69,32.13
+X$797 \$120 VIA_M1M2_PR
+* cell instance $798 r0 *1 27.83,33.15
+X$798 \$120 VIA_L1M1_PR_MR
+* cell instance $799 r0 *1 38.87,33.15
+X$799 \$120 VIA_L1M1_PR_MR
+* cell instance $800 r0 *1 60.03,28.73
+X$800 \$120 VIA_L1M1_PR_MR
+* cell instance $801 r0 *1 23.69,32.13
+X$801 \$120 VIA_L1M1_PR_MR
+* cell instance $802 r0 *1 70.15,28.73
+X$802 \$120 VIA_L1M1_PR_MR
+* cell instance $803 r0 *1 66.47,25.67
+X$803 \$123 VIA_M1M2_PR
+* cell instance $804 r0 *1 66.47,28.39
+X$804 \$123 VIA_M1M2_PR
+* cell instance $805 r0 *1 66.47,30.77
+X$805 \$123 VIA_M1M2_PR
+* cell instance $806 r0 *1 65.55,30.77
+X$806 \$123 VIA_L1M1_PR_MR
+* cell instance $807 r0 *1 66.47,25.67
+X$807 \$123 VIA_L1M1_PR_MR
+* cell instance $808 r0 *1 66.47,28.39
+X$808 \$123 VIA_L1M1_PR_MR
+* cell instance $809 r0 *1 82.57,27.71
+X$809 \$125 VIA_M1M2_PR
+* cell instance $810 r0 *1 82.57,36.21
+X$810 \$125 VIA_M1M2_PR
+* cell instance $811 r0 *1 73.37,36.21
+X$811 \$125 VIA_L1M1_PR_MR
+* cell instance $812 r0 *1 66.93,31.45
+X$812 \$130 VIA_M1M2_PR
+* cell instance $813 r0 *1 66.93,29.07
+X$813 \$130 VIA_M1M2_PR
+* cell instance $814 r0 *1 61.41,31.11
+X$814 \$130 VIA_L1M1_PR_MR
+* cell instance $815 r0 *1 66.47,31.45
+X$815 \$130 VIA_L1M1_PR_MR
+* cell instance $816 r0 *1 84.41,28.39
+X$816 \$130 VIA_L1M1_PR_MR
+* cell instance $817 r0 *1 28.29,36.38
+X$817 B VIA_M2M3_PR
+* cell instance $818 r0 *1 28.29,28.73
+X$818 B VIA_M1M2_PR
+* cell instance $819 r0 *1 27.37,28.73
+X$819 B VIA_L1M1_PR_MR
+* cell instance $820 r0 *1 36.11,26.69
+X$820 \$142 VIA_M1M2_PR
+* cell instance $821 r0 *1 36.11,38.59
+X$821 \$142 VIA_M1M2_PR
+* cell instance $822 r0 *1 31.51,38.93
+X$822 \$142 VIA_L1M1_PR_MR
+* cell instance $823 r0 *1 36.57,26.69
+X$823 \$142 VIA_L1M1_PR_MR
+* cell instance $824 r0 *1 74.29,47.43
+X$824 \$143 VIA_M1M2_PR
+* cell instance $825 r0 *1 74.29,26.69
+X$825 \$143 VIA_M1M2_PR
+* cell instance $826 r0 *1 74.29,47.43
+X$826 \$143 VIA_L1M1_PR_MR
+* cell instance $827 r0 *1 75.67,26.69
+X$827 \$143 VIA_L1M1_PR_MR
+* cell instance $828 r0 *1 78.89,27.71
+X$828 \$146 VIA_M1M2_PR
+* cell instance $829 r0 *1 78.89,26.35
+X$829 \$146 VIA_M1M2_PR
+* cell instance $830 r0 *1 78.89,26.35
+X$830 \$146 VIA_L1M1_PR_MR
+* cell instance $831 r0 *1 61.87,27.71
+X$831 \$146 VIA_L1M1_PR_MR
+* cell instance $832 r0 *1 66.01,26.35
+X$832 \$153 VIA_M1M2_PR
+* cell instance $833 r0 *1 66.01,38.93
+X$833 \$153 VIA_M1M2_PR
+* cell instance $834 r0 *1 66.01,36.89
+X$834 \$153 VIA_M1M2_PR
+* cell instance $835 r0 *1 71.99,38.93
+X$835 \$153 VIA_L1M1_PR_MR
+* cell instance $836 r0 *1 66.01,36.89
+X$836 \$153 VIA_L1M1_PR_MR
+* cell instance $837 r0 *1 65.55,26.35
+X$837 \$153 VIA_L1M1_PR_MR
+* cell instance $838 r0 *1 67.85,31.62
+X$838 \$160 VIA_M2M3_PR
+* cell instance $839 r0 *1 63.25,31.62
+X$839 \$160 VIA_M2M3_PR
+* cell instance $840 r0 *1 55.43,32.3
+X$840 \$160 VIA_M2M3_PR
+* cell instance $841 r0 *1 27.83,31.62
+X$841 \$160 VIA_M2M3_PR
+* cell instance $842 r0 *1 35.19,32.3
+X$842 \$160 VIA_M2M3_PR
+* cell instance $843 r0 *1 63.25,31.79
+X$843 \$160 VIA_M1M2_PR
+* cell instance $844 r0 *1 55.43,31.79
+X$844 \$160 VIA_M1M2_PR
+* cell instance $845 r0 *1 67.85,20.57
+X$845 \$160 VIA_M1M2_PR
+* cell instance $846 r0 *1 35.19,35.87
+X$846 \$160 VIA_M1M2_PR
+* cell instance $847 r0 *1 27.83,30.43
+X$847 \$160 VIA_M1M2_PR
+* cell instance $848 r0 *1 35.19,35.87
+X$848 \$160 VIA_L1M1_PR_MR
+* cell instance $849 r0 *1 67.85,20.57
+X$849 \$160 VIA_L1M1_PR_MR
+* cell instance $850 r0 *1 20.01,31.45
+X$850 \$160 VIA_L1M1_PR_MR
+* cell instance $851 r0 *1 60.03,31.45
+X$851 \$160 VIA_L1M1_PR_MR
+* cell instance $852 r0 *1 27.83,31.11
+X$852 \$162 VIA_L1M1_PR_MR
+* cell instance $853 r0 *1 25.99,30.77
+X$853 \$162 VIA_L1M1_PR_MR
+* cell instance $854 r0 *1 64.63,30.43
+X$854 \$170 VIA_M1M2_PR
+* cell instance $855 r0 *1 64.63,33.83
+X$855 \$170 VIA_M1M2_PR
+* cell instance $856 r0 *1 64.63,33.83
+X$856 \$170 VIA_L1M1_PR_MR
+* cell instance $857 r0 *1 81.19,31.11
+X$857 \$170 VIA_L1M1_PR_MR
+* cell instance $858 r0 *1 71.99,36.89
+X$858 \$179 VIA_M1M2_PR
+* cell instance $859 r0 *1 71.99,30.43
+X$859 \$179 VIA_M1M2_PR
+* cell instance $860 r0 *1 81.65,30.43
+X$860 \$179 VIA_M1M2_PR
+* cell instance $861 r0 *1 81.65,29.41
+X$861 \$179 VIA_M1M2_PR
+* cell instance $862 r0 *1 71.99,26.01
+X$862 \$179 VIA_M1M2_PR
+* cell instance $863 r0 *1 69.69,36.89
+X$863 \$179 VIA_L1M1_PR_MR
+* cell instance $864 r0 *1 81.65,29.41
+X$864 \$179 VIA_L1M1_PR_MR
+* cell instance $865 r0 *1 71.99,26.01
+X$865 \$179 VIA_L1M1_PR_MR
+* cell instance $866 r0 *1 62.79,31.45
+X$866 \$197 VIA_M1M2_PR
+* cell instance $867 r0 *1 62.79,26.35
+X$867 \$197 VIA_M1M2_PR
+* cell instance $868 r0 *1 62.79,31.45
+X$868 \$197 VIA_L1M1_PR_MR
+* cell instance $869 r0 *1 62.79,26.35
+X$869 \$197 VIA_L1M1_PR_MR
+* cell instance $870 r0 *1 77.97,33.66
+X$870 \$210 VIA_M2M3_PR
+* cell instance $871 r0 *1 24.61,74.46
+X$871 \$210 VIA_M2M3_PR
+* cell instance $872 r0 *1 45.31,74.46
+X$872 \$210 VIA_M2M3_PR
+* cell instance $873 r0 *1 45.31,33.66
+X$873 \$210 VIA_M2M3_PR
+* cell instance $874 r0 *1 24.61,74.63
+X$874 \$210 VIA_M1M2_PR
+* cell instance $875 r0 *1 77.97,33.49
+X$875 \$210 VIA_M1M2_PR
+* cell instance $876 r0 *1 45.31,73.95
+X$876 \$210 VIA_M1M2_PR
+* cell instance $877 r0 *1 24.61,70.21
+X$877 \$210 VIA_M1M2_PR
+* cell instance $878 r0 *1 77.97,22.95
+X$878 \$210 VIA_M1M2_PR
+* cell instance $879 r0 *1 77.97,33.49
+X$879 \$210 VIA_L1M1_PR_MR
+* cell instance $880 r0 *1 23.69,74.63
+X$880 \$210 VIA_L1M1_PR_MR
+* cell instance $881 r0 *1 77.97,22.95
+X$881 \$210 VIA_L1M1_PR_MR
+* cell instance $882 r0 *1 24.15,70.21
+X$882 \$210 VIA_L1M1_PR_MR
+* cell instance $883 r0 *1 45.31,73.95
+X$883 \$210 VIA_L1M1_PR_MR
+* cell instance $884 r0 *1 75.67,31.79
+X$884 \$215 VIA_M1M2_PR
+* cell instance $885 r0 *1 75.67,33.15
+X$885 \$215 VIA_M1M2_PR
+* cell instance $886 r0 *1 78.89,31.79
+X$886 \$215 VIA_L1M1_PR_MR
+* cell instance $887 r0 *1 75.67,33.15
+X$887 \$215 VIA_L1M1_PR_MR
+* cell instance $888 r0 *1 64.17,33.83
+X$888 \$215 VIA_L1M1_PR_MR
+* cell instance $889 r0 *1 68.77,32.13
+X$889 \$216 VIA_M1M2_PR
+* cell instance $890 r0 *1 68.77,53.89
+X$890 \$216 VIA_M1M2_PR
+* cell instance $891 r0 *1 68.31,31.79
+X$891 \$216 VIA_L1M1_PR_MR
+* cell instance $892 r0 *1 71.07,53.89
+X$892 \$216 VIA_L1M1_PR_MR
+* cell instance $893 r0 *1 67.85,33.49
+X$893 \$217 VIA_L1M1_PR_MR
+* cell instance $894 r0 *1 73.83,32.13
+X$894 \$220 VIA_M1M2_PR
+* cell instance $895 r0 *1 73.83,49.81
+X$895 \$220 VIA_M1M2_PR
+* cell instance $896 r0 *1 74.29,31.79
+X$896 \$220 VIA_L1M1_PR_MR
+* cell instance $897 r0 *1 73.83,49.81
+X$897 \$220 VIA_L1M1_PR_MR
+* cell instance $898 r0 *1 31.415,34.85
+X$898 \$236 VIA_L1M1_PR_MR
+* cell instance $899 r0 *1 29.67,34.85
+X$899 \$236 VIA_L1M1_PR_MR
+* cell instance $900 r0 *1 73.37,49.47
+X$900 \$252 VIA_M1M2_PR
+* cell instance $901 r0 *1 73.37,34.17
+X$901 \$252 VIA_M1M2_PR
+* cell instance $902 r0 *1 73.83,34.17
+X$902 \$252 VIA_L1M1_PR_MR
+* cell instance $903 r0 *1 73.37,49.47
+X$903 \$252 VIA_L1M1_PR_MR
+* cell instance $904 r0 *1 75.21,35.87
+X$904 \$257 VIA_M1M2_PR
+* cell instance $905 r0 *1 75.21,23.29
+X$905 \$257 VIA_M1M2_PR
+* cell instance $906 r0 *1 75.21,23.29
+X$906 \$257 VIA_L1M1_PR_MR
+* cell instance $907 r0 *1 75.21,35.87
+X$907 \$257 VIA_L1M1_PR_MR
+* cell instance $908 r0 *1 65.09,36.55
+X$908 \$261 VIA_M1M2_PR
+* cell instance $909 r0 *1 65.09,31.79
+X$909 \$261 VIA_M1M2_PR
+* cell instance $910 r0 *1 65.09,34.17
+X$910 \$261 VIA_M1M2_PR
+* cell instance $911 r0 *1 70.15,34.17
+X$911 \$261 VIA_L1M1_PR_MR
+* cell instance $912 r0 *1 65.09,36.55
+X$912 \$261 VIA_L1M1_PR_MR
+* cell instance $913 r0 *1 64.63,31.79
+X$913 \$261 VIA_L1M1_PR_MR
+* cell instance $914 r0 *1 5.75,41.14
+X$914 A VIA_M2M3_PR
+* cell instance $915 r0 *1 5.75,71.23
+X$915 A VIA_M1M2_PR
+* cell instance $916 r0 *1 27.37,71.23
+X$916 A VIA_L1M1_PR_MR
+* cell instance $917 r0 *1 38.41,44.71
+X$917 \$275 VIA_M1M2_PR
+* cell instance $918 r0 *1 38.41,50.83
+X$918 \$275 VIA_M1M2_PR
+* cell instance $919 r0 *1 38.41,64.09
+X$919 \$275 VIA_M1M2_PR
+* cell instance $920 r0 *1 31.05,44.71
+X$920 \$275 VIA_L1M1_PR_MR
+* cell instance $921 r0 *1 35.65,64.09
+X$921 \$275 VIA_L1M1_PR_MR
+* cell instance $922 r0 *1 38.41,50.83
+X$922 \$275 VIA_L1M1_PR_MR
+* cell instance $923 r0 *1 21.85,32.13
+X$923 \$289 VIA_M1M2_PR
+* cell instance $924 r0 *1 21.85,37.23
+X$924 \$289 VIA_M1M2_PR
+* cell instance $925 r0 *1 27.83,37.23
+X$925 \$289 VIA_L1M1_PR_MR
+* cell instance $926 r0 *1 21.85,32.13
+X$926 \$289 VIA_L1M1_PR_MR
+* cell instance $927 r0 *1 69.23,47.77
+X$927 \$316 VIA_M1M2_PR
+* cell instance $928 r0 *1 69.23,37.57
+X$928 \$316 VIA_M1M2_PR
+* cell instance $929 r0 *1 67.85,37.57
+X$929 \$316 VIA_L1M1_PR_MR
+* cell instance $930 r0 *1 70.61,47.77
+X$930 \$316 VIA_L1M1_PR_MR
+* cell instance $931 r0 *1 66.93,38.59
+X$931 \$317 VIA_M1M2_PR
+* cell instance $932 r0 *1 66.93,36.89
+X$932 \$317 VIA_M1M2_PR
+* cell instance $933 r0 *1 66.93,36.89
+X$933 \$317 VIA_L1M1_PR_MR
+* cell instance $934 r0 *1 68.31,38.59
+X$934 \$317 VIA_L1M1_PR_MR
+* cell instance $935 r0 *1 79.35,50.15
+X$935 \$343 VIA_M1M2_PR
+* cell instance $936 r0 *1 79.35,28.05
+X$936 \$343 VIA_M1M2_PR
+* cell instance $937 r0 *1 79.35,28.05
+X$937 \$343 VIA_L1M1_PR_MR
+* cell instance $938 r0 *1 70.15,50.15
+X$938 \$343 VIA_L1M1_PR_MR
+* cell instance $939 r0 *1 68.31,28.39
+X$939 \$348 VIA_M1M2_PR
+* cell instance $940 r0 *1 68.31,53.55
+X$940 \$348 VIA_M1M2_PR
+* cell instance $941 r0 *1 70.15,53.55
+X$941 \$348 VIA_L1M1_PR_MR
+* cell instance $942 r0 *1 68.31,28.39
+X$942 \$348 VIA_L1M1_PR_MR
+* cell instance $943 r0 *1 71.99,52.19
+X$943 \$351 VIA_M1M2_PR
+* cell instance $944 r0 *1 71.99,48.45
+X$944 \$351 VIA_M1M2_PR
+* cell instance $945 r0 *1 71.53,48.45
+X$945 \$351 VIA_L1M1_PR_MR
+* cell instance $946 r0 *1 71.99,52.19
+X$946 \$351 VIA_L1M1_PR_MR
+* cell instance $947 r0 *1 71.07,49.47
+X$947 \$353 VIA_M1M2_PR
+* cell instance $948 r0 *1 71.07,48.45
+X$948 \$353 VIA_M1M2_PR
+* cell instance $949 r0 *1 71.07,49.47
+X$949 \$353 VIA_L1M1_PR_MR
+* cell instance $950 r0 *1 71.07,48.45
+X$950 \$353 VIA_L1M1_PR_MR
+* cell instance $951 r0 *1 70.61,52.19
+X$951 \$354 VIA_M1M2_PR
+* cell instance $952 r0 *1 70.61,20.23
+X$952 \$354 VIA_M1M2_PR
+* cell instance $953 r0 *1 70.61,20.23
+X$953 \$354 VIA_L1M1_PR_MR
+* cell instance $954 r0 *1 71.07,52.19
+X$954 \$354 VIA_L1M1_PR_MR
+* cell instance $955 r0 *1 28.75,66.13
+X$955 \$368 VIA_M1M2_PR
+* cell instance $956 r0 *1 28.75,59.33
+X$956 \$368 VIA_M1M2_PR
+* cell instance $957 r0 *1 30.13,59.33
+X$957 \$368 VIA_L1M1_PR_MR
+* cell instance $958 r0 *1 31.51,66.13
+X$958 \$368 VIA_L1M1_PR_MR
+* cell instance $959 r0 *1 28.29,73.95
+X$959 \$376 VIA_M1M2_PR
+* cell instance $960 r0 *1 28.29,71.91
+X$960 \$376 VIA_M1M2_PR
+* cell instance $961 r0 *1 28.29,77.35
+X$961 \$376 VIA_M1M2_PR
+* cell instance $962 r0 *1 28.29,74.63
+X$962 \$376 VIA_M1M2_PR
+* cell instance $963 r0 *1 28.29,69.87
+X$963 \$376 VIA_M1M2_PR
+* cell instance $964 r0 *1 28.29,66.47
+X$964 \$376 VIA_M1M2_PR
+* cell instance $965 r0 *1 28.29,61.37
+X$965 \$376 VIA_M1M2_PR
+* cell instance $966 r0 *1 28.29,63.07
+X$966 \$376 VIA_M1M2_PR
+* cell instance $967 r0 *1 28.29,69.19
+X$967 \$376 VIA_M1M2_PR
+* cell instance $968 r0 *1 30.13,77.35
+X$968 \$376 VIA_L1M1_PR_MR
+* cell instance $969 r0 *1 36.57,74.63
+X$969 \$376 VIA_L1M1_PR_MR
+* cell instance $970 r0 *1 30.13,71.91
+X$970 \$376 VIA_L1M1_PR_MR
+* cell instance $971 r0 *1 26.45,69.53
+X$971 \$376 VIA_L1M1_PR_MR
+* cell instance $972 r0 *1 26.45,74.63
+X$972 \$376 VIA_L1M1_PR_MR
+* cell instance $973 r0 *1 28.29,63.07
+X$973 \$376 VIA_L1M1_PR_MR
+* cell instance $974 r0 *1 30.13,61.37
+X$974 \$376 VIA_L1M1_PR_MR
+* cell instance $975 r0 *1 30.13,66.47
+X$975 \$376 VIA_L1M1_PR_MR
+* cell instance $976 r0 *1 36.57,69.19
+X$976 \$376 VIA_L1M1_PR_MR
+* cell instance $977 r0 *1 34.27,75.65
+X$977 \$388 VIA_M1M2_PR
+* cell instance $978 r0 *1 32.89,60.69
+X$978 \$388 VIA_M1M2_PR
+* cell instance $979 r0 *1 25.99,75.65
+X$979 \$388 VIA_L1M1_PR_MR
+* cell instance $980 r0 *1 31.51,60.69
+X$980 \$388 VIA_L1M1_PR_MR
+* cell instance $981 r0 *1 27.83,69.19
+X$981 \$397 VIA_M1M2_PR
+* cell instance $982 r0 *1 27.83,67.49
+X$982 \$397 VIA_M1M2_PR
+* cell instance $983 r0 *1 27.83,69.19
+X$983 \$397 VIA_L1M1_PR_MR
+* cell instance $984 r0 *1 25.99,67.49
+X$984 \$397 VIA_L1M1_PR_MR
+* cell instance $985 r0 *1 39.33,71.23
+X$985 \$415 VIA_M1M2_PR
+* cell instance $986 r0 *1 39.33,69.87
+X$986 \$415 VIA_M1M2_PR
+* cell instance $987 r0 *1 39.79,71.23
+X$987 \$415 VIA_L1M1_PR_MR
+* cell instance $988 r0 *1 37.95,69.87
+X$988 \$415 VIA_L1M1_PR_MR
+* cell instance $989 r0 *1 32.89,74.29
+X$989 \$422 VIA_M1M2_PR
+* cell instance $990 r0 *1 32.89,70.21
+X$990 \$422 VIA_M1M2_PR
+* cell instance $991 r0 *1 37.95,74.63
+X$991 \$422 VIA_L1M1_PR_MR
+* cell instance $992 r0 *1 25.99,70.21
+X$992 \$422 VIA_L1M1_PR_MR
+* cell instance $993 r0 *1 31.51,71.57
+X$993 \$426 VIA_L1M1_PR_MR
+* cell instance $994 r0 *1 29.67,71.23
+X$994 \$426 VIA_L1M1_PR_MR
+* cell instance $995 r0 *1 31.97,72.42
+X$995 clk VIA_M2M3_PR
+* cell instance $996 r0 *1 31.97,50.15
+X$996 clk VIA_M1M2_PR
+* cell instance $997 r0 *1 31.97,50.15
+X$997 clk VIA_L1M1_PR_MR
+* cell instance $998 r0 *1 27.83,78.03
+X$998 \$464 VIA_M1M2_PR
+* cell instance $999 r0 *1 27.83,75.31
+X$999 \$464 VIA_M1M2_PR
+* cell instance $1000 r0 *1 27.83,75.31
+X$1000 \$464 VIA_L1M1_PR_MR
+* cell instance $1001 r0 *1 25.99,78.03
+X$1001 \$464 VIA_L1M1_PR_MR
+* cell instance $1002 r0 *1 31.51,79.39
+X$1002 \$473 VIA_M1M2_PR
+* cell instance $1003 r0 *1 31.51,77.69
+X$1003 \$473 VIA_M1M2_PR
+* cell instance $1004 r0 *1 31.51,77.69
+X$1004 \$473 VIA_L1M1_PR_MR
+* cell instance $1005 r0 *1 30.13,79.39
+X$1005 \$473 VIA_L1M1_PR_MR
+* cell instance $1006 r0 *1 60.14,61.23
+X$1006 VGND VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $1007 r0 *1 30.14,61.23
+X$1007 VGND VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $1008 r0 *1 30.14,31.23
+X$1008 VGND VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $1009 r0 *1 60.14,31.23
+X$1009 VGND VIA_via5_6_2000_2000_1_1_1600_1600
+* cell instance $1010 r0 *1 60.14,87.04
+X$1010 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1011 r0 *1 60.14,81.6
+X$1011 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1012 r0 *1 60.14,76.16
+X$1012 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1013 r0 *1 60.14,65.28
+X$1013 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1014 r0 *1 30.14,65.28
+X$1014 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1015 r0 *1 30.14,59.84
+X$1015 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1016 r0 *1 30.14,54.4
+X$1016 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1017 r0 *1 30.14,87.04
+X$1017 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1018 r0 *1 30.14,76.16
+X$1018 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1019 r0 *1 30.14,70.72
+X$1019 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1020 r0 *1 30.14,81.6
+X$1020 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1021 r0 *1 30.14,27.2
+X$1021 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1022 r0 *1 30.14,21.76
+X$1022 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1023 r0 *1 60.14,70.72
+X$1023 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1024 r0 *1 30.14,16.32
+X$1024 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1025 r0 *1 60.14,59.84
+X$1025 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1026 r0 *1 30.14,48.96
+X$1026 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1027 r0 *1 30.14,38.08
+X$1027 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1028 r0 *1 30.14,32.64
+X$1028 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1029 r0 *1 30.14,43.52
+X$1029 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1030 r0 *1 60.14,54.4
+X$1030 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1031 r0 *1 60.14,32.64
+X$1031 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1032 r0 *1 60.14,21.76
+X$1032 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1033 r0 *1 60.14,27.2
+X$1033 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1034 r0 *1 60.14,16.32
+X$1034 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1035 r0 *1 60.14,10.88
+X$1035 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1036 r0 *1 60.14,43.52
+X$1036 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1037 r0 *1 60.14,48.96
+X$1037 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1038 r0 *1 60.14,38.08
+X$1038 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1039 r0 *1 30.14,10.88
+X$1039 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1040 r0 *1 30.14,10.88
+X$1040 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1041 r0 *1 30.14,10.88
+X$1041 VGND VIA_via2_3_2000_480_1_6_320_320
+* cell instance $1042 r0 *1 60.14,32.64
+X$1042 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1043 r0 *1 60.14,38.08
+X$1043 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1044 r0 *1 60.14,48.96
+X$1044 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1045 r0 *1 30.14,32.64
+X$1045 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1046 r0 *1 30.14,38.08
+X$1046 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1047 r0 *1 30.14,43.52
+X$1047 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1048 r0 *1 30.14,48.96
+X$1048 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1049 r0 *1 60.14,43.52
+X$1049 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1050 r0 *1 60.14,59.84
+X$1050 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1051 r0 *1 60.14,10.88
+X$1051 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1052 r0 *1 60.14,16.32
+X$1052 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1053 r0 *1 30.14,54.4
+X$1053 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1054 r0 *1 30.14,65.28
+X$1054 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1055 r0 *1 60.14,65.28
+X$1055 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1056 r0 *1 30.14,59.84
+X$1056 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1057 r0 *1 60.14,21.76
+X$1057 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1058 r0 *1 60.14,27.2
+X$1058 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1059 r0 *1 60.14,87.04
+X$1059 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1060 r0 *1 60.14,54.4
+X$1060 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1061 r0 *1 30.14,76.16
+X$1061 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1062 r0 *1 30.14,81.6
+X$1062 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1063 r0 *1 30.14,87.04
+X$1063 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1064 r0 *1 30.14,70.72
+X$1064 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1065 r0 *1 60.14,70.72
+X$1065 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1066 r0 *1 60.14,76.16
+X$1066 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1067 r0 *1 30.14,27.2
+X$1067 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1068 r0 *1 30.14,21.76
+X$1068 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1069 r0 *1 60.14,81.6
+X$1069 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1070 r0 *1 30.14,16.32
+X$1070 VGND VIA_via4_5_2000_480_1_5_400_400
+* cell instance $1071 r0 *1 60.14,70.72
+X$1071 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1072 r0 *1 30.14,16.32
+X$1072 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1073 r0 *1 30.14,21.76
+X$1073 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1074 r0 *1 30.14,27.2
+X$1074 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1075 r0 *1 30.14,59.84
+X$1075 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1076 r0 *1 60.14,76.16
+X$1076 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1077 r0 *1 30.14,54.4
+X$1077 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1078 r0 *1 30.14,65.28
+X$1078 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1079 r0 *1 60.14,21.76
+X$1079 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1080 r0 *1 60.14,32.64
+X$1080 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1081 r0 *1 60.14,38.08
+X$1081 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1082 r0 *1 30.14,48.96
+X$1082 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1083 r0 *1 30.14,43.52
+X$1083 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1084 r0 *1 30.14,38.08
+X$1084 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1085 r0 *1 60.14,43.52
+X$1085 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1086 r0 *1 60.14,65.28
+X$1086 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1087 r0 *1 60.14,59.84
+X$1087 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1088 r0 *1 60.14,27.2
+X$1088 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1089 r0 *1 60.14,48.96
+X$1089 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1090 r0 *1 60.14,81.6
+X$1090 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1091 r0 *1 30.14,32.64
+X$1091 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1092 r0 *1 30.14,70.72
+X$1092 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1093 r0 *1 30.14,87.04
+X$1093 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1094 r0 *1 30.14,81.6
+X$1094 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1095 r0 *1 60.14,87.04
+X$1095 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1096 r0 *1 60.14,10.88
+X$1096 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1097 r0 *1 60.14,54.4
+X$1097 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1098 r0 *1 30.14,76.16
+X$1098 VGND VIA_via3_4_2000_480_1_5_400_400
+* cell instance $1099 r0 *1 60.14,16.32
+X$1099 VGND VIA_via3_4_2000_480_1_5_400_400
+.ENDS adder_demo
+
+* cell sky130_fd_sc_hd__xnor2_2
+* pin VGND
+* pin Y
+* pin B
+* pin A
+* pin VPWR
+* pin VPB
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__xnor2_2 VGND Y B A VPWR VPB sky130_gnd
+* device instance $1 r0 *1 4.96,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$1 VPWR \$4 Y VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=260000000000 AD=135000000000 PS=2520000 PD=1270000
+* device instance $2 r0 *1 5.38,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$2 Y \$4 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=280000000000 PS=1270000 PD=2560000
+* device instance $3 r0 *1 2.725,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 \$10 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=280000000000 AD=135000000000 PS=2560000 PD=1270000
+* device instance $4 r0 *1 3.145,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 VPWR A \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $5 r0 *1 3.565,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$5 \$10 B Y VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=152500000000 PS=1270000 PD=1305000
+* device instance $6 r0 *1 4.02,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$6 Y B \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=152500000000 AD=260000000000 PS=1305000 PD=2520000
+* device instance $7 r0 *1 0.485,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$7 \$4 B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=275000000000 AD=135000000000 PS=2550000 PD=1270000
+* device instance $8 r0 *1 0.905,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$8 VPWR B \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $9 r0 *1 1.325,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$9 \$4 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $10 r0 *1 1.745,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$10 VPWR A \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=280000000000 PS=1270000 PD=2560000
+* device instance $11 r0 *1 4.96,0.56 sky130_fd_pr__nfet_01v8
+XM$11 Y \$4 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=169000000000 AD=87750000000 PS=1820000 PD=920000
+* device instance $12 r0 *1 5.38,0.56 sky130_fd_pr__nfet_01v8
+XM$12 \$5 \$4 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=169000000000 PS=920000 PD=1820000
+* device instance $13 r0 *1 2.725,0.56 sky130_fd_pr__nfet_01v8
+XM$13 VGND A \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=182000000000 AD=87750000000 PS=1860000 PD=920000
+* device instance $14 r0 *1 3.145,0.56 sky130_fd_pr__nfet_01v8
+XM$14 \$5 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $15 r0 *1 3.565,0.56 sky130_fd_pr__nfet_01v8
+XM$15 VGND B \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=99125000000 PS=920000 PD=955000
+* device instance $16 r0 *1 4.02,0.56 sky130_fd_pr__nfet_01v8
+XM$16 \$5 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=99125000000 AD=169000000000 PS=955000 PD=1820000
+* device instance $17 r0 *1 0.485,0.56 sky130_fd_pr__nfet_01v8
+XM$17 \$3 B \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=178750000000 AD=87750000000 PS=1850000 PD=920000
+* device instance $18 r0 *1 0.905,0.56 sky130_fd_pr__nfet_01v8
+XM$18 \$4 B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $19 r0 *1 1.325,0.56 sky130_fd_pr__nfet_01v8
+XM$19 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $20 r0 *1 1.745,0.56 sky130_fd_pr__nfet_01v8
+XM$20 VGND A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=182000000000 PS=920000 PD=1860000
+.ENDS sky130_fd_sc_hd__xnor2_2
+
+* cell sky130_fd_sc_hd__nand2_2
+* pin VPB
+* pin VPWR
+* pin Y
+* pin B
+* pin VGND
+* pin A
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__nand2_2 VPB VPWR Y B VGND A sky130_gnd
+* device instance $1 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$1 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=260000000000 AD=135000000000 PS=2520000 PD=1270000
+* device instance $2 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$2 Y B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $3 r0 *1 1.31,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 VPWR A Y VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $4 r0 *1 1.73,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 Y A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=260000000000 PS=1270000 PD=2520000
+* device instance $5 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
+XM$5 \$3 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=169000000000 AD=87750000000 PS=1820000 PD=920000
+* device instance $6 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
+XM$6 VGND B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $7 r0 *1 1.31,0.56 sky130_fd_pr__nfet_01v8
+XM$7 \$3 A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $8 r0 *1 1.73,0.56 sky130_fd_pr__nfet_01v8
+XM$8 Y A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=169000000000 PS=920000 PD=1820000
+.ENDS sky130_fd_sc_hd__nand2_2
+
+* cell VIA_M3M4_PR
+* pin 
+.SUBCKT VIA_M3M4_PR \$1
+.ENDS VIA_M3M4_PR
+
+* cell sky130_fd_sc_hd__a21o_2
+* pin VPB
+* pin VPWR
+* pin VGND
+* pin X
+* pin B1
+* pin A1
+* pin A2
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__a21o_2 VPB VPWR VGND X B1 A1 A2 sky130_gnd
+* device instance $1 r0 *1 1.855,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$1 \$6 B1 \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=265000000000 AD=140000000000 PS=2530000 PD=1280000
+* device instance $2 r0 *1 2.285,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$2 \$2 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=157500000000 PS=1280000 PD=1315000
+* device instance $3 r0 *1 2.75,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 VPWR A2 \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=157500000000 AD=260000000000 PS=1315000 PD=2520000
+* device instance $4 r0 *1 0.475,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 VPWR \$6 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=265000000000 AD=140000000000 PS=2530000 PD=1280000
+* device instance $5 r0 *1 0.905,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$5 X \$6 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=265000000000 PS=1280000 PD=2530000
+* device instance $6 r0 *1 0.645,0.56 sky130_fd_pr__nfet_01v8
+XM$6 VGND \$6 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=172250000000 AD=91000000000 PS=1830000 PD=930000
+* device instance $7 r0 *1 1.075,0.56 sky130_fd_pr__nfet_01v8
+XM$7 X \$6 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=91000000000 AD=110500000000 PS=930000 PD=990000
+* device instance $8 r0 *1 1.565,0.56 sky130_fd_pr__nfet_01v8
+XM$8 VGND B1 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=110500000000 AD=162500000000 PS=990000 PD=1150000
+* device instance $9 r0 *1 2.215,0.56 sky130_fd_pr__nfet_01v8
+XM$9 \$6 A1 \$11 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=162500000000 AD=123500000000 PS=1150000 PD=1030000
+* device instance $10 r0 *1 2.745,0.56 sky130_fd_pr__nfet_01v8
+XM$10 \$11 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=123500000000 AD=172250000000 PS=1030000 PD=1830000
+.ENDS sky130_fd_sc_hd__a21o_2
+
+* cell sky130_fd_sc_hd__a21bo_2
+* pin VPB
+* pin VPWR
+* pin VGND
+* pin X
+* pin B1_N
+* pin A1
+* pin A2
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__a21bo_2 VPB VPWR VGND X B1_N A1 A2 sky130_gnd
+* device instance $1 r0 *1 2.35,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$1 \$8 \$7 \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=260000000000 AD=135000000000 PS=2520000 PD=1270000
+* device instance $2 r0 *1 2.77,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$2 \$2 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $3 r0 *1 3.19,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 VPWR A2 \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=260000000000 PS=1270000 PD=2520000
+* device instance $4 r0 *1 1.41,1.695 sky130_fd_pr__pfet_01v8_hvt
+XM$4 VPWR B1_N \$7 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=181500000000 AD=109200000000 PS=1510000 PD=1360000
+* device instance $5 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$5 VPWR \$8 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=260000000000 AD=140000000000 PS=2520000 PD=1280000
+* device instance $6 r0 *1 0.9,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$6 X \$8 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=181500000000 PS=1280000 PD=1510000
+* device instance $7 r0 *1 2.35,0.56 sky130_fd_pr__nfet_01v8
+XM$7 VGND \$7 \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=169000000000 AD=107250000000 PS=1820000 PD=980000
+* device instance $8 r0 *1 2.83,0.56 sky130_fd_pr__nfet_01v8
+XM$8 \$8 A1 \$12 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=107250000000 AD=68250000000 PS=980000 PD=860000
+* device instance $9 r0 *1 3.19,0.56 sky130_fd_pr__nfet_01v8
+XM$9 \$12 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=68250000000 AD=169000000000 PS=860000 PD=1820000
+* device instance $10 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
+XM$10 VGND \$8 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=169000000000 AD=91000000000 PS=1820000 PD=930000
+* device instance $11 r0 *1 0.9,0.56 sky130_fd_pr__nfet_01v8
+XM$11 X \$8 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=91000000000 AD=108375000000 PS=930000 PD=1010000
+* device instance $12 r0 *1 1.41,0.675 sky130_fd_pr__nfet_01v8
+XM$12 VGND B1_N \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=108375000000 AD=109200000000 PS=1010000 PD=1360000
+.ENDS sky130_fd_sc_hd__a21bo_2
+
+* cell sky130_fd_sc_hd__or2_2
+* pin VPB
+* pin X
+* pin VPWR
+* pin VGND
+* pin B
+* pin A
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__or2_2 VPB X VPWR VGND B A sky130_gnd
+* device instance $1 r0 *1 0.53,1.695 sky130_fd_pr__pfet_01v8_hvt
+XM$1 \$3 B \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=109200000000 AD=44100000000 PS=1360000 PD=630000
+* device instance $2 r0 *1 0.89,1.695 sky130_fd_pr__pfet_01v8_hvt
+XM$2 \$9 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=44100000000 AD=155750000000 PS=630000 PD=1355000
+* device instance $3 r0 *1 1.395,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=155750000000 AD=135000000000 PS=1355000 PD=1270000
+* device instance $4 r0 *1 1.815,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=260000000000 PS=1270000 PD=2520000
+* device instance $5 r0 *1 0.47,0.445 sky130_fd_pr__nfet_01v8
+XM$5 VGND B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=109200000000 AD=56700000000 PS=1360000 PD=690000
+* device instance $6 r0 *1 0.89,0.445 sky130_fd_pr__nfet_01v8
+XM$6 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=56700000000 AD=106750000000 PS=690000 PD=1005000
+* device instance $7 r0 *1 1.395,0.56 sky130_fd_pr__nfet_01v8
+XM$7 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=106750000000 AD=87750000000 PS=1005000 PD=920000
+* device instance $8 r0 *1 1.815,0.56 sky130_fd_pr__nfet_01v8
+XM$8 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=169000000000 PS=920000 PD=1820000
+.ENDS sky130_fd_sc_hd__or2_2
+
+* cell sky130_fd_sc_hd__xor2_2
+* pin VGND
+* pin A
+* pin B
+* pin X
+* pin VPWR
+* pin VPB
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__xor2_2 VGND A B X VPWR VPB sky130_gnd
+* device instance $1 r0 *1 4.94,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$1 \$8 \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=260000000000 AD=135000000000 PS=2520000 PD=1270000
+* device instance $2 r0 *1 5.36,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$2 X \$3 \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=280000000000 PS=1270000 PD=2560000
+* device instance $3 r0 *1 2.685,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 \$8 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=260000000000 AD=135000000000 PS=2520000 PD=1270000
+* device instance $4 r0 *1 3.105,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 VPWR A \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $5 r0 *1 3.525,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$5 \$8 B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=162500000000 PS=1270000 PD=1325000
+* device instance $6 r0 *1 4,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$6 VPWR B \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=162500000000 AD=260000000000 PS=1325000 PD=2520000
+* device instance $7 r0 *1 0.485,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$7 \$9 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=275000000000 AD=135000000000 PS=2550000 PD=1270000
+* device instance $8 r0 *1 0.905,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$8 VPWR A \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $9 r0 *1 1.325,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$9 \$9 B \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $10 r0 *1 1.745,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$10 \$3 B \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=260000000000 PS=1270000 PD=2520000
+* device instance $11 r0 *1 4.94,0.56 sky130_fd_pr__nfet_01v8
+XM$11 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=169000000000 AD=87750000000 PS=1820000 PD=920000
+* device instance $12 r0 *1 5.36,0.56 sky130_fd_pr__nfet_01v8
+XM$12 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=169000000000 PS=920000 PD=1820000
+* device instance $13 r0 *1 2.685,0.56 sky130_fd_pr__nfet_01v8
+XM$13 \$6 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=169000000000 AD=87750000000 PS=1820000 PD=920000
+* device instance $14 r0 *1 3.105,0.56 sky130_fd_pr__nfet_01v8
+XM$14 VGND A \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $15 r0 *1 3.525,0.56 sky130_fd_pr__nfet_01v8
+XM$15 \$6 B X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=105625000000 PS=920000 PD=975000
+* device instance $16 r0 *1 4,0.56 sky130_fd_pr__nfet_01v8
+XM$16 X B \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=105625000000 AD=169000000000 PS=975000 PD=1820000
+* device instance $17 r0 *1 0.485,0.56 sky130_fd_pr__nfet_01v8
+XM$17 VGND A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=178750000000 AD=87750000000 PS=1850000 PD=920000
+* device instance $18 r0 *1 0.905,0.56 sky130_fd_pr__nfet_01v8
+XM$18 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $19 r0 *1 1.325,0.56 sky130_fd_pr__nfet_01v8
+XM$19 VGND B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $20 r0 *1 1.745,0.56 sky130_fd_pr__nfet_01v8
+XM$20 \$3 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=169000000000 PS=920000 PD=1820000
+.ENDS sky130_fd_sc_hd__xor2_2
+
+* cell sky130_fd_sc_hd__and2_2
+* pin VPB
+* pin VPWR
+* pin A
+* pin B
+* pin X
+* pin VGND
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__and2_2 VPB VPWR A B X VGND sky130_gnd
+* device instance $1 r0 *1 0.66,2.065 sky130_fd_pr__pfet_01v8_hvt
+XM$1 VPWR A \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=117600000000 AD=56700000000 PS=1400000 PD=690000
+* device instance $2 r0 *1 1.08,2.065 sky130_fd_pr__pfet_01v8_hvt
+XM$2 VPWR B \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=166550000000 AD=56700000000 PS=1390000 PD=690000
+* device instance $3 r0 *1 1.62,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=166550000000 AD=195000000000 PS=1390000 PD=1390000
+* device instance $4 r0 *1 2.16,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 X \$2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=195000000000 AD=380000000000 PS=1390000 PD=2760000
+* device instance $5 r0 *1 0.66,0.585 sky130_fd_pr__nfet_01v8
+XM$5 \$2 A \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=117600000000 AD=56700000000 PS=1400000 PD=690000
+* device instance $6 r0 *1 1.08,0.585 sky130_fd_pr__nfet_01v8
+XM$6 VGND B \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=111800000000 AD=56700000000 PS=1040000 PD=690000
+* device instance $7 r0 *1 1.62,0.56 sky130_fd_pr__nfet_01v8
+XM$7 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=111800000000 AD=126750000000 PS=1040000 PD=1040000
+* device instance $8 r0 *1 2.16,0.56 sky130_fd_pr__nfet_01v8
+XM$8 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=126750000000 AD=247000000000 PS=1040000 PD=2060000
+.ENDS sky130_fd_sc_hd__and2_2
+
+* cell sky130_fd_sc_hd__o21bai_2
+* pin VGND
+* pin B1_N
+* pin Y
+* pin A2
+* pin A1
+* pin VPWR
+* pin VPB
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__o21bai_2 VGND B1_N Y A2 A1 VPWR VPB sky130_gnd
+* device instance $1 r0 *1 0.475,1.695 sky130_fd_pr__pfet_01v8_hvt
+XM$1 \$3 B1_N VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=109200000000 AD=145750000000 PS=1360000 PD=1335000
+* device instance $2 r0 *1 0.96,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$2 VPWR \$3 Y VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=145750000000 AD=135000000000 PS=1335000 PD=1270000
+* device instance $3 r0 *1 1.38,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 Y \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=260000000000 PS=1270000 PD=2520000
+* device instance $4 r0 *1 2.32,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 \$9 A2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=260000000000 AD=135000000000 PS=2520000 PD=1270000
+* device instance $5 r0 *1 2.74,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$5 Y A2 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $6 r0 *1 3.16,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$6 \$9 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $7 r0 *1 3.58,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$7 VPWR A1 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=280000000000 PS=1270000 PD=2560000
+* device instance $8 r0 *1 1.48,0.56 sky130_fd_pr__nfet_01v8
+XM$8 \$4 \$3 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=169000000000 AD=87750000000 PS=1820000 PD=920000
+* device instance $9 r0 *1 1.9,0.56 sky130_fd_pr__nfet_01v8
+XM$9 Y \$3 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $10 r0 *1 2.32,0.56 sky130_fd_pr__nfet_01v8
+XM$10 \$4 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $11 r0 *1 2.74,0.56 sky130_fd_pr__nfet_01v8
+XM$11 VGND A2 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $12 r0 *1 3.16,0.56 sky130_fd_pr__nfet_01v8
+XM$12 \$4 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $13 r0 *1 3.58,0.56 sky130_fd_pr__nfet_01v8
+XM$13 VGND A1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=182000000000 PS=920000 PD=1860000
+* device instance $14 r0 *1 0.475,0.675 sky130_fd_pr__nfet_01v8
+XM$14 VGND B1_N \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=109200000000 AD=109200000000 PS=1360000 PD=1360000
+.ENDS sky130_fd_sc_hd__o21bai_2
+
+* cell sky130_fd_sc_hd__a21boi_2
+* pin VGND
+* pin B1_N
+* pin Y
+* pin A2
+* pin A1
+* pin VPWR
+* pin VPB
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__a21boi_2 VGND B1_N Y A2 A1 VPWR VPB sky130_gnd
+* device instance $1 r0 *1 1.42,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$1 \$11 \$4 Y VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=260000000000 AD=135000000000 PS=2520000 PD=1270000
+* device instance $2 r0 *1 1.84,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$2 Y \$4 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $3 r0 *1 2.26,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 \$11 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $4 r0 *1 2.68,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 VPWR A1 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=140000000000 PS=1270000 PD=1280000
+* device instance $5 r0 *1 3.11,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$5 \$11 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $6 r0 *1 3.54,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$6 VPWR A2 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=285000000000 PS=1280000 PD=2570000
+* device instance $7 r0 *1 0.475,2.1 sky130_fd_pr__pfet_01v8_hvt
+XM$7 VPWR B1_N \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=111300000000 AD=111300000000 PS=1370000 PD=1370000
+* device instance $8 r0 *1 0.68,0.445 sky130_fd_pr__nfet_01v8
+XM$8 \$4 B1_N VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=126000000000 AD=183125000000 PS=1440000 PD=1240000
+* device instance $9 r0 *1 1.42,0.56 sky130_fd_pr__nfet_01v8
+XM$9 VGND \$4 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=183125000000 AD=87750000000 PS=1240000 PD=920000
+* device instance $10 r0 *1 1.84,0.56 sky130_fd_pr__nfet_01v8
+XM$10 Y \$4 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=107250000000 PS=920000 PD=980000
+* device instance $11 r0 *1 2.32,0.56 sky130_fd_pr__nfet_01v8
+XM$11 VGND A2 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=107250000000 AD=68250000000 PS=980000 PD=860000
+* device instance $12 r0 *1 2.68,0.56 sky130_fd_pr__nfet_01v8
+XM$12 \$9 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=68250000000 AD=91000000000 PS=860000 PD=930000
+* device instance $13 r0 *1 3.11,0.56 sky130_fd_pr__nfet_01v8
+XM$13 Y A1 \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=91000000000 AD=91000000000 PS=930000 PD=930000
+* device instance $14 r0 *1 3.54,0.56 sky130_fd_pr__nfet_01v8
+XM$14 \$8 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=91000000000 AD=185250000000 PS=930000 PD=1870000
+.ENDS sky130_fd_sc_hd__a21boi_2
+
+* cell sky130_fd_sc_hd__nor2_2
+* pin VPB
+* pin VGND
+* pin A
+* pin VPWR
+* pin Y
+* pin B
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__nor2_2 VPB VGND A VPWR Y B sky130_gnd
+* device instance $1 r0 *1 0.49,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$1 \$3 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=280000000000 AD=135000000000 PS=2560000 PD=1270000
+* device instance $2 r0 *1 0.91,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$2 VPWR A \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $3 r0 *1 1.33,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 \$3 B Y VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000 AS=135000000000
++ AD=135000000000 PS=1270000 PD=1270000
+* device instance $4 r0 *1 1.75,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 Y B \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000 AS=135000000000
++ AD=260000000000 PS=1270000 PD=2520000
+* device instance $5 r0 *1 0.49,0.56 sky130_fd_pr__nfet_01v8
+XM$5 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=182000000000 AD=87750000000 PS=1860000 PD=920000
+* device instance $6 r0 *1 0.91,0.56 sky130_fd_pr__nfet_01v8
+XM$6 Y A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $7 r0 *1 1.33,0.56 sky130_fd_pr__nfet_01v8
+XM$7 VGND B Y sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $8 r0 *1 1.75,0.56 sky130_fd_pr__nfet_01v8
+XM$8 Y B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=169000000000 PS=920000 PD=1820000
+.ENDS sky130_fd_sc_hd__nor2_2
+
+* cell sky130_fd_sc_hd__a31o_2
+* pin VPB
+* pin X
+* pin VPWR
+* pin A3
+* pin A2
+* pin A1
+* pin VGND
+* pin B1
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__a31o_2 VPB X VPWR A3 A2 A1 VGND B1 sky130_gnd
+* device instance $1 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$1 VPWR \$8 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=260000000000 AD=135000000000 PS=2520000 PD=1270000
+* device instance $2 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$2 X \$8 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $3 r0 *1 1.31,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 VPWR A3 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=135000000000 PS=1270000 PD=1270000
+* device instance $4 r0 *1 1.73,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 \$5 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=165000000000 PS=1270000 PD=1330000
+* device instance $5 r0 *1 2.21,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$5 VPWR A1 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=165000000000 AD=165000000000 PS=1330000 PD=1330000
+* device instance $6 r0 *1 2.69,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$6 \$5 B1 \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=165000000000 AD=320000000000 PS=1330000 PD=2640000
+* device instance $7 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
+XM$7 VGND \$8 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=169000000000 AD=87750000000 PS=1820000 PD=920000
+* device instance $8 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
+XM$8 X \$8 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $9 r0 *1 1.31,0.56 sky130_fd_pr__nfet_01v8
+XM$9 VGND A3 \$13 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=87750000000 PS=920000 PD=920000
+* device instance $10 r0 *1 1.73,0.56 sky130_fd_pr__nfet_01v8
+XM$10 \$13 A2 \$12 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=107250000000 PS=920000 PD=980000
+* device instance $11 r0 *1 2.21,0.56 sky130_fd_pr__nfet_01v8
+XM$11 \$12 A1 \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=107250000000 AD=126750000000 PS=980000 PD=1040000
+* device instance $12 r0 *1 2.75,0.56 sky130_fd_pr__nfet_01v8
+XM$12 \$8 B1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=126750000000 AD=169000000000 PS=1040000 PD=1820000
+.ENDS sky130_fd_sc_hd__a31o_2
+
+* cell VIA_M2M3_PR
+* pin 
+.SUBCKT VIA_M2M3_PR \$1
+.ENDS VIA_M2M3_PR
+
+* cell sky130_fd_sc_hd__dfrtp_2
+* pin VGND
+* pin RESET_B
+* pin Q
+* pin CLK
+* pin D
+* pin VPWR
+* pin VPB
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__dfrtp_2 VGND RESET_B Q CLK D VPWR VPB sky130_gnd
+* device instance $1 r0 *1 5.35,2.065 sky130_fd_pr__pfet_01v8_hvt
+XM$1 VPWR \$6 \$17 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=840000
++ AS=218400000000 AD=129150000000 PS=2200000 PD=1185000
+* device instance $2 r0 *1 5.845,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$2 \$17 \$3 \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=129150000000 AD=58800000000 PS=1185000 PD=700000
+* device instance $3 r0 *1 6.275,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$3 \$8 \$4 \$20 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=58800000000 AD=56700000000 PS=700000 PD=690000
+* device instance $4 r0 *1 6.695,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$4 \$20 \$9 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=56700000000 AD=81900000000 PS=690000 PD=810000
+* device instance $5 r0 *1 7.235,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$5 VPWR RESET_B \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=81900000000 AD=56700000000 PS=810000 PD=690000
+* device instance $6 r0 *1 7.655,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$6 \$9 \$8 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=56700000000 AD=113400000000 PS=690000 PD=1380000
+* device instance $7 r0 *1 0.47,2.135 sky130_fd_pr__pfet_01v8_hvt
+XM$7 \$3 CLK VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=640000
++ AS=166400000000 AD=86400000000 PS=1800000 PD=910000
+* device instance $8 r0 *1 0.89,2.135 sky130_fd_pr__pfet_01v8_hvt
+XM$8 VPWR \$3 \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=640000
++ AS=86400000000 AD=166400000000 PS=910000 PD=1800000
+* device instance $9 r0 *1 2.225,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$9 VPWR D \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=109200000000 AD=65100000000 PS=1360000 PD=730000
+* device instance $10 r0 *1 2.685,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$10 \$5 \$4 \$6 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=65100000000 AD=72450000000 PS=730000 PD=765000
+* device instance $11 r0 *1 3.18,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$11 \$6 \$3 \$19 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=72450000000 AD=115500000000 PS=765000 PD=970000
+* device instance $12 r0 *1 3.88,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$12 \$19 \$17 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=115500000000 AD=70350000000 PS=970000 PD=755000
+* device instance $13 r0 *1 4.365,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$13 VPWR RESET_B \$19 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=70350000000 AD=109200000000 PS=755000 PD=1360000
+* device instance $14 r0 *1 8.73,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$14 VPWR \$9 Q VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=301200000000 AD=135000000000 PS=2660000 PD=1270000
+* device instance $15 r0 *1 9.15,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$15 Q \$9 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=260000000000 PS=1270000 PD=2520000
+* device instance $16 r0 *1 8.73,0.56 sky130_fd_pr__nfet_01v8
+XM$16 VGND \$9 Q sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=208700000000 AD=87750000000 PS=2020000 PD=920000
+* device instance $17 r0 *1 9.15,0.56 sky130_fd_pr__nfet_01v8
+XM$17 Q \$9 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=169000000000 PS=920000 PD=1820000
+* device instance $18 r0 *1 2.64,0.415 sky130_fd_pr__nfet_01v8
+XM$18 \$5 \$3 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=360000
++ AS=66000000000 AD=59400000000 PS=745000 PD=690000
+* device instance $19 r0 *1 3.12,0.415 sky130_fd_pr__nfet_01v8
+XM$19 \$6 \$4 \$13 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=360000
++ AS=59400000000 AD=140100000000 PS=690000 PD=1100000
+* device instance $20 r0 *1 5.465,0.415 sky130_fd_pr__nfet_01v8
+XM$20 \$17 \$4 \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=360000
++ AS=99900000000 AD=71100000000 PS=985000 PD=755000
+* device instance $21 r0 *1 6.01,0.415 sky130_fd_pr__nfet_01v8
+XM$21 \$8 \$3 \$12 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=360000
++ AS=71100000000 AD=66900000000 PS=755000 PD=750000
+* device instance $22 r0 *1 2.165,0.445 sky130_fd_pr__nfet_01v8
+XM$22 VGND D \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=220500000000 AD=66000000000 PS=1890000 PD=745000
+* device instance $23 r0 *1 3.95,0.445 sky130_fd_pr__nfet_01v8
+XM$23 \$13 \$17 \$14 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=140100000000 AD=44100000000 PS=1100000 PD=630000
+* device instance $24 r0 *1 4.31,0.445 sky130_fd_pr__nfet_01v8
+XM$24 \$14 RESET_B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=44100000000 AD=134600000000 PS=630000 PD=1150000
+* device instance $25 r0 *1 6.49,0.445 sky130_fd_pr__nfet_01v8
+XM$25 \$12 \$9 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=66900000000 AD=124950000000 PS=750000 PD=1015000
+* device instance $26 r0 *1 7.235,0.445 sky130_fd_pr__nfet_01v8
+XM$26 VGND RESET_B \$11 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=124950000000 AD=64050000000 PS=1015000 PD=725000
+* device instance $27 r0 *1 7.69,0.445 sky130_fd_pr__nfet_01v8
+XM$27 \$11 \$8 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=64050000000 AD=109200000000 PS=725000 PD=1360000
+* device instance $28 r0 *1 4.97,0.555 sky130_fd_pr__nfet_01v8
+XM$28 VGND \$6 \$17 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=640000
++ AS=134600000000 AD=99900000000 PS=1150000 PD=985000
+* device instance $29 r0 *1 0.47,0.445 sky130_fd_pr__nfet_01v8
+XM$29 \$3 CLK VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=109200000000 AD=56700000000 PS=1360000 PD=690000
+* device instance $30 r0 *1 0.89,0.445 sky130_fd_pr__nfet_01v8
+XM$30 VGND \$3 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=56700000000 AD=109200000000 PS=690000 PD=1360000
+.ENDS sky130_fd_sc_hd__dfrtp_2
+
+* cell sky130_fd_sc_hd__mux2_1
+* pin VGND
+* pin X
+* pin A1
+* pin A0
+* pin S
+* pin VPWR
+* pin VPB
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__mux2_1 VGND X A1 A0 S VPWR VPB sky130_gnd
+* device instance $1 r0 *1 1.015,2.08 sky130_fd_pr__pfet_01v8_hvt
+XM$1 VPWR S \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=158350000000 AD=76650000000 PS=1395000 PD=785000
+* device instance $2 r0 *1 1.53,2.08 sky130_fd_pr__pfet_01v8_hvt
+XM$2 \$13 A0 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=76650000000 AD=193200000000 PS=785000 PD=1340000
+* device instance $3 r0 *1 2.6,2.08 sky130_fd_pr__pfet_01v8_hvt
+XM$3 \$5 A1 \$14 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=193200000000 AD=44100000000 PS=1340000 PD=630000
+* device instance $4 r0 *1 2.96,2.08 sky130_fd_pr__pfet_01v8_hvt
+XM$4 \$14 \$7 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=44100000000 AD=69300000000 PS=630000 PD=750000
+* device instance $5 r0 *1 3.44,2.08 sky130_fd_pr__pfet_01v8_hvt
+XM$5 VPWR S \$7 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=69300000000 AD=117600000000 PS=750000 PD=1400000
+* device instance $6 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$6 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=260000000000 AD=158350000000 PS=2520000 PD=1395000
+* device instance $7 r0 *1 1.015,0.445 sky130_fd_pr__nfet_01v8
+XM$7 VGND S \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=112850000000 AD=69300000000 PS=1045000 PD=750000
+* device instance $8 r0 *1 1.495,0.445 sky130_fd_pr__nfet_01v8
+XM$8 \$8 A1 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=69300000000 AD=99750000000 PS=750000 PD=895000
+* device instance $9 r0 *1 2.12,0.445 sky130_fd_pr__nfet_01v8
+XM$9 \$5 A0 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=99750000000 AD=69300000000 PS=895000 PD=750000
+* device instance $10 r0 *1 2.6,0.445 sky130_fd_pr__nfet_01v8
+XM$10 \$9 \$7 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=69300000000 AD=144900000000 PS=750000 PD=1110000
+* device instance $11 r0 *1 3.44,0.445 sky130_fd_pr__nfet_01v8
+XM$11 VGND S \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=144900000000 AD=109200000000 PS=1110000 PD=1360000
+* device instance $12 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
+XM$12 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=169000000000 AD=112850000000 PS=1820000 PD=1045000
+.ENDS sky130_fd_sc_hd__mux2_1
+
+* cell VIA_L1M1_PR_MR
+* pin 
+.SUBCKT VIA_L1M1_PR_MR \$1
+.ENDS VIA_L1M1_PR_MR
+
+* cell sky130_fd_sc_hd__and3_2
+* pin VPB
+* pin A
+* pin B
+* pin C
+* pin VGND
+* pin VPWR
+* pin X
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__and3_2 VPB A B C VGND VPWR X sky130_gnd
+* device instance $1 r0 *1 1.375,1.695 sky130_fd_pr__pfet_01v8_hvt
+XM$1 \$4 C VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=74375000000 AD=150750000000 PS=815000 PD=1345000
+* device instance $2 r0 *1 0.48,1.765 sky130_fd_pr__pfet_01v8_hvt
+XM$2 \$4 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=109200000000 AD=56700000000 PS=1360000 PD=690000
+* device instance $3 r0 *1 0.9,1.765 sky130_fd_pr__pfet_01v8_hvt
+XM$3 \$4 B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=74375000000 AD=56700000000 PS=815000 PD=690000
+* device instance $4 r0 *1 1.87,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 VPWR \$4 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=150750000000 AD=135000000000 PS=1345000 PD=1270000
+* device instance $5 r0 *1 2.29,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$5 X \$4 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=260000000000 PS=1270000 PD=2520000
+* device instance $6 r0 *1 0.485,0.475 sky130_fd_pr__nfet_01v8
+XM$6 \$4 A \$11 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=109200000000 AD=44100000000 PS=1360000 PD=630000
+* device instance $7 r0 *1 0.845,0.475 sky130_fd_pr__nfet_01v8
+XM$7 \$11 B \$10 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=44100000000 AD=53550000000 PS=630000 PD=675000
+* device instance $8 r0 *1 1.25,0.475 sky130_fd_pr__nfet_01v8
+XM$8 VGND C \$10 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=130400000000 AD=53550000000 PS=1105000 PD=675000
+* device instance $9 r0 *1 1.855,0.56 sky130_fd_pr__nfet_01v8
+XM$9 VGND \$4 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=130400000000 AD=87750000000 PS=1105000 PD=920000
+* device instance $10 r0 *1 2.275,0.56 sky130_fd_pr__nfet_01v8
+XM$10 X \$4 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=178750000000 PS=920000 PD=1850000
+.ENDS sky130_fd_sc_hd__and3_2
+
+* cell VIA_via2_3_2000_480_1_6_320_320
+* pin 
+.SUBCKT VIA_via2_3_2000_480_1_6_320_320 \$1
+.ENDS VIA_via2_3_2000_480_1_6_320_320
+
+* cell VIA_via3_4_2000_480_1_5_400_400
+* pin 
+.SUBCKT VIA_via3_4_2000_480_1_5_400_400 \$1
+.ENDS VIA_via3_4_2000_480_1_5_400_400
+
+* cell VIA_via4_5_2000_480_1_5_400_400
+* pin 
+.SUBCKT VIA_via4_5_2000_480_1_5_400_400 \$1
+.ENDS VIA_via4_5_2000_480_1_5_400_400
+
+* cell VIA_via5_6_2000_2000_1_1_1600_1600
+* pin 
+.SUBCKT VIA_via5_6_2000_2000_1_1_1600_1600 \$1
+.ENDS VIA_via5_6_2000_2000_1_1_1600_1600
+
+* cell VIA_M1M2_PR
+* pin 
+.SUBCKT VIA_M1M2_PR \$1
+.ENDS VIA_M1M2_PR
+
+* cell sky130_fd_sc_hd__and4bb_2
+* pin VGND
+* pin X
+* pin C
+* pin D
+* pin B_N
+* pin A_N
+* pin VPWR
+* pin VPB
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__and4bb_2 VGND X C D B_N A_N VPWR VPB sky130_gnd
+* device instance $1 r0 *1 0.47,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$1 VPWR A_N \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=140750000000 AD=109200000000 PS=1325000 PD=1360000
+* device instance $2 r0 *1 0.945,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$2 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140750000000 AD=135000000000 PS=1325000 PD=1270000
+* device instance $3 r0 *1 1.365,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=135000000000 AD=330750000000 PS=1270000 PD=1705000
+* device instance $4 r0 *1 2.22,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$4 VPWR \$3 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=330750000000 AD=67200000000 PS=1705000 PD=740000
+* device instance $5 r0 *1 2.69,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$5 \$5 \$13 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=67200000000 AD=58800000000 PS=740000 PD=700000
+* device instance $6 r0 *1 3.12,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$6 VPWR C \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=58800000000 AD=56700000000 PS=700000 PD=690000
+* device instance $7 r0 *1 3.54,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$7 \$5 D VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=56700000000 AD=92400000000 PS=690000 PD=860000
+* device instance $8 r0 *1 4.13,2.275 sky130_fd_pr__pfet_01v8_hvt
+XM$8 VPWR B_N \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=420000
++ AS=92400000000 AD=109200000000 PS=860000 PD=1360000
+* device instance $9 r0 *1 0.47,0.445 sky130_fd_pr__nfet_01v8
+XM$9 \$3 A_N VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=109200000000 AD=97000000000 PS=1360000 PD=975000
+* device instance $10 r0 *1 0.945,0.56 sky130_fd_pr__nfet_01v8
+XM$10 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=97000000000 AD=87750000000 PS=975000 PD=920000
+* device instance $11 r0 *1 1.365,0.56 sky130_fd_pr__nfet_01v8
+XM$11 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=650000
++ AS=87750000000 AD=169000000000 PS=920000 PD=1820000
+* device instance $12 r0 *1 2.305,0.445 sky130_fd_pr__nfet_01v8
+XM$12 \$5 \$3 \$10 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=109200000000 AD=44100000000 PS=1360000 PD=630000
+* device instance $13 r0 *1 2.665,0.445 sky130_fd_pr__nfet_01v8
+XM$13 \$10 \$13 \$11 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=44100000000 AD=64050000000 PS=630000 PD=725000
+* device instance $14 r0 *1 3.12,0.445 sky130_fd_pr__nfet_01v8
+XM$14 \$11 C \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=64050000000 AD=56700000000 PS=725000 PD=690000
+* device instance $15 r0 *1 3.54,0.445 sky130_fd_pr__nfet_01v8
+XM$15 \$9 D VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=56700000000 AD=92400000000 PS=690000 PD=860000
+* device instance $16 r0 *1 4.13,0.445 sky130_fd_pr__nfet_01v8
+XM$16 VGND B_N \$13 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=92400000000 AD=109200000000 PS=860000 PD=1360000
+.ENDS sky130_fd_sc_hd__and4bb_2
+
+* cell sky130_fd_sc_hd__clkbuf_16
+* pin VGND
+* pin A
+* pin X
+* pin VPWR
+* pin VPB
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__clkbuf_16 VGND A X VPWR VPB sky130_gnd
+* device instance $1 r0 *1 0.475,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$1 VPWR A \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=265000000000 AD=140000000000 PS=2530000 PD=1280000
+* device instance $2 r0 *1 0.905,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$2 \$3 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $3 r0 *1 1.335,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 VPWR A \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $4 r0 *1 1.765,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 \$3 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $5 r0 *1 2.195,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$5 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $6 r0 *1 2.625,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$6 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $7 r0 *1 3.055,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$7 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $8 r0 *1 3.485,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$8 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $9 r0 *1 3.915,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$9 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $10 r0 *1 4.345,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$10 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $11 r0 *1 4.775,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$11 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $12 r0 *1 5.205,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$12 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=137500000000 PS=1280000 PD=1275000
+* device instance $13 r0 *1 5.63,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$13 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=137500000000 AD=140000000000 PS=1275000 PD=1280000
+* device instance $14 r0 *1 6.06,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$14 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $15 r0 *1 6.49,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$15 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $16 r0 *1 6.92,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$16 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $17 r0 *1 7.35,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$17 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $18 r0 *1 7.78,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$18 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $19 r0 *1 8.21,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$19 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=140000000000 PS=1280000 PD=1280000
+* device instance $20 r0 *1 8.64,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$20 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=150000 W=1000000
++ AS=140000000000 AD=265000000000 PS=1280000 PD=2530000
+* device instance $21 r0 *1 0.475,0.445 sky130_fd_pr__nfet_01v8
+XM$21 VGND A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=111300000000 AD=58800000000 PS=1370000 PD=700000
+* device instance $22 r0 *1 0.905,0.445 sky130_fd_pr__nfet_01v8
+XM$22 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $23 r0 *1 1.335,0.445 sky130_fd_pr__nfet_01v8
+XM$23 VGND A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $24 r0 *1 1.765,0.445 sky130_fd_pr__nfet_01v8
+XM$24 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $25 r0 *1 2.195,0.445 sky130_fd_pr__nfet_01v8
+XM$25 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $26 r0 *1 2.625,0.445 sky130_fd_pr__nfet_01v8
+XM$26 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $27 r0 *1 3.055,0.445 sky130_fd_pr__nfet_01v8
+XM$27 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $28 r0 *1 3.485,0.445 sky130_fd_pr__nfet_01v8
+XM$28 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $29 r0 *1 3.915,0.445 sky130_fd_pr__nfet_01v8
+XM$29 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $30 r0 *1 4.345,0.445 sky130_fd_pr__nfet_01v8
+XM$30 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $31 r0 *1 4.775,0.445 sky130_fd_pr__nfet_01v8
+XM$31 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $32 r0 *1 5.205,0.445 sky130_fd_pr__nfet_01v8
+XM$32 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=57750000000 PS=700000 PD=695000
+* device instance $33 r0 *1 5.63,0.445 sky130_fd_pr__nfet_01v8
+XM$33 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=57750000000 AD=58800000000 PS=695000 PD=700000
+* device instance $34 r0 *1 6.06,0.445 sky130_fd_pr__nfet_01v8
+XM$34 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $35 r0 *1 6.49,0.445 sky130_fd_pr__nfet_01v8
+XM$35 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $36 r0 *1 6.92,0.445 sky130_fd_pr__nfet_01v8
+XM$36 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $37 r0 *1 7.35,0.445 sky130_fd_pr__nfet_01v8
+XM$37 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $38 r0 *1 7.78,0.445 sky130_fd_pr__nfet_01v8
+XM$38 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $39 r0 *1 8.21,0.445 sky130_fd_pr__nfet_01v8
+XM$39 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=58800000000 PS=700000 PD=700000
+* device instance $40 r0 *1 8.64,0.445 sky130_fd_pr__nfet_01v8
+XM$40 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=58800000000 AD=111300000000 PS=700000 PD=1370000
+.ENDS sky130_fd_sc_hd__clkbuf_16
+
+* cell sky130_fd_sc_hd__tapvpwrvgnd_1
+* pin VPWR
+* pin VGND
+.SUBCKT sky130_fd_sc_hd__tapvpwrvgnd_1 VPWR VGND
+.ENDS sky130_fd_sc_hd__tapvpwrvgnd_1
+
+* cell sky130_fd_sc_hd__decap_3
+* pin VPB
+* pin VGND
+* pin VPWR
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__decap_3 VPB VGND VPWR sky130_gnd
+* device instance $1 r0 *1 0.69,2.05 sky130_fd_pr__pfet_01v8_hvt
+XM$1 VPWR VGND VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=590000 W=870000
++ AS=226200000000 AD=226200000000 PS=2260000 PD=2260000
+* device instance $2 r0 *1 0.69,0.51 sky130_fd_pr__nfet_01v8
+XM$2 VGND VPWR VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=590000 W=550000
++ AS=143000000000 AD=143000000000 PS=1620000 PD=1620000
+.ENDS sky130_fd_sc_hd__decap_3

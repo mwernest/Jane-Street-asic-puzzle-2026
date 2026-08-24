@@ -1,0 +1,8 @@
+* test block
+
+.include "C:/Users/mwern/KLayout/salt/Efabless_sky130/tech/sky130/lvs/standard_cells/include_hd2.cdl"
+
+.subckt adder_demo A B S VGND VPWR clk en rst_n
+* clkbuf: A VGND VNB VPB VPWR X
+X$12 clk VGND VGND VPWR VPWR clk_b sky130_fd_sc_hd__clkbuf_16
+.ends

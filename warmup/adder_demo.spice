@@ -1,0 +1,171 @@
+* handwritten
+
+.include "C:/Users/mwern/KLayout/salt/Efabless_sky130/tech/sky130/lvs/standard_cells/include_hd2.cdl"
+.SUBCKT adder_demo A B S VGND VPWR clk en rst_n
+ 
+* \$13 => QA[0]
+* \$14 => QB[0]
+* \$426 => SELA[0]
+* \$275 => clk_b
+* \$376 => clkd
+* \$111 => SELB[0]
+* \$57 => clkd2
+* \$236 => SELB[1]
+* \$120 => QB[1]
+* \$368 => SELA[1]
+* \$118 => QA[1]
+* \$83 => QA[2]
+* \$473 => SELA[2]
+* \$397 => SELA[3]
+* \$45 => QA[3]
+* \$23 => QA[4]
+* \$464 => SELA[4] 
+* \$415 => SELA[5]
+* \$33 => QA[5]
+* \$422 => SELA[6]
+* \$210 => QA[6]
+* \$388 => SELA[7]
+* \$20 => QA[7]
+* \$162 => SELB[2]
+* \$42 => QB[2]
+* \$44 => SELB[3]
+* \$41 => QB[3]
+* \$59 => SELB[4]
+* \$22 => QB[4]
+* \$142 => SELB[5]
+* \$32 => QB[5]
+* \$92 => SELB[6]
+* \$67 => QB[6]
+* \$289 => SELB[7]
+* \$160 => QB[7]
+* 
+* \$15 => or0
+* \$257 => or2
+* \$61 => or3
+* \$102 => or5
+* \$74 => or6
+* \$179 => na0
+* \$55 => na2
+* \$73 => na6
+* \$105 => xn6
+
+* \$I1625 => sb
+
+* X$14 => XMA[0]
+
+* clkbuf: A VGND VNB VPB VPWR X
+X$12  clk   VGND VGND VPWR VPWR clk_b sky130_fd_sc_hd__clkbuf_16
+X$11  clk_b VGND VGND VPWR VPWR clkd  sky130_fd_sc_hd__clkbuf_16
+X$109 clk_b VGND VGND VPWR VPWR clkd2 sky130_fd_sc_hd__clkbuf_16
+
+
+* mux2_1: A0 A1 S VGND VNB VPB VPWR X
+* layout: sky130_fd_sc_hd__mux2_1 VGND X A1 A0 S VPWR VPB sky130_gnd
+XMA[0]  QA[0]  A    en VGND VGND VPWR VPWR SELA[0] sky130_fd_sc_hd__mux2_1
+XMA[1]  QA[1] QA[0] en VGND VGND \$I1508 VPWR SELA[1] sky130_fd_sc_hd__mux2_1
+XMA[2]  QA[2] QA[1] en VGND VGND VPWR VPWR SELA[2] sky130_fd_sc_hd__mux2_1
+XMA[3]  QA[3] QA[2] en VGND VGND VPWR VPWR SELA[3] sky130_fd_sc_hd__mux2_1
+XMA[4]  QA[4] QA[3] en VGND VGND VPWR VPWR SELA[4] sky130_fd_sc_hd__mux2_1
+XMA[5]  QA[5] QA[4] en VGND VGND VPWR VPWR SELA[5] sky130_fd_sc_hd__mux2_1
+XMA[6]  QA[6] QA[5] en VGND VGND VPWR VPWR SELA[6] sky130_fd_sc_hd__mux2_1
+XMA[7]  QA[7] QA[6] en VGND VGND VPWR VPWR SELA[7] sky130_fd_sc_hd__mux2_1
+
+XMB[0]  QB[0]  B    en VGND VGND VPWR VPWR SELB[0] sky130_fd_sc_hd__mux2_1
+XMB[1]  QB[1] QB[0] en VGND VGND VPWR VPWR SELB[1] sky130_fd_sc_hd__mux2_1
+XMB[2]  QB[2] QB[1] en VGND VGND VPWR VPWR SELB[2] sky130_fd_sc_hd__mux2_1
+XMB[3]  QB[3] QB[2] en VGND VGND \$I1506 VPWR SELB[3] sky130_fd_sc_hd__mux2_1
+XMB[4]  QB[4] QB[3] en VGND VGND VPWR VPWR SELB[4] sky130_fd_sc_hd__mux2_1
+XMB[5]  QB[5] QB[4] en VGND VGND VPWR VPWR SELB[5] sky130_fd_sc_hd__mux2_1
+XMB[6]  QB[6] QB[5] en VGND VGND VPWR VPWR SELB[6] sky130_fd_sc_hd__mux2_1
+XMB[7]  QB[7] QB[6] en VGND VGND VPWR VPWR SELB[7] sky130_fd_sc_hd__mux2_1
+
+* sky130_fd_sc_hd__or2_2 A B VGND VNB VPB VPWR X
+X$61 QA[0] QB[0] VGND VGND \$I1159 VPWR or0 sky130_fd_sc_hd__or2_2
+X$60 QA[2] QB[2] VGND VGND VPWR    VPWR or2 sky130_fd_sc_hd__or2_2
+X$63 QA[3] QB[3] VGND VGND VPWR    VPWR or3 sky130_fd_sc_hd__or2_2
+X$78 QA[5] QB[5] VGND VGND VPWR    VPWR or5 sky130_fd_sc_hd__or2_2
+X$62 QA[6] QB[6] VGND VGND VPWR    VPWR or6 sky130_fd_sc_hd__or2_2
+
+* sky130_fd_sc_hd__nand2_2 A B VGND VNB VPB VPWR Y
+X$47 QA[0] QB[0] VGND VGND VPWR VPWR na0 sky130_fd_sc_hd__nand2_2
+X$45 QA[2] QB[2] VGND VGND VPWR VPWR na2 sky130_fd_sc_hd__nand2_2
+X$46 or6   na6   VGND VGND VPWR VPWR xn6 sky130_fd_sc_hd__nand2_2
+X$85 QA[6] QB[6] VGND VGND VPWR VPWR na6 sky130_fd_sc_hd__nand2_2
+
+
+* dfrtp_2: VGND RESET_B Q CLK D VPWR VPB
+* sky130_fd_sc_hd__dfrtp_2 CLK D RESET_B VGND VNB VPB VPWR Q
+XQA[0] clkd SELA[0] rst_n VGND VGND VPWR VPWR QA[0] sky130_fd_sc_hd__dfrtp_2
+XQA[1] clkd SELA[1] rst_n VGND VGND VPWR VPWR QA[1] sky130_fd_sc_hd__dfrtp_2
+XQA[2] clkd SELA[2] rst_n VGND VGND VPWR VPWR QA[2] sky130_fd_sc_hd__dfrtp_2
+XQA[3] clkd SELA[3] rst_n VGND VGND VPWR VPWR QA[3] sky130_fd_sc_hd__dfrtp_2
+XQA[4] clkd SELA[4] rst_n VGND VGND VPWR VPWR QA[4] sky130_fd_sc_hd__dfrtp_2
+XQA[5] clkd SELA[5] rst_n VGND VGND VPWR VPWR QA[5] sky130_fd_sc_hd__dfrtp_2
+XQA[6] clkd SELA[6] rst_n VGND VGND VPWR VPWR QA[6] sky130_fd_sc_hd__dfrtp_2
+XQA[7] clkd SELA[7] rst_n VGND VGND VPWR VPWR QA[7] sky130_fd_sc_hd__dfrtp_2
+
+XQB[0] clkd2 SELB[0] rst_n VGND VGND VPWR VPWR QB[0] sky130_fd_sc_hd__dfrtp_2
+XQB[1] clkd2 SELB[1] rst_n VGND VGND VPWR VPWR QB[1] sky130_fd_sc_hd__dfrtp_2
+XQB[2] clkd2 SELB[2] rst_n VGND VGND VPWR VPWR QB[2] sky130_fd_sc_hd__dfrtp_2
+XQB[3] clkd2 SELB[3] rst_n VGND VGND VPWR VPWR QB[3] sky130_fd_sc_hd__dfrtp_2
+XQB[4] clkd2 SELB[4] rst_n VGND VGND VPWR VPWR QB[4] sky130_fd_sc_hd__dfrtp_2
+XQB[5] clkd2 SELB[5] rst_n VGND VGND VPWR VPWR QB[5] sky130_fd_sc_hd__dfrtp_2
+XQB[6] clkd2 SELB[6] rst_n VGND VGND VPWR VPWR QB[6] sky130_fd_sc_hd__dfrtp_2
+XQB[7] clkd2 SELB[7] rst_n VGND VGND VPWR VPWR QB[7] sky130_fd_sc_hd__dfrtp_2
+
+* a3lo (A1&A2&A3) | B1: VPB X VPWR A3 A2 A1 VGND B1 sky130_gnd
+* sky130_fd_sc_hd__a31o_2 A1 A2 A3 B1 VGND VNB VPB VPWR X
+X$55 QB[0] QA[0] \$89 \$146 VGND VGND VPWR VPWR \$80 sky130_fd_sc_hd__a31o_2
+*X$55 VPWR \$80 VPWR \$89 QA[0] QB[0] VGND \$146 VGND sky130_fd_sc_hd__a31o_2
+X$52 QB[2] QA[2] or3 \$215 VGND VGND VPWR VPWR \$51 sky130_fd_sc_hd__a31o_2
+*X$52 VPWR \$51 VPWR or3 QA[2] QB[2] VGND \$215 VGND sky130_fd_sc_hd__a31o_2
+X$53 QB[4] QA[4] or5 \$153 VGND VGND VPWR VPWR \$197 sky130_fd_sc_hd__a31o_2
+*X$53 VPWR \$197 VPWR or5 QA[4] QB[4] VGND \$153 VGND sky130_fd_sc_hd__a31o_2
+
+X$56 \$52 \$49 \$262 \$197 VGND VGND VPWR VPWR \$123 sky130_fd_sc_hd__a31o_2
+*X$56 VPWR \$123 VPWR \$262 \$49 \$52 VGND \$197 VGND sky130_fd_sc_hd__a31o_2
+X$64 \$80 \$37 \$48 \$51 VGND VGND VPWR VPWR \$49 sky130_fd_sc_hd__a31o_2
+*X$64 VPWR \$49 VPWR \$48 \$37 \$80 VGND \$51 VGND sky130_fd_sc_hd__a31o_2
+
+* output
+*schematic: sky130_fd_sc_hd__and4bb_2 A_N B_N C D VGND VNB VPB VPWR X
+X$149 \$143 \$316 \$351 \$353 VGND VGND VPWR VPWR S sky130_fd_sc_hd__and4bb_2
+* layout: sky130_fd_sc_hd__and4bb_2 VGND X C D B_N A_N VPWR VPB sky130_gnd
+*X$149 VGND S \$351 \$353 \$316 \$143 VPWR VPWR VGND sky130_fd_sc_hd__and4bb_2
+*Xoutdrv sb S VPWR VGND outInv
+*XM$358 VPWR sb S VPWR sky130_fd_pr__pfet_01v8_hvt L=.15 W=2
+*XM$366 VGND sb S VGND sky130_fd_pr__nfet_01v8 L=.15 W=1.3
+.ENDS adder_demo
+
+*** Std cells that need special netlists ***
+* cell sky130_fd_sc_hd__a21boi_2
+* pin VGND
+* pin B1_N
+* pin Y
+* pin A2
+* pin A1
+* pin VPWR
+* pin VPB
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__a21boi_2 VGND B1_N Y A2 A1 VPWR VPB sky130_gnd
+* device instance $1 r0 *1 1.42,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$1 \$11 \$4 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15u W=2u
+* device instance $3 r0 *1 2.26,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 \$11 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15u W=2u
+* device instance $4 r0 *1 2.68,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 VPWR A1 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15u W=2u
+* device instance $7 r0 *1 0.475,2.1 sky130_fd_pr__pfet_01v8_hvt
+XM$7 VPWR B1_N \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15u W=0.42u
+* device instance $8 r0 *1 0.68,0.445 sky130_fd_pr__nfet_01v8
+XM$8 \$4 B1_N VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=0.42u
+* device instance $9 r0 *1 1.42,0.56 sky130_fd_pr__nfet_01v8
+XM$9 VGND \$4 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=1.3u
+* device instance $11 r0 *1 2.32,0.56 sky130_fd_pr__nfet_01v8
+XM$11 VGND A2 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=0.65u
+* device instance $12 r0 *1 2.68,0.56 sky130_fd_pr__nfet_01v8
+XM$12 \$9 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=0.65u
+* device instance $13 r0 *1 3.11,0.56 sky130_fd_pr__nfet_01v8
+XM$13 Y A1 \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=0.65u
+* device instance $14 r0 *1 3.54,0.56 sky130_fd_pr__nfet_01v8
+XM$14 \$8 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=0.65u
+.ENDS sky130_fd_sc_hd__a21boi_2
