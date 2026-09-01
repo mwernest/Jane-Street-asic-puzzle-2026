@@ -1,0 +1,52 @@
+* Handwritten netlist for puzzle
+*.include "C:/Users/mwern/KLayout/salt/Efabless_sky130/tech/sky130/lvs/standard_cells/include_hd.cdl"
+*.include "include_hd.cdl"
+.include "subckts.spice"
+
+.SUBCKT puzzle I O[0] O[1] O[2] O[3] O[4] O[5] O[6] O[7] VGND VPWR clk enable rst_n success
+
+*clkbuf sch: A VGND VNB VPB VPWR X
+*clkbuf_16 lay: VGND A X VPWR VPB sky130_gnd
+Xclkd VGND clk clkd VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_16
+
+
+.ENDS puzzle
+
+*** Std Cells that need special definition
+* cell sky130_fd_sc_hd__conb_1
+* pin VPB
+* pin HI,VPWR
+* pin LO,VGND
+*.SUBCKT sky130_fd_sc_hd__conb_1 VPB HI LO
+*.ENDS sky130_fd_sc_hd__conb_1
+* cell sky130_fd_sc_hd__a21boi_2
+* pin VGND
+* pin B1_N
+* pin Y
+* pin A2
+* pin A1
+* pin VPWR
+* pin VPB
+* pin sky130_gnd
+.SUBCKT sky130_fd_sc_hd__a21boi_2 VGND B1_N Y A2 A1 VPWR VPB sky130_gnd
+* device instance $1 r0 *1 1.42,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$1 \$11 \$4 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15u W=2u
+* device instance $3 r0 *1 2.26,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$3 \$11 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15u W=2u
+* device instance $4 r0 *1 2.68,1.985 sky130_fd_pr__pfet_01v8_hvt
+XM$4 VPWR A1 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15u W=2u
+* device instance $7 r0 *1 0.475,2.1 sky130_fd_pr__pfet_01v8_hvt
+XM$7 VPWR B1_N \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15u W=0.42u
+* device instance $8 r0 *1 0.68,0.445 sky130_fd_pr__nfet_01v8
+XM$8 \$4 B1_N VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=0.42u
+* device instance $9 r0 *1 1.42,0.56 sky130_fd_pr__nfet_01v8
+XM$9 VGND \$4 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=1.3u
+* device instance $11 r0 *1 2.32,0.56 sky130_fd_pr__nfet_01v8
+XM$11 VGND A2 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=0.65u
+* device instance $12 r0 *1 2.68,0.56 sky130_fd_pr__nfet_01v8
+XM$12 \$9 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=0.65u
+* device instance $13 r0 *1 3.11,0.56 sky130_fd_pr__nfet_01v8
+XM$13 Y A1 \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=0.65u
+* device instance $14 r0 *1 3.54,0.56 sky130_fd_pr__nfet_01v8
+XM$14 \$8 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15u W=0.65u
+.ENDS sky130_fd_sc_hd__a21boi_2
