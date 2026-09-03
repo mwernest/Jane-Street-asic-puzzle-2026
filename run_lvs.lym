@@ -165,7 +165,7 @@ if run:
         interpreter.define_variable(key, value)
 
     # Run the script
-    pya.Macro(os.path.join(path, '../lvs/sky130.lvs')).run()
+    pya.Macro(os.path.join(path, './sky130.lvs')).run() # localized copy of the lvs script
 
  </text>
 </klayout-macro>
