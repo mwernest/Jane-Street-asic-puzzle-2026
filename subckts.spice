@@ -1,9 +1,25 @@
 *** SUBCKT copied from std cell library
+*.SUBCKT sky130_fd_sc_hd__or4b_2 A B C D_N VGND VNB VPB VPWR X
+*.ENDS sky130_fd_sc_hd__or4b_2
 
+
+.SUBCKT sky130_fd_sc_hd__or4b_2_ref A B C D_N VGND VNB VPB VPWR X
+*.PININFO A:I B:I C:I D_N:I VGND:I VNB:I VPB:I VPWR:I X:O
+MMP0 VPWR A sndPA VPB sky130_fd_pr__pfet_01v8_hvt m=1 w=0.42 l=0.15 
+MMP1 sndPA B sndPB VPB sky130_fd_pr__pfet_01v8_hvt m=1 w=0.42 l=0.15 
+MMP2 sndPB C sndPC VPB sky130_fd_pr__pfet_01v8_hvt m=1 w=0.42 l=0.15
+MMP3 sndPC D y VPB sky130_fd_pr__pfet_01v8_hvt m=1 w=0.42 l=0.15 
+MMIP3 D D_N VPWR VPB sky130_fd_pr__pfet_01v8_hvt m=1 w=0.42 l=0.15
+MMIP4 X y VPWR VPB sky130_fd_pr__pfet_01v8_hvt m=2 w=1.0 l=0.15 
+MMN0 y A VGND VNB sky130_fd_pr__nfet_01v8 m=1 w=0.42 l=0.15 
+MMN1 y B VGND VNB sky130_fd_pr__nfet_01v8 m=1 w=0.42 l=0.15 
+MMN2 y C VGND VNB sky130_fd_pr__nfet_01v8 m=1 w=0.42 l=0.15 
+MMN3 y D VGND VNB sky130_fd_pr__nfet_01v8 m=1 w=0.42 l=0.15 
+MMIN3 D D_N VGND VNB sky130_fd_pr__nfet_01v8 m=1 w=0.42 l=0.15 
+MMIN4 X y VGND VNB sky130_fd_pr__nfet_01v8 m=2 w=0.65 l=0.15 
+.ENDS sky130_fd_sc_hd__or4b_2
 
 *** SUBCKT copied from extracted netlist ***
-
-
 * cell sky130_fd_sc_hd__o31ai_2
 * pin VGND
 * pin A1
@@ -16,53 +32,29 @@
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o31ai_2 VGND A1 A2 A3 Y B1 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 2.71,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 Y A3 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $2 r0 *1 3.13,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 \$12 A3 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$1 Y A3 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.27
++ PS=3.83 PD=2.54
 * device instance $3 r0 *1 3.55,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 Y B1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.195
-+ PS=1.27 PD=1.39
-* device instance $4 r0 *1 4.09,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR B1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.195 AD=0.26
-+ PS=1.39 PD=2.52
+XM$3 Y B1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.33 AD=0.455
++ PS=2.66 PD=3.91
 * device instance $5 r0 *1 0.49,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$9 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $6 r0 *1 0.91,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 VPWR A1 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$5 \$9 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.27
++ PS=3.83 PD=2.54
 * device instance $7 r0 *1 1.33,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 \$9 A2 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $8 r0 *1 1.75,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 \$12 A2 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$7 \$9 A2 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $9 r0 *1 0.49,0.56 sky130_fd_pr__nfet_01v8
-XM$9 \$3 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.182
-+ AD=0.08775 PS=1.86 PD=0.92
-* device instance $10 r0 *1 0.91,0.56 sky130_fd_pr__nfet_01v8
-XM$10 VGND A1 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$9 \$3 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26975
++ AD=0.1755 PS=2.78 PD=1.84
 * device instance $11 r0 *1 1.33,0.56 sky130_fd_pr__nfet_01v8
-XM$11 \$3 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.19825 PS=0.92 PD=1.26
-* device instance $12 r0 *1 2.09,0.56 sky130_fd_pr__nfet_01v8
-XM$12 VGND A2 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.19825
-+ AD=0.12675 PS=1.26 PD=1.04
+XM$11 \$3 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.286
++ AD=0.325 PS=2.18 PD=2.3
 * device instance $13 r0 *1 2.63,0.56 sky130_fd_pr__nfet_01v8
-XM$13 \$3 A3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.12675
-+ AD=0.11375 PS=1.04 PD=1
-* device instance $14 r0 *1 3.13,0.56 sky130_fd_pr__nfet_01v8
-XM$14 VGND A3 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.11375
-+ AD=0.08775 PS=1 PD=0.92
+XM$13 \$3 A3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.2405
++ AD=0.2015 PS=2.04 PD=1.92
 * device instance $15 r0 *1 3.55,0.56 sky130_fd_pr__nfet_01v8
-XM$15 \$3 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.12675 PS=0.92 PD=1.04
-* device instance $16 r0 *1 4.09,0.56 sky130_fd_pr__nfet_01v8
-XM$16 Y B1 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.12675
-+ AD=0.169 PS=1.04 PD=1.82
+XM$15 \$3 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.2145
++ AD=0.29575 PS=1.96 PD=2.86
 .ENDS sky130_fd_sc_hd__o31ai_2
 
 * cell sky130_fd_sc_hd__a21bo_2
@@ -88,11 +80,8 @@ XM$3 VPWR A2 \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
 XM$4 VPWR B1_N \$7 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1815
 + AD=0.1092 PS=1.51 PD=1.36
 * device instance $5 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR \$8 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.14
-+ PS=2.52 PD=1.28
-* device instance $6 r0 *1 0.9,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 X \$8 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.1815
-+ PS=1.28 PD=1.51
+XM$5 VPWR \$8 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.4 AD=0.3215
++ PS=3.8 PD=2.79
 * device instance $7 r0 *1 2.35,0.56 sky130_fd_pr__nfet_01v8
 XM$7 VGND \$7 \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
 + AD=0.10725 PS=1.82 PD=0.98
@@ -103,11 +92,8 @@ XM$8 \$8 A1 \$12 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.10725
 XM$9 \$12 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.06825
 + AD=0.169 PS=0.86 PD=1.82
 * device instance $10 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$10 VGND \$8 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.091 PS=1.82 PD=0.93
-* device instance $11 r0 *1 0.9,0.56 sky130_fd_pr__nfet_01v8
-XM$11 X \$8 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.108375 PS=0.93 PD=1.01
+XM$10 VGND \$8 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26
++ AD=0.199375 PS=2.75 PD=1.94
 * device instance $12 r0 *1 1.41,0.675 sky130_fd_pr__nfet_01v8
 XM$12 VGND B1_N \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
 + AS=0.108375 AD=0.1092 PS=1.01 PD=1.36
@@ -125,53 +111,29 @@ XM$12 VGND B1_N \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o211ai_2 VGND Y A1 C1 B1 A2 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 2.775,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$10 A2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.265 AD=0.14
-+ PS=2.53 PD=1.28
-* device instance $2 r0 *1 3.205,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 Y A2 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
+XM$1 \$10 A2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.405 AD=0.28
++ PS=3.81 PD=2.56
 * device instance $3 r0 *1 3.635,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$10 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $4 r0 *1 4.065,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR A1 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.265
-+ PS=1.28 PD=2.53
+XM$3 \$10 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28 AD=0.405
++ PS=2.56 PD=3.81
 * device instance $5 r0 *1 0.495,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR C1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.265 AD=0.14
-+ PS=2.53 PD=1.28
-* device instance $6 r0 *1 0.925,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 Y C1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
+XM$5 VPWR C1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.405 AD=0.28
++ PS=3.81 PD=2.56
 * device instance $7 r0 *1 1.355,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 VPWR B1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $8 r0 *1 1.785,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 Y B1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.265
-+ PS=1.28 PD=2.53
+XM$7 VPWR B1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28 AD=0.405
++ PS=2.56 PD=3.81
 * device instance $9 r0 *1 2.775,0.56 sky130_fd_pr__nfet_01v8
-XM$9 VGND A2 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.18525
-+ AD=0.091 PS=1.87 PD=0.93
-* device instance $10 r0 *1 3.205,0.56 sky130_fd_pr__nfet_01v8
-XM$10 \$5 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.091 PS=0.93 PD=0.93
+XM$9 VGND A2 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.27625
++ AD=0.182 PS=2.8 PD=1.86
 * device instance $11 r0 *1 3.635,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND A1 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.091 PS=0.93 PD=0.93
-* device instance $12 r0 *1 4.065,0.56 sky130_fd_pr__nfet_01v8
-XM$12 \$5 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.18525 PS=0.93 PD=1.87
+XM$11 VGND A1 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.182
++ AD=0.27625 PS=1.86 PD=2.8
 * device instance $13 r0 *1 0.495,0.56 sky130_fd_pr__nfet_01v8
-XM$13 \$3 C1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.18525
-+ AD=0.091 PS=1.87 PD=0.93
-* device instance $14 r0 *1 0.925,0.56 sky130_fd_pr__nfet_01v8
-XM$14 Y C1 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.091 PS=0.93 PD=0.93
+XM$13 \$3 C1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.27625
++ AD=0.182 PS=2.8 PD=1.86
 * device instance $15 r0 *1 1.355,0.56 sky130_fd_pr__nfet_01v8
-XM$15 \$3 B1 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.091 PS=0.93 PD=0.93
-* device instance $16 r0 *1 1.785,0.56 sky130_fd_pr__nfet_01v8
-XM$16 \$5 B1 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.18525 PS=0.93 PD=1.87
+XM$15 \$3 B1 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.182
++ AD=0.27625 PS=1.86 PD=2.8
 .ENDS sky130_fd_sc_hd__o211ai_2
 
 * cell sky130_fd_sc_hd__o21bai_2
@@ -188,41 +150,23 @@ XM$16 \$5 B1 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
 XM$1 \$3 B1_N VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1092
 + AD=0.14575 PS=1.36 PD=1.335
 * device instance $2 r0 *1 0.96,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 VPWR \$3 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14575 AD=0.135
-+ PS=1.335 PD=1.27
-* device instance $3 r0 *1 1.38,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 Y \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$2 VPWR \$3 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28075 AD=0.395
++ PS=2.605 PD=3.79
 * device instance $4 r0 *1 2.32,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 \$9 A2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $5 r0 *1 2.74,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 Y A2 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$4 \$9 A2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $6 r0 *1 3.16,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 \$9 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $7 r0 *1 3.58,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 VPWR A1 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$6 \$9 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.415
++ PS=2.54 PD=3.83
 * device instance $8 r0 *1 1.48,0.56 sky130_fd_pr__nfet_01v8
-XM$8 \$4 \$3 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $9 r0 *1 1.9,0.56 sky130_fd_pr__nfet_01v8
-XM$9 Y \$3 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$8 \$4 \$3 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $10 r0 *1 2.32,0.56 sky130_fd_pr__nfet_01v8
-XM$10 \$4 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $11 r0 *1 2.74,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND A2 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$10 \$4 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.1755 PS=1.84 PD=1.84
 * device instance $12 r0 *1 3.16,0.56 sky130_fd_pr__nfet_01v8
-XM$12 \$4 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $13 r0 *1 3.58,0.56 sky130_fd_pr__nfet_01v8
-XM$13 VGND A1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.182 PS=0.92 PD=1.86
+XM$12 \$4 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.26975 PS=1.84 PD=2.78
 * device instance $14 r0 *1 0.475,0.675 sky130_fd_pr__nfet_01v8
 XM$14 VGND B1_N \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.1092 PS=1.36 PD=1.36
@@ -241,11 +185,8 @@ XM$14 VGND B1_N \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__a311o_2 VGND X A3 A2 A1 B1 C1 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR \$4 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 X \$4 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.24
-+ PS=1.27 PD=1.48
+XM$1 VPWR \$4 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.375
++ PS=3.79 PD=2.75
 * device instance $3 r0 *1 1.52,1.985 sky130_fd_pr__pfet_01v8_hvt
 XM$3 VPWR A3 \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.24 AD=0.17
 + PS=1.48 PD=1.34
@@ -262,11 +203,8 @@ XM$6 \$13 B1 \$15 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.21 AD=0.21
 XM$7 \$15 C1 \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.21 AD=0.26
 + PS=1.42 PD=2.52
 * device instance $8 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$8 VGND \$4 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $9 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
-XM$9 X \$4 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.156 PS=0.92 PD=1.13
+XM$8 VGND \$4 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.24375 PS=2.74 PD=2.05
 * device instance $10 r0 *1 1.52,0.56 sky130_fd_pr__nfet_01v8
 XM$10 VGND A3 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.156
 + AD=0.1105 PS=1.13 PD=0.99
@@ -297,65 +235,35 @@ XM$14 VGND C1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.13975
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o32ai_2 VGND A3 Y B2 B1 A2 A1 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 4.95,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR A1 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 5.37,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 \$12 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$1 VPWR A1 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.415
++ PS=3.79 PD=3.83
 * device instance $3 r0 *1 2.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$11 A3 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $4 r0 *1 3.15,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 Y A3 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$3 \$11 A3 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.27
++ PS=3.83 PD=2.54
 * device instance $5 r0 *1 3.57,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$11 A2 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $6 r0 *1 3.99,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 \$12 A2 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$5 \$11 A2 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.415
++ PS=2.54 PD=3.83
 * device instance $7 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 \$10 B2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $8 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 Y B2 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$7 \$10 B2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $9 r0 *1 1.31,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$9 \$10 B1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $10 r0 *1 1.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$10 VPWR B1 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$9 \$10 B1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $11 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$11 \$4 B2 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $12 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
-XM$12 Y B2 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$11 \$4 B2 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $13 r0 *1 1.31,0.56 sky130_fd_pr__nfet_01v8
-XM$13 \$4 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $14 r0 *1 1.73,0.56 sky130_fd_pr__nfet_01v8
-XM$14 Y B1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$13 \$4 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.1755 PS=1.84 PD=1.84
 * device instance $15 r0 *1 2.15,0.56 sky130_fd_pr__nfet_01v8
-XM$15 \$4 A3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.25675 PS=0.92 PD=1.44
-* device instance $16 r0 *1 3.09,0.56 sky130_fd_pr__nfet_01v8
-XM$16 VGND A3 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.25675
-+ AD=0.08775 PS=1.44 PD=0.92
+XM$15 \$4 A3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.3445
++ AD=0.3445 PS=2.36 PD=2.36
 * device instance $17 r0 *1 3.51,0.56 sky130_fd_pr__nfet_01v8
-XM$17 \$4 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $18 r0 *1 3.93,0.56 sky130_fd_pr__nfet_01v8
-XM$18 VGND A2 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.25675 PS=0.92 PD=1.44
+XM$17 \$4 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.3445 PS=1.84 PD=2.36
 * device instance $19 r0 *1 4.87,0.56 sky130_fd_pr__nfet_01v8
-XM$19 \$4 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.25675
-+ AD=0.08775 PS=1.44 PD=0.92
-* device instance $20 r0 *1 5.29,0.56 sky130_fd_pr__nfet_01v8
-XM$20 VGND A1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.2275 PS=0.92 PD=2
+XM$19 \$4 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.3445
++ AD=0.31525 PS=2.36 PD=2.92
 .ENDS sky130_fd_sc_hd__o32ai_2
 
 * cell sky130_fd_sc_hd__a31oi_2
@@ -370,53 +278,29 @@ XM$20 VGND A1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__a31oi_2 VGND Y A3 A2 A1 B1 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$11 A3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 VPWR A3 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$1 \$11 A3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $3 r0 *1 1.31,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$11 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $4 r0 *1 1.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR A2 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$3 \$11 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.27
++ PS=2.54 PD=2.54
 * device instance $5 r0 *1 2.15,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$11 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.41
-+ PS=1.27 PD=1.82
-* device instance $6 r0 *1 3.12,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 VPWR A1 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.41 AD=0.18
-+ PS=1.82 PD=1.36
+XM$5 \$11 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.545 AD=0.59
++ PS=3.09 PD=3.18
 * device instance $7 r0 *1 3.63,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 \$11 B1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.18 AD=0.175
-+ PS=1.36 PD=1.35
-* device instance $8 r0 *1 4.13,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 Y B1 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.175 AD=0.26
-+ PS=1.35 PD=2.52
+XM$7 \$11 B1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.355 AD=0.435
++ PS=2.71 PD=3.87
 * device instance $9 r0 *1 2.67,0.56 sky130_fd_pr__nfet_01v8
-XM$9 Y A1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.0975 PS=1.82 PD=0.95
-* device instance $10 r0 *1 3.12,0.56 sky130_fd_pr__nfet_01v8
-XM$10 \$4 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.0975
-+ AD=0.117 PS=0.95 PD=1.01
+XM$9 Y A1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.2665
++ AD=0.2145 PS=2.77 PD=1.96
 * device instance $11 r0 *1 3.63,0.56 sky130_fd_pr__nfet_01v8
-XM$11 Y B1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.117
-+ AD=0.11375 PS=1.01 PD=1
-* device instance $12 r0 *1 4.13,0.56 sky130_fd_pr__nfet_01v8
-XM$12 VGND B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.11375
-+ AD=0.169 PS=1 PD=1.82
+XM$11 Y B1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.23075
++ AD=0.28275 PS=2.01 PD=2.82
 * device instance $13 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$13 \$3 A3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $14 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
-XM$14 VGND A3 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$13 \$3 A3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $15 r0 *1 1.31,0.56 sky130_fd_pr__nfet_01v8
-XM$15 \$3 A2 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $16 r0 *1 1.73,0.56 sky130_fd_pr__nfet_01v8
-XM$16 \$4 A2 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$15 \$3 A2 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 .ENDS sky130_fd_sc_hd__a31oi_2
 
 * cell sky130_fd_sc_hd__o22ai_2
@@ -431,53 +315,29 @@ XM$16 \$4 A2 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o22ai_2 VGND Y B1 B2 A2 A1 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 2.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$10 A2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $2 r0 *1 3.15,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 Y A2 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$1 \$10 A2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.27
++ PS=3.83 PD=2.54
 * device instance $3 r0 *1 3.57,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$10 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $4 r0 *1 3.99,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR A1 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$3 \$10 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.415
++ PS=2.54 PD=3.83
 * device instance $5 r0 *1 0.49,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$9 B1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $6 r0 *1 0.91,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 VPWR B1 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$5 \$9 B1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.27
++ PS=3.83 PD=2.54
 * device instance $7 r0 *1 1.33,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 \$9 B2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $8 r0 *1 1.75,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 Y B2 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$7 \$9 B2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.415
++ PS=2.54 PD=3.83
 * device instance $9 r0 *1 0.49,0.56 sky130_fd_pr__nfet_01v8
-XM$9 \$3 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.182
-+ AD=0.08775 PS=1.86 PD=0.92
-* device instance $10 r0 *1 0.91,0.56 sky130_fd_pr__nfet_01v8
-XM$10 Y B1 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$9 \$3 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26975
++ AD=0.1755 PS=2.78 PD=1.84
 * device instance $11 r0 *1 1.33,0.56 sky130_fd_pr__nfet_01v8
-XM$11 \$3 B2 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $12 r0 *1 1.75,0.56 sky130_fd_pr__nfet_01v8
-XM$12 Y B2 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.26975 PS=0.92 PD=1.48
+XM$11 \$3 B2 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.3575 PS=1.84 PD=2.4
 * device instance $13 r0 *1 2.73,0.56 sky130_fd_pr__nfet_01v8
-XM$13 \$3 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.26975
-+ AD=0.08775 PS=1.48 PD=0.92
-* device instance $14 r0 *1 3.15,0.56 sky130_fd_pr__nfet_01v8
-XM$14 VGND A2 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$13 \$3 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.3575
++ AD=0.1755 PS=2.4 PD=1.84
 * device instance $15 r0 *1 3.57,0.56 sky130_fd_pr__nfet_01v8
-XM$15 \$3 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $16 r0 *1 3.99,0.56 sky130_fd_pr__nfet_01v8
-XM$16 VGND A1 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$15 \$3 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 .ENDS sky130_fd_sc_hd__o22ai_2
 
 * cell sky130_fd_sc_hd__o2bb2a_2
@@ -492,11 +352,8 @@ XM$16 VGND A1 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o2bb2a_2 VGND X A2_N A1_N B2 B1 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 0.495,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR \$8 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.285 AD=0.135
-+ PS=2.57 PD=1.27
-* device instance $2 r0 *1 0.915,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 X \$8 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.154
-+ PS=1.27 PD=1.335
+XM$1 VPWR \$8 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.42 AD=0.289
++ PS=3.84 PD=2.605
 * device instance $3 r0 *1 1.4,2.165 sky130_fd_pr__pfet_01v8_hvt
 XM$3 VPWR A1_N \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.64 AS=0.154
 + AD=0.173 PS=1.335 PD=1.4
@@ -519,11 +376,8 @@ XM$8 VGND A1_N \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.098625
 XM$9 \$7 A2_N \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.06615
 + AD=0.1092 PS=0.735 PD=1.36
 * device instance $10 r0 *1 0.495,0.56 sky130_fd_pr__nfet_01v8
-XM$10 VGND \$8 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.18525
-+ AD=0.08775 PS=1.87 PD=0.92
-* device instance $11 r0 *1 0.915,0.56 sky130_fd_pr__nfet_01v8
-XM$11 X \$8 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.098625 PS=0.92 PD=0.98
+XM$10 VGND \$8 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.273
++ AD=0.186375 PS=2.79 PD=1.9
 * device instance $12 r0 *1 2.83,0.445 sky130_fd_pr__nfet_01v8
 XM$12 \$8 \$5 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.0567 PS=1.36 PD=0.69
@@ -546,47 +400,29 @@ XM$14 VGND B1 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__nand3b_2 VGND A_N C B Y VPWR VPB sky130_gnd
 * device instance $1 r0 *1 3.215,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR \$3 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 3.635,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 Y \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$1 VPWR \$3 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.395
++ PS=3.79 PD=3.79
 * device instance $3 r0 *1 0.47,2.275 sky130_fd_pr__pfet_01v8_hvt
 XM$3 VPWR A_N \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.17575
 + AD=0.1092 PS=1.395 PD=1.36
 * device instance $4 r0 *1 1.015,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR C Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.17575 AD=0.135
-+ PS=1.395 PD=1.27
-* device instance $5 r0 *1 1.435,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 Y C VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$4 VPWR C Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.31075 AD=0.27
++ PS=2.665 PD=2.54
 * device instance $6 r0 *1 1.855,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $7 r0 *1 2.275,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 Y B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$6 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $8 r0 *1 2.375,0.56 sky130_fd_pr__nfet_01v8
-XM$8 \$5 B \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $9 r0 *1 2.795,0.56 sky130_fd_pr__nfet_01v8
-XM$9 \$4 B \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$8 \$5 B \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $10 r0 *1 3.215,0.56 sky130_fd_pr__nfet_01v8
-XM$10 \$5 \$3 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $11 r0 *1 3.635,0.56 sky130_fd_pr__nfet_01v8
-XM$11 Y \$3 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$10 \$5 \$3 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 * device instance $12 r0 *1 0.47,0.445 sky130_fd_pr__nfet_01v8
 XM$12 \$3 A_N VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.11975 PS=1.36 PD=1.045
 * device instance $13 r0 *1 1.015,0.56 sky130_fd_pr__nfet_01v8
-XM$13 VGND C \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.11975
-+ AD=0.08775 PS=1.045 PD=0.92
-* device instance $14 r0 *1 1.435,0.56 sky130_fd_pr__nfet_01v8
-XM$14 \$4 C VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$13 VGND C \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.2075
++ AD=0.25675 PS=1.965 PD=2.74
 .ENDS sky130_fd_sc_hd__nand3b_2
 
 * cell sky130_fd_sc_hd__o311a_2
@@ -602,11 +438,8 @@ XM$14 \$4 C VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o311a_2 VGND X A1 A2 A3 B1 C1 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 0.53,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.32 AD=0.135
-+ PS=2.64 PD=1.27
-* device instance $2 r0 *1 0.95,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.3125
-+ PS=1.27 PD=1.625
+XM$1 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.455 AD=0.4475
++ PS=3.91 PD=2.895
 * device instance $3 r0 *1 1.725,1.985 sky130_fd_pr__pfet_01v8_hvt
 XM$3 VPWR A1 \$14 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.3125 AD=0.175
 + PS=1.625 PD=1.35
@@ -623,11 +456,8 @@ XM$6 \$5 B1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.1375 AD=0.15
 XM$7 VPWR C1 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.15 AD=0.26
 + PS=1.3 PD=2.52
 * device instance $8 r0 *1 0.53,0.56 sky130_fd_pr__nfet_01v8
-XM$8 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.208
-+ AD=0.08775 PS=1.94 PD=0.92
-* device instance $9 r0 *1 0.95,0.56 sky130_fd_pr__nfet_01v8
-XM$9 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.203125 PS=0.92 PD=1.275
+XM$8 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.29575
++ AD=0.290875 PS=2.86 PD=2.195
 * device instance $10 r0 *1 1.725,0.56 sky130_fd_pr__nfet_01v8
 XM$10 VGND A1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.203125
 + AD=0.11375 PS=1.275 PD=1
@@ -660,56 +490,32 @@ XM$14 \$11 C1 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.06825
 XM$1 \$4 D_N VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1092
 + AD=0.1092 PS=1.36 PD=1.36
 * device instance $2 r0 *1 2.705,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 \$12 C \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $3 r0 *1 3.125,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$11 C \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$2 \$12 C \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $4 r0 *1 3.545,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 \$12 \$4 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $5 r0 *1 3.965,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 Y \$4 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$4 \$12 \$4 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $6 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 \$9 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $7 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 VPWR A \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$6 \$9 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $8 r0 *1 1.31,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 \$9 B \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $9 r0 *1 1.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$9 \$11 B \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$8 \$9 B \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $10 r0 *1 4.905,0.675 sky130_fd_pr__nfet_01v8
 XM$10 \$4 D_N VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.1092 PS=1.36 PD=1.36
 * device instance $11 r0 *1 2.705,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND C Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $12 r0 *1 3.125,0.56 sky130_fd_pr__nfet_01v8
-XM$12 Y C VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$11 VGND C Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $13 r0 *1 3.545,0.56 sky130_fd_pr__nfet_01v8
-XM$13 VGND \$4 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $14 r0 *1 3.965,0.56 sky130_fd_pr__nfet_01v8
-XM$14 Y \$4 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$13 VGND \$4 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 * device instance $15 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$15 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $16 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
-XM$16 Y A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$15 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $17 r0 *1 1.31,0.56 sky130_fd_pr__nfet_01v8
-XM$17 VGND B Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $18 r0 *1 1.73,0.56 sky130_fd_pr__nfet_01v8
-XM$18 Y B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$17 VGND B Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 .ENDS sky130_fd_sc_hd__nor4b_2
 
 * cell sky130_fd_sc_hd__buf_2
@@ -724,20 +530,14 @@ XM$18 Y B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 XM$1 VPWR A \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.64 AS=0.149
 + AD=0.1664 PS=1.325 PD=1.8
 * device instance $2 r0 *1 0.945,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.149 AD=0.135
-+ PS=1.325 PD=1.27
-* device instance $3 r0 *1 1.365,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.265
-+ PS=1.27 PD=2.53
+XM$2 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.284 AD=0.4
++ PS=2.595 PD=3.8
 * device instance $4 r0 *1 0.47,0.445 sky130_fd_pr__nfet_01v8
 XM$4 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.097 PS=1.36 PD=0.975
 * device instance $5 r0 *1 0.945,0.56 sky130_fd_pr__nfet_01v8
-XM$5 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.097
-+ AD=0.08775 PS=0.975 PD=0.92
-* device instance $6 r0 *1 1.365,0.56 sky130_fd_pr__nfet_01v8
-XM$6 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.17225 PS=0.92 PD=1.83
+XM$5 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.18475
++ AD=0.26 PS=1.895 PD=2.75
 .ENDS sky130_fd_sc_hd__buf_2
 
 * cell sky130_fd_sc_hd__or4bb_2
@@ -764,11 +564,8 @@ XM$3 \$10 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.05985
 XM$4 \$14 \$7 \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1215
 + AD=0.1092 PS=1.33 PD=1.36
 * device instance $5 r0 *1 3.68,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14825 AD=0.135
-+ PS=1.34 PD=1.27
-* device instance $6 r0 *1 4.1,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.285
-+ PS=1.27 PD=2.57
+XM$5 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28325 AD=0.42
++ PS=2.61 PD=3.84
 * device instance $7 r0 *1 0.955,1.695 sky130_fd_pr__pfet_01v8_hvt
 XM$7 VPWR D_N \$7 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1226125
 + AD=0.1176 PS=1.32 PD=1.4
@@ -788,11 +585,8 @@ XM$11 VGND B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
 XM$12 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
 + AD=0.101875 PS=0.69 PD=0.99
 * device instance $13 r0 *1 3.68,0.56 sky130_fd_pr__nfet_01v8
-XM$13 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.101875
-+ AD=0.08775 PS=0.99 PD=0.92
-* device instance $14 r0 *1 4.1,0.56 sky130_fd_pr__nfet_01v8
-XM$14 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.18525 PS=0.92 PD=1.87
+XM$13 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.189625
++ AD=0.273 PS=1.91 PD=2.79
 * device instance $15 r0 *1 0.51,0.675 sky130_fd_pr__nfet_01v8
 XM$15 \$8 C_N VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.06195 PS=1.36 PD=0.715
@@ -825,11 +619,8 @@ XM$3 VPWR C \$7 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.0777
 XM$4 VPWR D \$7 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.27995
 + AD=0.0588 PS=1.615 PD=0.7
 * device instance $5 r0 *1 2.69,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR \$7 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.27995 AD=0.165
-+ PS=1.615 PD=1.33
-* device instance $6 r0 *1 3.17,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 X \$7 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.3
-+ PS=1.33 PD=2.6
+XM$5 VPWR \$7 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.44495 AD=0.465
++ PS=2.945 PD=3.93
 * device instance $7 r0 *1 0.47,0.445 sky130_fd_pr__nfet_01v8
 XM$7 \$7 A \$13 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.06195 PS=1.36 PD=0.715
@@ -843,11 +634,8 @@ XM$9 \$12 C \$11 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0798
 XM$10 \$11 D VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0693
 + AD=0.17515 PS=0.75 PD=1.265
 * device instance $11 r0 *1 2.69,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND \$7 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.17515
-+ AD=0.10725 PS=1.265 PD=0.98
-* device instance $12 r0 *1 3.17,0.56 sky130_fd_pr__nfet_01v8
-XM$12 X \$7 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.10725
-+ AD=0.195 PS=0.98 PD=1.9
+XM$11 VGND \$7 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.2824
++ AD=0.30225 PS=2.245 PD=2.88
 .ENDS sky130_fd_sc_hd__and4_2
 
 * cell sky130_fd_sc_hd__a41oi_2
@@ -863,65 +651,35 @@ XM$12 X \$7 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.10725
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__a41oi_2 VGND Y A4 B1 A1 A2 A3 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 1.08,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$12 B1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 1.5,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 Y B1 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$1 \$12 B1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $3 r0 *1 1.92,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$12 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $4 r0 *1 2.34,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR A1 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$3 \$12 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.27
++ PS=2.54 PD=2.54
 * device instance $5 r0 *1 2.76,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$12 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $6 r0 *1 3.18,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 VPWR A2 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.145
-+ PS=1.27 PD=1.29
+XM$5 \$12 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.28
++ PS=2.54 PD=2.56
 * device instance $7 r0 *1 3.62,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 \$12 A3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.145 AD=0.385
-+ PS=1.29 PD=1.77
-* device instance $8 r0 *1 4.54,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 VPWR A3 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.385 AD=0.135
-+ PS=1.77 PD=1.27
+XM$7 \$12 A3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.53 AD=0.52
++ PS=3.06 PD=3.04
 * device instance $9 r0 *1 4.96,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$9 \$12 A4 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $10 r0 *1 5.38,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$10 VPWR A4 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$9 \$12 A4 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $11 r0 *1 4.12,0.56 sky130_fd_pr__nfet_01v8
-XM$11 \$6 A3 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $12 r0 *1 4.54,0.56 sky130_fd_pr__nfet_01v8
-XM$12 \$5 A3 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$11 \$6 A3 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $13 r0 *1 4.96,0.56 sky130_fd_pr__nfet_01v8
-XM$13 \$6 A4 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $14 r0 *1 5.38,0.56 sky130_fd_pr__nfet_01v8
-XM$14 VGND A4 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$13 \$6 A4 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 * device instance $15 r0 *1 1.92,0.56 sky130_fd_pr__nfet_01v8
-XM$15 \$4 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $16 r0 *1 2.34,0.56 sky130_fd_pr__nfet_01v8
-XM$16 Y A1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$15 \$4 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $17 r0 *1 2.76,0.56 sky130_fd_pr__nfet_01v8
-XM$17 \$4 A2 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $18 r0 *1 3.18,0.56 sky130_fd_pr__nfet_01v8
-XM$18 \$5 A2 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$17 \$4 A2 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 * device instance $19 r0 *1 0.56,0.56 sky130_fd_pr__nfet_01v8
-XM$19 VGND B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $20 r0 *1 0.98,0.56 sky130_fd_pr__nfet_01v8
-XM$20 Y B1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$19 VGND B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.25675 PS=2.74 PD=2.74
 .ENDS sky130_fd_sc_hd__a41oi_2
 
 * cell sky130_fd_sc_hd__a221oi_2
@@ -937,65 +695,35 @@ XM$20 Y B1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__a221oi_2 VGND C1 Y B2 B1 A2 A1 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 1.84,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$13 B2 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
+XM$1 \$13 B2 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.31
++ PS=3.79 PD=2.62
 * device instance $2 r0 *1 2.26,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 \$11 B1 \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $3 r0 *1 2.68,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$13 B1 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $4 r0 *1 3.1,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 \$11 B2 \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.175
-+ PS=1.27 PD=1.35
+XM$2 \$11 B1 \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.27
++ PS=2.54 PD=2.54
 * device instance $5 r0 *1 3.6,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$13 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.175 AD=0.135
-+ PS=1.35 PD=1.27
+XM$5 \$13 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.31 AD=0.42
++ PS=2.62 PD=3.84
 * device instance $6 r0 *1 4.02,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 VPWR A1 \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $7 r0 *1 4.44,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 \$13 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $8 r0 *1 4.86,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 VPWR A2 \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.285
-+ PS=1.27 PD=2.57
+XM$6 VPWR A1 \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.27
++ PS=2.54 PD=2.54
 * device instance $9 r0 *1 0.48,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$9 \$11 C1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.27 AD=0.135
-+ PS=2.54 PD=1.27
-* device instance $10 r0 *1 0.9,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$10 Y C1 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$9 \$11 C1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.405 AD=0.395
++ PS=3.81 PD=3.79
 * device instance $11 r0 *1 0.48,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND C1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.1755
-+ AD=0.08775 PS=1.84 PD=0.92
-* device instance $12 r0 *1 0.9,0.56 sky130_fd_pr__nfet_01v8
-XM$12 Y C1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.25675 PS=0.92 PD=1.44
+XM$11 VGND C1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26325
++ AD=0.3445 PS=2.76 PD=2.36
 * device instance $13 r0 *1 1.84,0.56 sky130_fd_pr__nfet_01v8
-XM$13 VGND B2 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.25675
-+ AD=0.08775 PS=1.44 PD=0.92
+XM$13 VGND B2 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.3445
++ AD=0.2015 PS=2.36 PD=1.92
 * device instance $14 r0 *1 2.26,0.56 sky130_fd_pr__nfet_01v8
-XM$14 \$6 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $15 r0 *1 2.68,0.56 sky130_fd_pr__nfet_01v8
-XM$15 Y B1 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $16 r0 *1 3.1,0.56 sky130_fd_pr__nfet_01v8
-XM$16 \$6 B2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.11375 PS=0.92 PD=1
+XM$14 \$6 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.1755 PS=1.84 PD=1.84
 * device instance $17 r0 *1 3.6,0.56 sky130_fd_pr__nfet_01v8
-XM$17 VGND A2 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.11375
-+ AD=0.08775 PS=1 PD=0.92
+XM$17 VGND A2 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.2015
++ AD=0.25675 PS=1.92 PD=2.74
 * device instance $18 r0 *1 4.02,0.56 sky130_fd_pr__nfet_01v8
-XM$18 \$9 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $19 r0 *1 4.44,0.56 sky130_fd_pr__nfet_01v8
-XM$19 Y A1 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $20 r0 *1 4.86,0.56 sky130_fd_pr__nfet_01v8
-XM$20 \$9 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$18 \$9 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.1755 PS=1.84 PD=1.84
 .ENDS sky130_fd_sc_hd__a221oi_2
 
 * cell sky130_fd_sc_hd__mux2_1
@@ -1076,11 +804,8 @@ XM$3 \$11 \$4 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.0567
 XM$4 VPWR C_N \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.14575
 + AD=0.1092 PS=1.335 PD=1.36
 * device instance $5 r0 *1 0.955,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14575 AD=0.135
-+ PS=1.335 PD=1.27
-* device instance $6 r0 *1 1.375,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.14825
-+ PS=1.27 PD=1.34
+XM$5 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28075
++ AD=0.28325 PS=2.605 PD=2.61
 * device instance $7 r0 *1 0.47,0.445 sky130_fd_pr__nfet_01v8
 XM$7 \$4 C_N VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.10025 PS=1.36 PD=0.985
@@ -1094,11 +819,8 @@ XM$9 \$5 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
 XM$10 VGND \$4 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
 + AD=0.1092 PS=0.69 PD=1.36
 * device instance $11 r0 *1 0.955,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.10025
-+ AD=0.08775 PS=0.985 PD=0.92
-* device instance $12 r0 *1 1.375,0.56 sky130_fd_pr__nfet_01v8
-XM$12 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.101875 PS=0.92 PD=0.99
+XM$11 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.188
++ AD=0.189625 PS=1.905 PD=1.91
 .ENDS sky130_fd_sc_hd__or3b_2
 
 * cell sky130_fd_sc_hd__o32a_2
@@ -1114,11 +836,8 @@ XM$12 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o32a_2 VGND X A1 A2 A3 B2 B1 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.305
-+ PS=1.27 PD=1.61
+XM$1 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.44
++ PS=3.79 PD=2.88
 * device instance $3 r0 *1 1.65,1.985 sky130_fd_pr__pfet_01v8_hvt
 XM$3 VPWR A1 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.305 AD=0.135
 + PS=1.61 PD=1.27
@@ -1135,11 +854,8 @@ XM$6 \$5 B2 \$14 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.19
 XM$7 \$14 B1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.19 AD=0.33
 + PS=1.38 PD=2.66
 * device instance $8 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$8 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $9 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
-XM$9 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.19825 PS=0.92 PD=1.26
+XM$8 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.286 PS=2.74 PD=2.18
 * device instance $10 r0 *1 1.65,0.56 sky130_fd_pr__nfet_01v8
 XM$10 VGND A1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.19825
 + AD=0.08775 PS=1.26 PD=0.92
@@ -1177,11 +893,8 @@ XM$2 \$6 \$7 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1092
 XM$3 \$6 B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.074375
 + AD=0.0567 PS=0.815 PD=0.69
 * device instance $4 r0 *1 2.79,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR \$6 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14575 AD=0.135
-+ PS=1.335 PD=1.27
-* device instance $5 r0 *1 3.21,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 X \$6 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$4 VPWR \$6 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28075 AD=0.395
++ PS=2.605 PD=3.79
 * device instance $6 r0 *1 0.47,1.765 sky130_fd_pr__pfet_01v8_hvt
 XM$6 VPWR A_N \$7 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1092
 + AD=0.1092 PS=1.36 PD=1.36
@@ -1195,20 +908,17 @@ XM$8 \$12 B \$11 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0441
 XM$9 VGND C \$11 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.12715
 + AD=0.05355 PS=1.095 PD=0.675
 * device instance $10 r0 *1 2.79,0.56 sky130_fd_pr__nfet_01v8
-XM$10 VGND \$6 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.12715
-+ AD=0.08775 PS=1.095 PD=0.92
-* device instance $11 r0 *1 3.21,0.56 sky130_fd_pr__nfet_01v8
-XM$11 X \$6 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$10 VGND \$6 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.2149
++ AD=0.25675 PS=2.015 PD=2.74
 * device instance $12 r0 *1 0.47,0.475 sky130_fd_pr__nfet_01v8
 XM$12 VGND A_N \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.1176 PS=1.36 PD=1.4
 .ENDS sky130_fd_sc_hd__and3b_2
 
-* cell VIA_M1M2_PR_MR
-* pin 
-.SUBCKT VIA_M1M2_PR_MR \$1
-.ENDS VIA_M1M2_PR_MR
+** cell VIA_M1M2_PR_MR
+** pin 
+*.SUBCKT VIA_M1M2_PR_MR \$1
+*.ENDS VIA_M1M2_PR_MR
 
 * cell sky130_fd_sc_hd__o22a_2
 * pin VPB
@@ -1222,11 +932,8 @@ XM$12 VGND A_N \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o22a_2 VPB VGND VPWR X B1 B2 A2 A1 sky130_gnd
 * device instance $1 r0 *1 0.49,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $2 r0 *1 0.91,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.39
-+ PS=1.27 PD=1.78
+XM$1 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.525
++ PS=3.83 PD=3.05
 * device instance $3 r0 *1 1.84,1.985 sky130_fd_pr__pfet_01v8_hvt
 XM$3 VPWR B1 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.39 AD=0.105
 + PS=1.78 PD=1.21
@@ -1252,11 +959,8 @@ XM$9 \$7 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.1235
 XM$10 VGND A1 \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 + AD=0.169 PS=0.92 PD=1.82
 * device instance $11 r0 *1 0.48,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $12 r0 *1 0.9,0.56 sky130_fd_pr__nfet_01v8
-XM$12 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$11 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.25675 PS=2.74 PD=2.74
 .ENDS sky130_fd_sc_hd__o22a_2
 
 * cell sky130_fd_sc_hd__a22oi_2
@@ -1271,53 +975,29 @@ XM$12 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__a22oi_2 VGND B2 B1 Y A1 A2 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 2.67,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$10 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 3.09,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 VPWR A1 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$1 \$10 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $3 r0 *1 3.51,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$10 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $4 r0 *1 3.93,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR A2 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$3 \$10 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $5 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 Y B2 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $6 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 \$10 B2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$5 Y B2 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $7 r0 *1 1.31,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 Y B1 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $8 r0 *1 1.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 \$10 B1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$7 Y B1 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $9 r0 *1 2.67,0.56 sky130_fd_pr__nfet_01v8
-XM$9 \$7 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $10 r0 *1 3.09,0.56 sky130_fd_pr__nfet_01v8
-XM$10 Y A1 \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$9 \$7 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $11 r0 *1 3.51,0.56 sky130_fd_pr__nfet_01v8
-XM$11 \$7 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $12 r0 *1 3.93,0.56 sky130_fd_pr__nfet_01v8
-XM$12 VGND A2 \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$11 \$7 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 * device instance $13 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$13 \$3 B2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $14 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
-XM$14 VGND B2 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$13 \$3 B2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $15 r0 *1 1.31,0.56 sky130_fd_pr__nfet_01v8
-XM$15 \$3 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $16 r0 *1 1.73,0.56 sky130_fd_pr__nfet_01v8
-XM$16 Y B1 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$15 \$3 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 .ENDS sky130_fd_sc_hd__a22oi_2
 
 * cell sky130_fd_sc_hd__a221o_2
@@ -1339,11 +1019,8 @@ XM$1 VPWR A1 \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.165
 XM$2 \$13 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.1575
 + PS=1.33 PD=1.315
 * device instance $3 r0 *1 3.195,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.1575 AD=0.135
-+ PS=1.315 PD=1.27
-* device instance $4 r0 *1 3.615,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.285
-+ PS=1.27 PD=2.57
+XM$3 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.2925 AD=0.42
++ PS=2.585 PD=3.84
 * device instance $5 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
 XM$5 \$3 C1 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
 + PS=2.52 PD=1.27
@@ -1360,11 +1037,8 @@ XM$8 \$3 A1 \$11 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
 XM$9 \$11 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.10725
 + AD=0.102375 PS=0.98 PD=0.965
 * device instance $10 r0 *1 3.195,0.56 sky130_fd_pr__nfet_01v8
-XM$10 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.102375
-+ AD=0.08775 PS=0.965 PD=0.92
-* device instance $11 r0 *1 3.615,0.56 sky130_fd_pr__nfet_01v8
-XM$11 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.18525 PS=0.92 PD=1.87
+XM$10 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.190125
++ AD=0.273 PS=1.885 PD=2.79
 * device instance $12 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
 XM$12 \$3 C1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
 + AD=0.10725 PS=1.82 PD=0.98
@@ -1432,11 +1106,8 @@ XM$14 VPWR \$4 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.64 AS=0.0864
 XM$15 \$10 \$9 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
 + PS=2.52 PD=1.27
 * device instance $16 r0 *1 8.765,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$16 VPWR \$10 Q VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $17 r0 *1 9.185,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$17 Q \$10 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$16 VPWR \$10 Q VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $18 r0 *1 5.205,0.445 sky130_fd_pr__nfet_01v8
 XM$18 VGND \$7 \$15 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.0441 PS=1.36 PD=0.63
@@ -1459,11 +1130,8 @@ XM$23 VGND \$9 \$19 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.54 AS=0.1137
 XM$24 \$10 \$9 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
 + AD=0.08775 PS=1.82 PD=0.92
 * device instance $25 r0 *1 8.765,0.56 sky130_fd_pr__nfet_01v8
-XM$25 VGND \$10 Q sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $26 r0 *1 9.185,0.56 sky130_fd_pr__nfet_01v8
-XM$26 Q \$10 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$25 VGND \$10 Q sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 * device instance $27 r0 *1 0.47,0.445 sky130_fd_pr__nfet_01v8
 XM$27 \$4 CLK VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.0567 PS=1.36 PD=0.69
@@ -1489,8 +1157,6 @@ XM$33 \$16 \$7 \$20 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0441
 XM$34 VGND D \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.64 AS=0.1664
 + AD=0.0935 PS=1.8 PD=0.965
 .ENDS sky130_fd_sc_hd__dfstp_2
-
-
 
 * cell sky130_fd_sc_hd__o221a_2
 * pin VGND
@@ -1520,11 +1186,8 @@ XM$4 \$3 A2 \$15 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.3875 AD=0.105
 XM$5 \$15 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.105 AD=0.165
 + PS=1.21 PD=1.33
 * device instance $6 r0 *1 3.25,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.135
-+ PS=1.33 PD=1.27
-* device instance $7 r0 *1 3.67,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$6 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.3 AD=0.395
++ PS=2.6 PD=3.79
 * device instance $8 r0 *1 2.41,0.56 sky130_fd_pr__nfet_01v8
 XM$8 VGND A2 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
 + AD=0.08775 PS=1.82 PD=0.92
@@ -1532,11 +1195,8 @@ XM$8 VGND A2 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
 XM$9 \$5 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 + AD=0.08775 PS=0.92 PD=0.92
 * device instance $10 r0 *1 3.25,0.56 sky130_fd_pr__nfet_01v8
-XM$10 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $11 r0 *1 3.67,0.56 sky130_fd_pr__nfet_01v8
-XM$11 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$10 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 * device instance $12 r0 *1 0.63,0.56 sky130_fd_pr__nfet_01v8
 XM$12 \$3 C1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.23725
 + AD=0.08775 PS=2.03 PD=0.92
@@ -1559,41 +1219,23 @@ XM$14 \$5 B2 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o21ai_2 VPB VPWR A1 VGND A2 Y B1 sky130_gnd
 * device instance $1 r0 *1 0.485,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR A1 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.265 AD=0.14
-+ PS=2.53 PD=1.28
+XM$1 VPWR A1 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.44 AD=0.3
++ PS=3.88 PD=2.6
 * device instance $2 r0 *1 0.915,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 \$5 A2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $3 r0 *1 1.345,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 Y A2 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.175
-+ PS=1.28 PD=1.35
-* device instance $4 r0 *1 1.845,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 \$5 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.175 AD=0.16
-+ PS=1.35 PD=1.32
+XM$2 \$5 A2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28 AD=0.315
++ PS=2.56 PD=2.63
 * device instance $5 r0 *1 2.315,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR B1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.16 AD=0.14
-+ PS=1.32 PD=1.28
-* device instance $6 r0 *1 2.745,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 Y B1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.265
-+ PS=1.28 PD=2.53
+XM$5 VPWR B1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.3 AD=0.405
++ PS=2.6 PD=3.81
 * device instance $7 r0 *1 0.485,0.56 sky130_fd_pr__nfet_01v8
-XM$7 \$2 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.17225
-+ AD=0.091 PS=1.83 PD=0.93
+XM$7 \$2 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.299
++ AD=0.182 PS=2.87 PD=1.86
 * device instance $8 r0 *1 0.915,0.56 sky130_fd_pr__nfet_01v8
-XM$8 VGND A2 \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.091 PS=0.93 PD=0.93
-* device instance $9 r0 *1 1.345,0.56 sky130_fd_pr__nfet_01v8
-XM$9 \$2 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.12675 PS=0.93 PD=1.04
-* device instance $10 r0 *1 1.885,0.56 sky130_fd_pr__nfet_01v8
-XM$10 VGND A1 \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.12675
-+ AD=0.091 PS=1.04 PD=0.93
+XM$8 VGND A2 \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.182
++ AD=0.21775 PS=1.86 PD=1.97
 * device instance $11 r0 *1 2.315,0.56 sky130_fd_pr__nfet_01v8
-XM$11 \$2 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.091 PS=0.93 PD=0.93
-* device instance $12 r0 *1 2.745,0.56 sky130_fd_pr__nfet_01v8
-XM$12 Y B1 \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.17225 PS=0.93 PD=1.83
+XM$11 \$2 B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.182
++ AD=0.26325 PS=1.86 PD=2.76
 .ENDS sky130_fd_sc_hd__o21ai_2
 
 * cell sky130_fd_sc_hd__nor4_2
@@ -1608,53 +1250,29 @@ XM$12 Y B1 \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__nor4_2 VGND Y A B C D VPWR VPB sky130_gnd
 * device instance $1 r0 *1 2.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$11 C \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $2 r0 *1 3.15,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 \$10 C \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$1 \$11 C \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.27
++ PS=3.83 PD=2.54
 * device instance $3 r0 *1 3.57,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$11 D Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $4 r0 *1 3.99,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 Y D \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$3 \$11 D Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $5 r0 *1 0.49,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$8 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $6 r0 *1 0.91,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 VPWR A \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$5 \$8 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.27
++ PS=3.83 PD=2.54
 * device instance $7 r0 *1 1.33,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 \$8 B \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $8 r0 *1 1.75,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 \$10 B \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$7 \$8 B \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.415
++ PS=2.54 PD=3.83
 * device instance $9 r0 *1 2.73,0.56 sky130_fd_pr__nfet_01v8
-XM$9 VGND C Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.182
-+ AD=0.08775 PS=1.86 PD=0.92
-* device instance $10 r0 *1 3.15,0.56 sky130_fd_pr__nfet_01v8
-XM$10 Y C VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$9 VGND C Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26975
++ AD=0.1755 PS=2.78 PD=1.84
 * device instance $11 r0 *1 3.57,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND D Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $12 r0 *1 3.99,0.56 sky130_fd_pr__nfet_01v8
-XM$12 Y D VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$11 VGND D Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 * device instance $13 r0 *1 0.49,0.56 sky130_fd_pr__nfet_01v8
-XM$13 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.182
-+ AD=0.08775 PS=1.86 PD=0.92
-* device instance $14 r0 *1 0.91,0.56 sky130_fd_pr__nfet_01v8
-XM$14 Y A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$13 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26975
++ AD=0.1755 PS=2.78 PD=1.84
 * device instance $15 r0 *1 1.33,0.56 sky130_fd_pr__nfet_01v8
-XM$15 VGND B Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $16 r0 *1 1.75,0.56 sky130_fd_pr__nfet_01v8
-XM$16 Y B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.182 PS=0.92 PD=1.86
+XM$15 VGND B Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.26975 PS=1.84 PD=2.78
 .ENDS sky130_fd_sc_hd__nor4_2
 
 * cell sky130_fd_sc_hd__clkbuf_16
@@ -1666,125 +1284,17 @@ XM$16 Y B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__clkbuf_16 VGND A X VPWR VPB sky130_gnd
 * device instance $1 r0 *1 0.475,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR A \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.265 AD=0.14
-+ PS=2.53 PD=1.28
-* device instance $2 r0 *1 0.905,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 \$3 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $3 r0 *1 1.335,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 VPWR A \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $4 r0 *1 1.765,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 \$3 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
+XM$1 VPWR A \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=4 AS=0.685 AD=0.56
++ PS=6.37 PD=5.12
 * device instance $5 r0 *1 2.195,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $6 r0 *1 2.625,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $7 r0 *1 3.055,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $8 r0 *1 3.485,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $9 r0 *1 3.915,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$9 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $10 r0 *1 4.345,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$10 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $11 r0 *1 4.775,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$11 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $12 r0 *1 5.205,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$12 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.1375
-+ PS=1.28 PD=1.275
-* device instance $13 r0 *1 5.63,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$13 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.1375 AD=0.14
-+ PS=1.275 PD=1.28
-* device instance $14 r0 *1 6.06,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$14 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $15 r0 *1 6.49,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$15 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $16 r0 *1 6.92,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$16 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $17 r0 *1 7.35,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$17 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $18 r0 *1 7.78,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$18 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $19 r0 *1 8.21,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$19 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $20 r0 *1 8.64,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$20 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.265
-+ PS=1.28 PD=2.53
+XM$5 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=16 AS=2.2375 AD=2.3625
++ PS=20.475 PD=21.725
 * device instance $21 r0 *1 0.475,0.445 sky130_fd_pr__nfet_01v8
-XM$21 VGND A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1113
-+ AD=0.0588 PS=1.37 PD=0.7
-* device instance $22 r0 *1 0.905,0.445 sky130_fd_pr__nfet_01v8
-XM$22 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $23 r0 *1 1.335,0.445 sky130_fd_pr__nfet_01v8
-XM$23 VGND A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $24 r0 *1 1.765,0.445 sky130_fd_pr__nfet_01v8
-XM$24 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
+XM$21 VGND A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.68 AS=0.2877
++ AD=0.2352 PS=3.47 PD=2.8
 * device instance $25 r0 *1 2.195,0.445 sky130_fd_pr__nfet_01v8
-XM$25 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $26 r0 *1 2.625,0.445 sky130_fd_pr__nfet_01v8
-XM$26 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $27 r0 *1 3.055,0.445 sky130_fd_pr__nfet_01v8
-XM$27 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $28 r0 *1 3.485,0.445 sky130_fd_pr__nfet_01v8
-XM$28 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $29 r0 *1 3.915,0.445 sky130_fd_pr__nfet_01v8
-XM$29 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $30 r0 *1 4.345,0.445 sky130_fd_pr__nfet_01v8
-XM$30 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $31 r0 *1 4.775,0.445 sky130_fd_pr__nfet_01v8
-XM$31 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $32 r0 *1 5.205,0.445 sky130_fd_pr__nfet_01v8
-XM$32 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.05775 PS=0.7 PD=0.695
-* device instance $33 r0 *1 5.63,0.445 sky130_fd_pr__nfet_01v8
-XM$33 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.05775
-+ AD=0.0588 PS=0.695 PD=0.7
-* device instance $34 r0 *1 6.06,0.445 sky130_fd_pr__nfet_01v8
-XM$34 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $35 r0 *1 6.49,0.445 sky130_fd_pr__nfet_01v8
-XM$35 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $36 r0 *1 6.92,0.445 sky130_fd_pr__nfet_01v8
-XM$36 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $37 r0 *1 7.35,0.445 sky130_fd_pr__nfet_01v8
-XM$37 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $38 r0 *1 7.78,0.445 sky130_fd_pr__nfet_01v8
-XM$38 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $39 r0 *1 8.21,0.445 sky130_fd_pr__nfet_01v8
-XM$39 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $40 r0 *1 8.64,0.445 sky130_fd_pr__nfet_01v8
-XM$40 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.1113 PS=0.7 PD=1.37
+XM$25 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=6.72 AS=0.93975
++ AD=0.99225 PS=11.195 PD=11.865
 .ENDS sky130_fd_sc_hd__clkbuf_16
 
 * cell sky130_fd_sc_hd__and2b_2
@@ -1806,11 +1316,8 @@ XM$2 VPWR \$4 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.07665
 XM$3 VPWR B \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.22895
 + AD=0.0609 PS=1.745 PD=0.71
 * device instance $4 r0 *1 2.32,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.22895 AD=0.135
-+ PS=1.745 PD=1.27
-* device instance $5 r0 *1 2.74,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$4 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.36395 AD=0.395
++ PS=3.015 PD=3.79
 * device instance $6 r0 *1 1.41,0.445 sky130_fd_pr__nfet_01v8
 XM$6 \$5 \$4 \$10 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.0567 PS=1.36 PD=0.69
@@ -1818,11 +1325,8 @@ XM$6 \$5 \$4 \$10 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 XM$7 \$10 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
 + AD=0.101875 PS=0.69 PD=0.99
 * device instance $8 r0 *1 2.32,0.56 sky130_fd_pr__nfet_01v8
-XM$8 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.101875
-+ AD=0.08775 PS=0.99 PD=0.92
-* device instance $9 r0 *1 2.74,0.56 sky130_fd_pr__nfet_01v8
-XM$9 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.1755 PS=0.92 PD=1.84
+XM$8 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.189625
++ AD=0.26325 PS=1.91 PD=2.76
 * device instance $10 r0 *1 0.47,0.445 sky130_fd_pr__nfet_01v8
 XM$10 VGND A_N \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.1092 PS=1.36 PD=1.36
@@ -1843,11 +1347,8 @@ XM$10 VGND A_N \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 XM$1 VPWR A_N \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.14075
 + AD=0.1092 PS=1.325 PD=1.36
 * device instance $2 r0 *1 0.945,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14075 AD=0.135
-+ PS=1.325 PD=1.27
-* device instance $3 r0 *1 1.365,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.33075
-+ PS=1.27 PD=1.705
+XM$2 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27575
++ AD=0.46575 PS=2.595 PD=2.975
 * device instance $4 r0 *1 2.22,2.275 sky130_fd_pr__pfet_01v8_hvt
 XM$4 VPWR \$3 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.33075
 + AD=0.0672 PS=1.705 PD=0.74
@@ -1867,11 +1368,8 @@ XM$8 VPWR B_N \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.0924
 XM$9 \$3 A_N VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.097 PS=1.36 PD=0.975
 * device instance $10 r0 *1 0.945,0.56 sky130_fd_pr__nfet_01v8
-XM$10 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.097
-+ AD=0.08775 PS=0.975 PD=0.92
-* device instance $11 r0 *1 1.365,0.56 sky130_fd_pr__nfet_01v8
-XM$11 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$10 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.18475
++ AD=0.25675 PS=1.895 PD=2.74
 * device instance $12 r0 *1 2.305,0.445 sky130_fd_pr__nfet_01v8
 XM$12 \$5 \$3 \$10 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.0441 PS=1.36 PD=0.63
@@ -1900,41 +1398,23 @@ XM$16 VGND B_N \$13 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0924
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__nor3_2 VPB C Y VGND A VPWR B sky130_gnd
 * device instance $1 r0 *1 2.71,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$3 C Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 3.13,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 Y C \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$1 \$3 C Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.395
++ PS=3.79 PD=3.79
 * device instance $3 r0 *1 0.49,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$2 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $4 r0 *1 0.91,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR A \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$3 \$2 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.27
++ PS=3.83 PD=2.54
 * device instance $5 r0 *1 1.33,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$2 B \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $6 r0 *1 1.75,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 \$3 B \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$5 \$2 B \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.415
++ PS=2.54 PD=3.83
 * device instance $7 r0 *1 2.71,0.56 sky130_fd_pr__nfet_01v8
-XM$7 VGND C Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $8 r0 *1 3.13,0.56 sky130_fd_pr__nfet_01v8
-XM$8 Y C VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$7 VGND C Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.25675 PS=2.74 PD=2.74
 * device instance $9 r0 *1 0.49,0.56 sky130_fd_pr__nfet_01v8
-XM$9 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.17875
-+ AD=0.08775 PS=1.85 PD=0.92
-* device instance $10 r0 *1 0.91,0.56 sky130_fd_pr__nfet_01v8
-XM$10 Y A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$9 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.2665
++ AD=0.1755 PS=2.77 PD=1.84
 * device instance $11 r0 *1 1.33,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND B Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $12 r0 *1 1.75,0.56 sky130_fd_pr__nfet_01v8
-XM$12 Y B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$11 VGND B Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 .ENDS sky130_fd_sc_hd__nor3_2
 
 * cell sky130_fd_sc_hd__nor3b_2
@@ -1948,23 +1428,14 @@ XM$12 Y B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__nor3b_2 VGND Y A B C_N VPWR VPB sky130_gnd
 * device instance $1 r0 *1 2.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$10 \$6 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $2 r0 *1 3.15,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 Y \$6 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$1 \$10 \$6 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.415
++ PS=3.83 PD=3.83
 * device instance $3 r0 *1 0.49,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$8 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $4 r0 *1 0.91,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR A \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$3 \$8 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.27
++ PS=3.83 PD=2.54
 * device instance $5 r0 *1 1.33,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$8 B \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $6 r0 *1 1.75,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 \$10 B \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$5 \$8 B \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.415
++ PS=2.54 PD=3.83
 * device instance $7 r0 *1 4.13,1.695 sky130_fd_pr__pfet_01v8_hvt
 XM$7 \$6 C_N VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1092
 + AD=0.1092 PS=1.36 PD=1.36
@@ -1972,29 +1443,20 @@ XM$7 \$6 C_N VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1092
 XM$8 \$6 C_N VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.1092 PS=1.36 PD=1.36
 * device instance $9 r0 *1 2.73,0.56 sky130_fd_pr__nfet_01v8
-XM$9 VGND \$6 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $10 r0 *1 3.15,0.56 sky130_fd_pr__nfet_01v8
-XM$10 Y \$6 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.182 PS=0.92 PD=1.86
+XM$9 VGND \$6 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.26975 PS=2.74 PD=2.78
 * device instance $11 r0 *1 0.49,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.182
-+ AD=0.08775 PS=1.86 PD=0.92
-* device instance $12 r0 *1 0.91,0.56 sky130_fd_pr__nfet_01v8
-XM$12 Y A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$11 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26975
++ AD=0.1755 PS=2.78 PD=1.84
 * device instance $13 r0 *1 1.33,0.56 sky130_fd_pr__nfet_01v8
-XM$13 VGND B Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $14 r0 *1 1.75,0.56 sky130_fd_pr__nfet_01v8
-XM$14 Y B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$13 VGND B Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 .ENDS sky130_fd_sc_hd__nor3b_2
 
 * cell VIA_M3M4_PR
 * pin 
-.SUBCKT VIA_M3M4_PR \$1
-.ENDS VIA_M3M4_PR
+*.SUBCKT VIA_M3M4_PR \$1
+*.ENDS VIA_M3M4_PR
 
 * cell sky130_fd_sc_hd__o211a_2
 * pin VPB
@@ -2014,17 +1476,14 @@ XM$1 \$2 C1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.265 AD=0.14
 XM$2 VPWR B1 \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.3675
 + PS=1.28 PD=1.735
 * device instance $3 r0 *1 1.79,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$2 A2 \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.3675 AD=0.105
+XM$3 \$2 A2 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.3675 AD=0.105
 + PS=1.735 PD=1.21
 * device instance $4 r0 *1 2.15,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 \$13 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.105 AD=0.195
+XM$4 \$12 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.105 AD=0.195
 + PS=1.21 PD=1.39
 * device instance $5 r0 *1 2.69,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.195 AD=0.14
-+ PS=1.39 PD=1.28
-* device instance $6 r0 *1 3.12,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 X \$2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.265
-+ PS=1.28 PD=2.53
+XM$5 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.335 AD=0.405
++ PS=2.67 PD=3.81
 * device instance $7 r0 *1 1.77,0.56 sky130_fd_pr__nfet_01v8
 XM$7 VGND A2 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.16535
 + AD=0.091 PS=1.82 PD=0.93
@@ -2032,16 +1491,13 @@ XM$7 VGND A2 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.16535
 XM$8 \$6 A1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
 + AD=0.104 PS=0.93 PD=0.97
 * device instance $9 r0 *1 2.67,0.56 sky130_fd_pr__nfet_01v8
-XM$9 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.104
-+ AD=0.091 PS=0.97 PD=0.93
-* device instance $10 r0 *1 3.1,0.56 sky130_fd_pr__nfet_01v8
-XM$10 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.23075 PS=0.93 PD=2.01
+XM$9 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.195
++ AD=0.32175 PS=1.9 PD=2.94
 * device instance $11 r0 *1 0.475,0.56 sky130_fd_pr__nfet_01v8
-XM$11 \$2 C1 \$12 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.17225
+XM$11 \$2 C1 \$13 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.17225
 + AD=0.06825 PS=1.83 PD=0.86
 * device instance $12 r0 *1 0.835,0.56 sky130_fd_pr__nfet_01v8
-XM$12 \$12 B1 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.06825
+XM$12 \$13 B1 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.06825
 + AD=0.16535 PS=0.86 PD=1.82
 .ENDS sky130_fd_sc_hd__o211a_2
 
@@ -2065,11 +1521,8 @@ XM$2 \$11 B \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.0441
 XM$3 \$10 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.0693
 + AD=0.14825 PS=0.75 PD=1.34
 * device instance $4 r0 *1 1.815,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR \$7 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14825 AD=0.135
-+ PS=1.34 PD=1.27
-* device instance $5 r0 *1 2.235,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 X \$7 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.315
-+ PS=1.27 PD=2.63
+XM$4 VPWR \$7 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28325 AD=0.45
++ PS=2.61 PD=3.9
 * device instance $6 r0 *1 0.485,0.475 sky130_fd_pr__nfet_01v8
 XM$6 \$7 C VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.0567 PS=1.36 PD=0.69
@@ -2080,11 +1533,8 @@ XM$7 VGND B \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
 XM$8 VGND A \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.101875
 + AD=0.0567 PS=0.99 PD=0.69
 * device instance $9 r0 *1 1.815,0.56 sky130_fd_pr__nfet_01v8
-XM$9 VGND \$7 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.101875
-+ AD=0.08775 PS=0.99 PD=0.92
-* device instance $10 r0 *1 2.235,0.56 sky130_fd_pr__nfet_01v8
-XM$10 X \$7 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.18525 PS=0.92 PD=1.87
+XM$9 VGND \$7 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.189625
++ AD=0.273 PS=1.91 PD=2.79
 .ENDS sky130_fd_sc_hd__or3_2
 
 * cell sky130_fd_sc_hd__or4b_2
@@ -2102,30 +1552,27 @@ XM$10 X \$7 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin 
 * pin 
 * pin sky130_gnd
-.SUBCKT sky130_fd_sc_hd__or4b_2 VPB \$2 VGND C B A VPWR X \$9 D_N \$12 \$13
+*.SUBCKT sky130_fd_sc_hd__or4b_2 VPB \$2 VGND C B A VPWR X \$9 D_N \$12 \$13
 + \$14 sky130_gnd
-* device instance $1 r0 *1 0.47,0.475 sky130_fd_pr__nfet_01v8
-XM$1 VGND D_N \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.10025
-+ AD=0.1092 PS=0.985 PD=1.36
-* device instance $2 r0 *1 1.86,0.475 sky130_fd_pr__nfet_01v8
-XM$2 VGND A \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.10025
-+ AD=0.0693 PS=0.985 PD=0.75
-* device instance $3 r0 *1 2.34,0.475 sky130_fd_pr__nfet_01v8
-XM$3 \$2 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0693
-+ AD=0.0567 PS=0.75 PD=0.69
-* device instance $4 r0 *1 2.76,0.475 sky130_fd_pr__nfet_01v8
-XM$4 VGND C \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
-+ AD=0.0567 PS=0.69 PD=0.69
-* device instance $5 r0 *1 3.18,0.475 sky130_fd_pr__nfet_01v8
-XM$5 \$2 \$9 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
-+ AD=0.1092 PS=0.69 PD=1.36
-* device instance $6 r0 *1 0.955,0.56 sky130_fd_pr__nfet_01v8
-XM$6 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.10025
-+ AD=0.08775 PS=0.985 PD=0.92
-* device instance $7 r0 *1 1.375,0.56 sky130_fd_pr__nfet_01v8
-XM$7 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.10025 PS=0.92 PD=0.985
-.ENDS sky130_fd_sc_hd__or4b_2
+** device instance $1 r0 *1 0.47,0.475 sky130_fd_pr__nfet_01v8
+*XM$1 VGND D_N \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.10025
+*+ AD=0.1092 PS=0.985 PD=1.36
+** device instance $2 r0 *1 1.86,0.475 sky130_fd_pr__nfet_01v8
+*XM$2 VGND A \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.10025
+*+ AD=0.0693 PS=0.985 PD=0.75
+** device instance $3 r0 *1 2.34,0.475 sky130_fd_pr__nfet_01v8
+*XM$3 \$2 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0693
+*+ AD=0.0567 PS=0.75 PD=0.69
+** device instance $4 r0 *1 2.76,0.475 sky130_fd_pr__nfet_01v8
+*XM$4 VGND C \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
+*+ AD=0.0567 PS=0.69 PD=0.69
+** device instance $5 r0 *1 3.18,0.475 sky130_fd_pr__nfet_01v8
+*XM$5 \$2 \$9 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
+*+ AD=0.1092 PS=0.69 PD=1.36
+** device instance $6 r0 *1 0.955,0.56 sky130_fd_pr__nfet_01v8
+*XM$6 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.188
+*+ AD=0.188 PS=1.905 PD=1.905
+*.ENDS sky130_fd_sc_hd__or4b_2
 
 * cell sky130_fd_sc_hd__nor2_2
 * pin VPB
@@ -2137,29 +1584,17 @@ XM$7 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__nor2_2 VPB VGND A Y B VPWR sky130_gnd
 * device instance $1 r0 *1 0.49,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$3 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $2 r0 *1 0.91,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 VPWR A \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$1 \$3 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.27
++ PS=3.83 PD=2.54
 * device instance $3 r0 *1 1.33,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$3 B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $4 r0 *1 1.75,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 Y B \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$3 \$3 B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $5 r0 *1 0.49,0.56 sky130_fd_pr__nfet_01v8
-XM$5 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.182
-+ AD=0.08775 PS=1.86 PD=0.92
-* device instance $6 r0 *1 0.91,0.56 sky130_fd_pr__nfet_01v8
-XM$6 Y A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$5 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26975
++ AD=0.1755 PS=2.78 PD=1.84
 * device instance $7 r0 *1 1.33,0.56 sky130_fd_pr__nfet_01v8
-XM$7 VGND B Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $8 r0 *1 1.75,0.56 sky130_fd_pr__nfet_01v8
-XM$8 Y B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$7 VGND B Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 .ENDS sky130_fd_sc_hd__nor2_2
 
 * cell sky130_fd_sc_hd__nand3_2
@@ -2173,41 +1608,23 @@ XM$8 Y B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__nand3_2 VGND Y A B C VPWR VPB sky130_gnd
 * device instance $1 r0 *1 2.67,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR C Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 3.09,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 Y C VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.31
-+ PS=1.27 PD=2.62
+XM$1 VPWR C Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.445
++ PS=3.79 PD=3.89
 * device instance $3 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 VPWR A Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $4 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 Y A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$3 VPWR A Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $5 r0 *1 1.31,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $6 r0 *1 1.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 Y B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$5 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $7 r0 *1 2.67,0.56 sky130_fd_pr__nfet_01v8
-XM$7 VGND C \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $8 r0 *1 3.09,0.56 sky130_fd_pr__nfet_01v8
-XM$8 \$5 C VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.2015 PS=0.92 PD=1.92
+XM$7 VGND C \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.28925 PS=2.74 PD=2.84
 * device instance $9 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$9 \$3 A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $10 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
-XM$10 Y A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$9 \$3 A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $11 r0 *1 1.31,0.56 sky130_fd_pr__nfet_01v8
-XM$11 \$3 B \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $12 r0 *1 1.73,0.56 sky130_fd_pr__nfet_01v8
-XM$12 \$5 B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$11 \$3 B \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 .ENDS sky130_fd_sc_hd__nand3_2
 
 * cell sky130_fd_sc_hd__and4b_2
@@ -2237,11 +1654,8 @@ XM$4 VPWR C \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1281
 XM$5 VPWR D \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.14325
 + AD=0.06615 PS=1.33 PD=0.735
 * device instance $6 r0 *1 3.215,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 VPWR \$4 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14325 AD=0.1525
-+ PS=1.33 PD=1.305
-* device instance $7 r0 *1 3.67,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 X \$4 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.1525 AD=0.26
-+ PS=1.305 PD=2.52
+XM$6 VPWR \$4 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.29575 AD=0.4125
++ PS=2.635 PD=3.825
 * device instance $8 r0 *1 1.41,0.445 sky130_fd_pr__nfet_01v8
 XM$8 \$4 \$3 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.0441 PS=1.36 PD=0.63
@@ -2255,11 +1669,8 @@ XM$10 \$10 C \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0735
 XM$11 \$8 D VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.06195
 + AD=0.103975 PS=0.715 PD=1
 * device instance $12 r0 *1 3.215,0.56 sky130_fd_pr__nfet_01v8
-XM$12 VGND \$4 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.103975
-+ AD=0.099125 PS=1 PD=0.955
-* device instance $13 r0 *1 3.67,0.56 sky130_fd_pr__nfet_01v8
-XM$13 X \$4 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.099125
-+ AD=0.169 PS=0.955 PD=1.82
+XM$12 VGND \$4 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.2031
++ AD=0.268125 PS=1.955 PD=2.775
 * device instance $14 r0 *1 0.47,0.445 sky130_fd_pr__nfet_01v8
 XM$14 VGND A_N \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.1092 PS=1.36 PD=1.36
@@ -2278,29 +1689,17 @@ XM$14 VGND A_N \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 XM$1 \$2 A_N VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1092
 + AD=0.1468 PS=1.36 PD=1.34
 * device instance $2 r0 *1 0.96,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 VPWR \$2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.1468 AD=0.165
-+ PS=1.34 PD=1.33
-* device instance $3 r0 *1 1.44,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 Y \$2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.335
-+ PS=1.33 PD=1.67
+XM$2 VPWR \$2 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.3118 AD=0.5
++ PS=2.67 PD=3
 * device instance $4 r0 *1 2.26,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.335 AD=0.135
-+ PS=1.67 PD=1.27
-* device instance $5 r0 *1 2.68,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 Y B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.275
-+ PS=1.27 PD=2.55
+XM$4 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.47 AD=0.41
++ PS=2.94 PD=3.82
 * device instance $6 r0 *1 1.48,0.56 sky130_fd_pr__nfet_01v8
-XM$6 \$3 \$2 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $7 r0 *1 1.9,0.56 sky130_fd_pr__nfet_01v8
-XM$7 Y \$2 \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$6 \$3 \$2 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $8 r0 *1 2.32,0.56 sky130_fd_pr__nfet_01v8
-XM$8 \$3 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $9 r0 *1 2.74,0.56 sky130_fd_pr__nfet_01v8
-XM$9 VGND B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$8 \$3 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 * device instance $10 r0 *1 0.47,0.675 sky130_fd_pr__nfet_01v8
 XM$10 VGND A_N \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.194
 + AD=0.1092 PS=1.95 PD=1.36
@@ -2317,16 +1716,13 @@ XM$10 VGND A_N \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.194
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o21ba_2 VPB VPWR B1_N VGND X A2 A1 sky130_gnd
 * device instance $1 r0 *1 0.47,1.695 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$7 B1_N VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1092
+XM$1 \$3 B1_N VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1092
 + AD=0.14575 PS=1.36 PD=1.335
 * device instance $2 r0 *1 0.955,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14575 AD=0.135
-+ PS=1.335 PD=1.27
-* device instance $3 r0 *1 1.375,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 X \$2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.395
-+ PS=1.27 PD=1.79
+XM$2 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28075 AD=0.53
++ PS=2.605 PD=3.06
 * device instance $4 r0 *1 2.315,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR \$7 \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.395 AD=0.165
+XM$4 VPWR \$3 \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.395 AD=0.165
 + PS=1.79 PD=1.33
 * device instance $5 r0 *1 2.795,1.985 sky130_fd_pr__pfet_01v8_hvt
 XM$5 \$2 A2 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.105
@@ -2335,7 +1731,7 @@ XM$5 \$2 A2 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.105
 XM$6 \$12 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.105 AD=0.28
 + PS=1.21 PD=2.56
 * device instance $7 r0 *1 2.315,0.56 sky130_fd_pr__nfet_01v8
-XM$7 \$2 \$7 \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
+XM$7 \$2 \$3 \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
 + AD=0.105625 PS=1.82 PD=0.975
 * device instance $8 r0 *1 2.79,0.56 sky130_fd_pr__nfet_01v8
 XM$8 \$8 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.105625
@@ -2344,14 +1740,11 @@ XM$8 \$8 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.105625
 XM$9 VGND A1 \$8 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 + AD=0.169 PS=0.92 PD=1.82
 * device instance $10 r0 *1 0.47,0.675 sky130_fd_pr__nfet_01v8
-XM$10 VGND B1_N \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.097
+XM$10 VGND B1_N \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.097
 + AD=0.1092 PS=0.975 PD=1.36
 * device instance $11 r0 *1 0.945,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.097
-+ AD=0.08775 PS=0.975 PD=0.92
-* device instance $12 r0 *1 1.365,0.56 sky130_fd_pr__nfet_01v8
-XM$12 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$11 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.18475
++ AD=0.25675 PS=1.895 PD=2.74
 .ENDS sky130_fd_sc_hd__o21ba_2
 
 * cell sky130_fd_sc_hd__diode_2
@@ -2359,8 +1752,8 @@ XM$12 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin DIODE
 * pin VPWR
 * pin VGND
-.SUBCKT sky130_fd_sc_hd__diode_2 VPB DIODE VPWR VGND
-.ENDS sky130_fd_sc_hd__diode_2
+*.SUBCKT sky130_fd_sc_hd__diode_2 VPB DIODE VPWR VGND
+*.ENDS sky130_fd_sc_hd__diode_2
 
 * cell sky130_fd_sc_hd__nand4_2
 * pin VGND
@@ -2374,53 +1767,29 @@ XM$12 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__nand4_2 VGND D C B A VPWR Y VPB sky130_gnd
 * device instance $1 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR D Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 Y D VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$1 VPWR D Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $3 r0 *1 1.31,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 VPWR C Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $4 r0 *1 1.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 Y C VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.215
-+ PS=1.27 PD=1.43
+XM$3 VPWR C Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.35
++ PS=2.54 PD=2.7
 * device instance $5 r0 *1 2.31,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.215 AD=0.135
-+ PS=1.43 PD=1.27
-* device instance $6 r0 *1 2.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 Y B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.335
-+ PS=1.27 PD=1.67
+XM$5 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.35 AD=0.47 PS=2.7
++ PD=2.94
 * device instance $7 r0 *1 3.55,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 VPWR A Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.335 AD=0.135
-+ PS=1.67 PD=1.27
-* device instance $8 r0 *1 3.97,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 Y A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.42
-+ PS=1.27 PD=2.84
+XM$7 VPWR A Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.47 AD=0.555
++ PS=2.94 PD=4.11
 * device instance $9 r0 *1 2.71,0.56 sky130_fd_pr__nfet_01v8
-XM$9 \$5 B \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.182
-+ AD=0.08775 PS=1.86 PD=0.92
-* device instance $10 r0 *1 3.13,0.56 sky130_fd_pr__nfet_01v8
-XM$10 \$4 B \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$9 \$5 B \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26975
++ AD=0.1755 PS=2.78 PD=1.84
 * device instance $11 r0 *1 3.55,0.56 sky130_fd_pr__nfet_01v8
-XM$11 \$5 A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $12 r0 *1 3.97,0.56 sky130_fd_pr__nfet_01v8
-XM$12 Y A \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.234 PS=0.92 PD=2.02
+XM$11 \$5 A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.32175 PS=1.84 PD=2.94
 * device instance $13 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$13 \$3 D VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $14 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
-XM$14 VGND D \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$13 \$3 D VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $15 r0 *1 1.31,0.56 sky130_fd_pr__nfet_01v8
-XM$15 \$3 C \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $16 r0 *1 1.73,0.56 sky130_fd_pr__nfet_01v8
-XM$16 \$4 C \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.182 PS=0.92 PD=1.86
+XM$15 \$3 C \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.26975 PS=1.84 PD=2.78
 .ENDS sky130_fd_sc_hd__nand4_2
 
 * cell sky130_fd_sc_hd__dfxtp_2
@@ -2466,20 +1835,14 @@ XM$10 VPWR \$4 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.64 AS=0.0864
 XM$11 \$10 \$9 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.27 AD=0.135
 + PS=2.54 PD=1.27
 * device instance $12 r0 *1 6.84,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$12 VPWR \$10 Q VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $13 r0 *1 7.26,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$13 Q \$10 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$12 VPWR \$10 Q VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $14 r0 *1 6.43,0.56 sky130_fd_pr__nfet_01v8
 XM$14 \$10 \$9 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
 + AD=0.08775 PS=1.82 PD=0.92
 * device instance $15 r0 *1 6.85,0.56 sky130_fd_pr__nfet_01v8
-XM$15 VGND \$10 Q sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $16 r0 *1 7.27,0.56 sky130_fd_pr__nfet_01v8
-XM$16 Q \$10 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$15 VGND \$10 Q sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 * device instance $17 r0 *1 2.39,0.415 sky130_fd_pr__nfet_01v8
 XM$17 \$6 \$4 \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.36 AS=0.0813
 + AD=0.0621 PS=0.83 PD=0.705
@@ -2540,17 +1903,11 @@ XM$4 VPWR A2 \$14 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.215 AD=0.135
 XM$5 \$14 A3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
 + PS=1.27 PD=2.52
 * device instance $6 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $7 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$6 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.395
++ PS=3.79 PD=3.79
 * device instance $8 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$8 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $9 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
-XM$9 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.209625 PS=0.92 PD=1.295
+XM$8 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.297375 PS=2.74 PD=2.215
 * device instance $10 r0 *1 1.685,0.56 sky130_fd_pr__nfet_01v8
 XM$10 VGND B2 \$10 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.209625
 + AD=0.115375 PS=1.295 PD=1.005
@@ -2618,17 +1975,11 @@ XM$12 \$19 \$17 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1155
 XM$13 VPWR RESET_B \$19 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42
 + AS=0.07035 AD=0.1092 PS=0.755 PD=1.36
 * device instance $14 r0 *1 8.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$14 VPWR \$9 Q VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.3012 AD=0.135
-+ PS=2.66 PD=1.27
-* device instance $15 r0 *1 9.15,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$15 Q \$9 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$14 VPWR \$9 Q VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.4362 AD=0.395
++ PS=3.93 PD=3.79
 * device instance $16 r0 *1 8.73,0.56 sky130_fd_pr__nfet_01v8
-XM$16 VGND \$9 Q sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.2087
-+ AD=0.08775 PS=2.02 PD=0.92
-* device instance $17 r0 *1 9.15,0.56 sky130_fd_pr__nfet_01v8
-XM$17 Q \$9 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$16 VGND \$9 Q sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.29645
++ AD=0.25675 PS=2.94 PD=2.74
 * device instance $18 r0 *1 2.64,0.415 sky130_fd_pr__nfet_01v8
 XM$18 \$5 \$3 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.36 AS=0.066
 + AD=0.0594 PS=0.745 PD=0.69
@@ -2679,7 +2030,7 @@ XM$30 VGND \$3 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
 * pin VGND
 * pin X
 * pin sky130_gnd
-.SUBCKT sky130_fd_sc_hd__and3_2 VPB A VPWR B C VGND X sky130_gnd
+.SUBCKT sky130_fd_sc_hd__and3_2 VPB A B C VGND VPWR X sky130_gnd
 * device instance $1 r0 *1 1.375,1.695 sky130_fd_pr__pfet_01v8_hvt
 XM$1 \$5 C VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.074375
 + AD=0.15075 PS=0.815 PD=1.345
@@ -2690,11 +2041,8 @@ XM$2 \$5 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1092
 XM$3 \$5 B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.074375
 + AD=0.0567 PS=0.815 PD=0.69
 * device instance $4 r0 *1 1.87,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.15075 AD=0.135
-+ PS=1.345 PD=1.27
-* device instance $5 r0 *1 2.29,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$4 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28575 AD=0.395
++ PS=2.615 PD=3.79
 * device instance $6 r0 *1 0.485,0.475 sky130_fd_pr__nfet_01v8
 XM$6 \$5 A \$11 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.0441 PS=1.36 PD=0.63
@@ -2705,11 +2053,8 @@ XM$7 \$11 B \$10 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0441
 XM$8 VGND C \$10 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1304
 + AD=0.05355 PS=1.105 PD=0.675
 * device instance $9 r0 *1 1.855,0.56 sky130_fd_pr__nfet_01v8
-XM$9 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.1304
-+ AD=0.08775 PS=1.105 PD=0.92
-* device instance $10 r0 *1 2.275,0.56 sky130_fd_pr__nfet_01v8
-XM$10 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.17875 PS=0.92 PD=1.85
+XM$9 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.21815
++ AD=0.2665 PS=2.025 PD=2.77
 .ENDS sky130_fd_sc_hd__and3_2
 
 * cell sky130_fd_sc_hd__o31a_2
@@ -2724,11 +2069,8 @@ XM$10 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o31a_2 VGND X A1 A2 A3 B1 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 0.615,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.405 AD=0.175
-+ PS=2.81 PD=1.35
-* device instance $2 r0 *1 1.115,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.175 AD=0.195
-+ PS=1.35 PD=1.39
+XM$1 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.58 AD=0.37
++ PS=4.16 PD=2.74
 * device instance $3 r0 *1 1.655,1.985 sky130_fd_pr__pfet_01v8_hvt
 XM$3 VPWR A1 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.195 AD=0.135
 + PS=1.39 PD=1.27
@@ -2742,11 +2084,8 @@ XM$5 \$13 A3 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.2125
 XM$6 \$5 B1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.2125 AD=0.34
 + PS=1.425 PD=2.68
 * device instance $7 r0 *1 0.615,0.56 sky130_fd_pr__nfet_01v8
-XM$7 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.26325
-+ AD=0.11375 PS=2.11 PD=1
-* device instance $8 r0 *1 1.115,0.56 sky130_fd_pr__nfet_01v8
-XM$8 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.11375
-+ AD=0.12675 PS=1 PD=1.04
+XM$7 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.377
++ AD=0.2405 PS=3.11 PD=2.04
 * device instance $9 r0 *1 1.655,0.56 sky130_fd_pr__nfet_01v8
 XM$9 VGND A1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.12675
 + AD=0.08775 PS=1.04 PD=0.92
@@ -2763,8 +2102,8 @@ XM$12 \$4 B1 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.10725
 
 * cell VIA_M2M3_PR
 * pin 
-.SUBCKT VIA_M2M3_PR \$1
-.ENDS VIA_M2M3_PR
+*.SUBCKT VIA_M2M3_PR \$1
+*.ENDS VIA_M2M3_PR
 
 * cell sky130_fd_sc_hd__xnor2_2
 * pin VGND
@@ -2776,65 +2115,35 @@ XM$12 \$4 B1 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.10725
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__xnor2_2 VGND Y B A VPWR VPB sky130_gnd
 * device instance $1 r0 *1 4.96,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR \$4 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 5.38,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 Y \$4 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$1 VPWR \$4 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.415
++ PS=3.79 PD=3.83
 * device instance $3 r0 *1 2.725,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$10 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.28 AD=0.135
-+ PS=2.56 PD=1.27
-* device instance $4 r0 *1 3.145,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR A \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$3 \$10 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.415 AD=0.27
++ PS=3.83 PD=2.54
 * device instance $5 r0 *1 3.565,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$10 B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.1525
-+ PS=1.27 PD=1.305
-* device instance $6 r0 *1 4.02,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 Y B \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.1525 AD=0.26
-+ PS=1.305 PD=2.52
+XM$5 \$10 B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.2875 AD=0.4125
++ PS=2.575 PD=3.825
 * device instance $7 r0 *1 0.485,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 \$4 B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.275 AD=0.135
-+ PS=2.55 PD=1.27
-* device instance $8 r0 *1 0.905,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 VPWR B \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$7 \$4 B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.41 AD=0.27
++ PS=3.82 PD=2.54
 * device instance $9 r0 *1 1.325,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$9 \$4 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $10 r0 *1 1.745,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$10 VPWR A \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$9 \$4 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.415
++ PS=2.54 PD=3.83
 * device instance $11 r0 *1 4.96,0.56 sky130_fd_pr__nfet_01v8
-XM$11 Y \$4 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $12 r0 *1 5.38,0.56 sky130_fd_pr__nfet_01v8
-XM$12 \$5 \$4 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$11 Y \$4 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.25675 PS=2.74 PD=2.74
 * device instance $13 r0 *1 2.725,0.56 sky130_fd_pr__nfet_01v8
-XM$13 VGND A \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.182
-+ AD=0.08775 PS=1.86 PD=0.92
-* device instance $14 r0 *1 3.145,0.56 sky130_fd_pr__nfet_01v8
-XM$14 \$5 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$13 VGND A \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26975
++ AD=0.1755 PS=2.78 PD=1.84
 * device instance $15 r0 *1 3.565,0.56 sky130_fd_pr__nfet_01v8
-XM$15 VGND B \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.099125 PS=0.92 PD=0.955
-* device instance $16 r0 *1 4.02,0.56 sky130_fd_pr__nfet_01v8
-XM$16 \$5 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.099125
-+ AD=0.169 PS=0.955 PD=1.82
+XM$15 VGND B \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.186875
++ AD=0.268125 PS=1.875 PD=2.775
 * device instance $17 r0 *1 0.485,0.56 sky130_fd_pr__nfet_01v8
-XM$17 \$3 B \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.17875
-+ AD=0.08775 PS=1.85 PD=0.92
-* device instance $18 r0 *1 0.905,0.56 sky130_fd_pr__nfet_01v8
-XM$18 \$4 B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$17 \$3 B \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.2665
++ AD=0.1755 PS=2.77 PD=1.84
 * device instance $19 r0 *1 1.325,0.56 sky130_fd_pr__nfet_01v8
-XM$19 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $20 r0 *1 1.745,0.56 sky130_fd_pr__nfet_01v8
-XM$20 VGND A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.182 PS=0.92 PD=1.86
+XM$19 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.26975 PS=1.84 PD=2.78
 .ENDS sky130_fd_sc_hd__xnor2_2
 
 * cell sky130_fd_sc_hd__inv_2
@@ -2846,19 +2155,12 @@ XM$20 VGND A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__inv_2 VPB VGND VPWR Y A sky130_gnd
 * device instance $1 r0 *1 0.48,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR A Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 0.9,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 Y A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$1 VPWR A Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.395
++ PS=3.79 PD=3.79
 * device instance $3 r0 *1 0.48,0.56 sky130_fd_pr__nfet_01v8
-XM$3 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $4 r0 *1 0.9,0.56 sky130_fd_pr__nfet_01v8
-XM$4 Y A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$3 VGND A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.25675 PS=2.74 PD=2.74
 .ENDS sky130_fd_sc_hd__inv_2
-
 
 * cell sky130_fd_sc_hd__and2_2
 * pin VPB
@@ -2876,11 +2178,8 @@ XM$1 VPWR A \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1176
 XM$2 VPWR B \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.16655
 + AD=0.0567 PS=1.39 PD=0.69
 * device instance $3 r0 *1 1.62,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.16655 AD=0.195
-+ PS=1.39 PD=1.39
-* device instance $4 r0 *1 2.16,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 X \$2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.195 AD=0.38
-+ PS=1.39 PD=2.76
+XM$3 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.36155 AD=0.575
++ PS=2.78 PD=4.15
 * device instance $5 r0 *1 0.66,0.585 sky130_fd_pr__nfet_01v8
 XM$5 \$2 A \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1176
 + AD=0.0567 PS=1.4 PD=0.69
@@ -2888,11 +2187,8 @@ XM$5 \$2 A \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1176
 XM$6 VGND B \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1118
 + AD=0.0567 PS=1.04 PD=0.69
 * device instance $7 r0 *1 1.62,0.56 sky130_fd_pr__nfet_01v8
-XM$7 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.1118
-+ AD=0.12675 PS=1.04 PD=1.04
-* device instance $8 r0 *1 2.16,0.56 sky130_fd_pr__nfet_01v8
-XM$8 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.12675
-+ AD=0.247 PS=1.04 PD=2.06
+XM$7 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.23855
++ AD=0.37375 PS=2.08 PD=3.1
 .ENDS sky130_fd_sc_hd__and2_2
 
 * cell sky130_fd_sc_hd__a22o_2
@@ -2913,11 +2209,8 @@ XM$1 VPWR A1 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.165
 XM$2 \$11 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.1575
 + PS=1.33 PD=1.315
 * device instance $3 r0 *1 2.775,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.1575 AD=0.135
-+ PS=1.315 PD=1.27
-* device instance $4 r0 *1 3.195,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.27
-+ PS=1.27 PD=2.54
+XM$3 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.2925 AD=0.405
++ PS=2.585 PD=3.81
 * device instance $5 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
 XM$5 \$5 B2 \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
 + PS=2.52 PD=1.27
@@ -2931,11 +2224,8 @@ XM$7 \$5 A1 \$10 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
 XM$8 \$10 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.10725
 + AD=0.102375 PS=0.98 PD=0.965
 * device instance $9 r0 *1 2.775,0.56 sky130_fd_pr__nfet_01v8
-XM$9 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.102375
-+ AD=0.08775 PS=0.965 PD=0.92
-* device instance $10 r0 *1 3.195,0.56 sky130_fd_pr__nfet_01v8
-XM$10 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.1755 PS=0.92 PD=1.84
+XM$9 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.190125
++ AD=0.26325 PS=1.885 PD=2.76
 * device instance $11 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
 XM$11 VGND B2 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
 + AD=0.07475 PS=1.82 PD=0.88
@@ -2954,32 +2244,18 @@ XM$12 \$9 B1 \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.07475
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__nand2_2 VPB VPWR Y B VGND A sky130_gnd
 * device instance $1 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 Y B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$1 VPWR B Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $3 r0 *1 1.31,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 VPWR A Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $4 r0 *1 1.73,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 Y A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$3 VPWR A Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $5 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$5 \$3 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $6 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
-XM$6 VGND B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$5 \$3 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $7 r0 *1 1.31,0.56 sky130_fd_pr__nfet_01v8
-XM$7 \$3 A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $8 r0 *1 1.73,0.56 sky130_fd_pr__nfet_01v8
-XM$8 Y A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$7 \$3 A Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 .ENDS sky130_fd_sc_hd__nand2_2
-
-
 
 * cell sky130_fd_sc_hd__xor2_2
 * pin VGND
@@ -2991,65 +2267,35 @@ XM$8 Y A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__xor2_2 VGND A B X VPWR VPB sky130_gnd
 * device instance $1 r0 *1 4.94,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 \$8 \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 5.36,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 X \$3 \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.28
-+ PS=1.27 PD=2.56
+XM$1 \$8 \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.415
++ PS=3.79 PD=3.83
 * device instance $3 r0 *1 2.685,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$8 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $4 r0 *1 3.105,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR A \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$3 \$8 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $5 r0 *1 3.525,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$8 B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.1625
-+ PS=1.27 PD=1.325
-* device instance $6 r0 *1 4,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 VPWR B \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.1625 AD=0.26
-+ PS=1.325 PD=2.52
+XM$5 \$8 B VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.2975 AD=0.4225
++ PS=2.595 PD=3.845
 * device instance $7 r0 *1 0.485,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 \$9 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.275 AD=0.135
-+ PS=2.55 PD=1.27
-* device instance $8 r0 *1 0.905,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 VPWR A \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$7 \$9 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.41 AD=0.27
++ PS=3.82 PD=2.54
 * device instance $9 r0 *1 1.325,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$9 \$9 B \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
-* device instance $10 r0 *1 1.745,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$10 \$3 B \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$9 \$9 B \$3 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.27 AD=0.395
++ PS=2.54 PD=3.79
 * device instance $11 r0 *1 4.94,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $12 r0 *1 5.36,0.56 sky130_fd_pr__nfet_01v8
-XM$12 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$11 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.25675 PS=2.74 PD=2.74
 * device instance $13 r0 *1 2.685,0.56 sky130_fd_pr__nfet_01v8
-XM$13 \$6 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $14 r0 *1 3.105,0.56 sky130_fd_pr__nfet_01v8
-XM$14 VGND A \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$13 \$6 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $15 r0 *1 3.525,0.56 sky130_fd_pr__nfet_01v8
-XM$15 \$6 B X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.105625 PS=0.92 PD=0.975
-* device instance $16 r0 *1 4,0.56 sky130_fd_pr__nfet_01v8
-XM$16 X B \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.105625
-+ AD=0.169 PS=0.975 PD=1.82
+XM$15 \$6 B X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.193375
++ AD=0.274625 PS=1.895 PD=2.795
 * device instance $17 r0 *1 0.485,0.56 sky130_fd_pr__nfet_01v8
-XM$17 VGND A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.17875
-+ AD=0.08775 PS=1.85 PD=0.92
-* device instance $18 r0 *1 0.905,0.56 sky130_fd_pr__nfet_01v8
-XM$18 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$17 VGND A \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.2665
++ AD=0.1755 PS=2.77 PD=1.84
 * device instance $19 r0 *1 1.325,0.56 sky130_fd_pr__nfet_01v8
-XM$19 VGND B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
-* device instance $20 r0 *1 1.745,0.56 sky130_fd_pr__nfet_01v8
-XM$20 \$3 B VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$19 VGND B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1755
++ AD=0.25675 PS=1.84 PD=2.74
 .ENDS sky130_fd_sc_hd__xor2_2
 
 * cell sky130_fd_sc_hd__a21o_2
@@ -3072,17 +2318,11 @@ XM$2 \$2 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.1575
 XM$3 VPWR A2 \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.1575 AD=0.26
 + PS=1.315 PD=2.52
 * device instance $4 r0 *1 0.475,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR \$6 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.265 AD=0.14
-+ PS=2.53 PD=1.28
-* device instance $5 r0 *1 0.905,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 X \$6 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.265
-+ PS=1.28 PD=2.53
+XM$4 VPWR \$6 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.405 AD=0.405
++ PS=3.81 PD=3.81
 * device instance $6 r0 *1 0.645,0.56 sky130_fd_pr__nfet_01v8
-XM$6 VGND \$6 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.17225
-+ AD=0.091 PS=1.83 PD=0.93
-* device instance $7 r0 *1 1.075,0.56 sky130_fd_pr__nfet_01v8
-XM$7 X \$6 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.1105 PS=0.93 PD=0.99
+XM$6 VGND \$6 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26325
++ AD=0.2015 PS=2.76 PD=1.92
 * device instance $8 r0 *1 1.565,0.56 sky130_fd_pr__nfet_01v8
 XM$8 VGND B1 \$6 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.1105
 + AD=0.1625 PS=0.99 PD=1.15
@@ -3118,11 +2358,8 @@ XM$3 \$12 B \$11 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.0441
 XM$4 \$11 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.0693
 + AD=0.14825 PS=0.75 PD=1.34
 * device instance $5 r0 *1 2.28,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14825 AD=0.135
-+ PS=1.34 PD=1.27
-* device instance $6 r0 *1 2.7,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.305
-+ PS=1.27 PD=2.61
+XM$5 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28325 AD=0.44
++ PS=2.61 PD=3.88
 * device instance $7 r0 *1 0.47,0.475 sky130_fd_pr__nfet_01v8
 XM$7 VGND D \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.0693 PS=1.36 PD=0.75
@@ -3136,11 +2373,8 @@ XM$9 VGND B \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
 XM$10 VGND A \$5 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.101875
 + AD=0.0567 PS=0.99 PD=0.69
 * device instance $11 r0 *1 2.28,0.56 sky130_fd_pr__nfet_01v8
-XM$11 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.101875
-+ AD=0.08775 PS=0.99 PD=0.92
-* device instance $12 r0 *1 2.7,0.56 sky130_fd_pr__nfet_01v8
-XM$12 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.19825 PS=0.92 PD=1.91
+XM$11 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.189625
++ AD=0.286 PS=1.91 PD=2.83
 .ENDS sky130_fd_sc_hd__or4_2
 
 * cell sky130_fd_sc_hd__or2_2
@@ -3159,11 +2393,8 @@ XM$1 \$3 B \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.1092
 XM$2 \$9 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.0441
 + AD=0.15575 PS=0.63 PD=1.355
 * device instance $3 r0 *1 1.395,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.15575 AD=0.135
-+ PS=1.355 PD=1.27
-* device instance $4 r0 *1 1.815,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$3 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.29075 AD=0.395
++ PS=2.625 PD=3.79
 * device instance $5 r0 *1 0.47,0.445 sky130_fd_pr__nfet_01v8
 XM$5 VGND B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 + AD=0.0567 PS=1.36 PD=0.69
@@ -3171,32 +2402,29 @@ XM$5 VGND B \$3 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1092
 XM$6 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
 + AD=0.10675 PS=0.69 PD=1.005
 * device instance $7 r0 *1 1.395,0.56 sky130_fd_pr__nfet_01v8
-XM$7 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.10675
-+ AD=0.08775 PS=1.005 PD=0.92
-* device instance $8 r0 *1 1.815,0.56 sky130_fd_pr__nfet_01v8
-XM$8 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.169 PS=0.92 PD=1.82
+XM$7 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.1945
++ AD=0.25675 PS=1.925 PD=2.74
 .ENDS sky130_fd_sc_hd__or2_2
 
 * cell VIA_via3_4_2000_480_1_5_400_400
 * pin 
-.SUBCKT VIA_via3_4_2000_480_1_5_400_400 \$1
-.ENDS VIA_via3_4_2000_480_1_5_400_400
+*.SUBCKT VIA_via3_4_2000_480_1_5_400_400 \$1
+*.ENDS VIA_via3_4_2000_480_1_5_400_400
 
 * cell VIA_via4_5_2000_480_1_5_400_400
 * pin 
-.SUBCKT VIA_via4_5_2000_480_1_5_400_400 \$1
-.ENDS VIA_via4_5_2000_480_1_5_400_400
+*.SUBCKT VIA_via4_5_2000_480_1_5_400_400 \$1
+*.ENDS VIA_via4_5_2000_480_1_5_400_400
 
 * cell VIA_via2_3_2000_480_1_6_320_320
 * pin 
-.SUBCKT VIA_via2_3_2000_480_1_6_320_320 \$1
-.ENDS VIA_via2_3_2000_480_1_6_320_320
+*.SUBCKT VIA_via2_3_2000_480_1_6_320_320 \$1
+*.ENDS VIA_via2_3_2000_480_1_6_320_320
 
 * cell VIA_L1M1_PR_MR
 * pin 
-.SUBCKT VIA_L1M1_PR_MR \$1
-.ENDS VIA_L1M1_PR_MR
+*.SUBCKT VIA_L1M1_PR_MR \$1
+*.ENDS VIA_L1M1_PR_MR
 
 * cell sky130_fd_sc_hd__o21a_2
 * pin VPB
@@ -3209,11 +2437,8 @@ XM$8 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__o21a_2 VPB VGND VPWR X B1 A2 A1 sky130_gnd
 * device instance $1 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.1375
-+ PS=2.52 PD=1.275
-* device instance $2 r0 *1 0.895,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 X \$5 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.1375 AD=0.4
-+ PS=1.275 PD=1.8
+XM$1 VPWR \$5 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.3975 AD=0.5375
++ PS=3.795 PD=3.075
 * device instance $3 r0 *1 1.845,1.985 sky130_fd_pr__pfet_01v8_hvt
 XM$3 VPWR B1 \$5 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.4 AD=0.14
 + PS=1.8 PD=1.28
@@ -3233,11 +2458,8 @@ XM$7 \$7 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
 XM$8 VGND A1 \$7 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.104
 + AD=0.17225 PS=0.97 PD=1.83
 * device instance $9 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$9 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.089375 PS=1.82 PD=0.925
-* device instance $10 r0 *1 0.895,0.56 sky130_fd_pr__nfet_01v8
-XM$10 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.089375
-+ AD=0.17225 PS=0.925 PD=1.83
+XM$9 VGND \$5 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.258375
++ AD=0.261625 PS=2.745 PD=2.755
 .ENDS sky130_fd_sc_hd__o21a_2
 
 * cell sky130_fd_sc_hd__a31o_2
@@ -3252,11 +2474,8 @@ XM$10 X \$5 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.089375
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__a31o_2 VPB X A3 A2 VPWR A1 VGND B1 sky130_gnd
 * device instance $1 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR \$8 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $2 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 X \$8 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
-+ PS=1.27 PD=1.27
+XM$1 VPWR \$8 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.27
++ PS=3.79 PD=2.54
 * device instance $3 r0 *1 1.31,1.985 sky130_fd_pr__pfet_01v8_hvt
 XM$3 VPWR A3 \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.135
 + PS=1.27 PD=1.27
@@ -3270,11 +2489,8 @@ XM$5 VPWR A1 \$4 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.165
 XM$6 \$4 B1 \$8 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.32
 + PS=1.33 PD=2.64
 * device instance $7 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$7 VGND \$8 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.08775 PS=1.82 PD=0.92
-* device instance $8 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
-XM$8 X \$8 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
-+ AD=0.08775 PS=0.92 PD=0.92
+XM$7 VGND \$8 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.25675
++ AD=0.1755 PS=2.74 PD=1.84
 * device instance $9 r0 *1 1.31,0.56 sky130_fd_pr__nfet_01v8
 XM$9 VGND A3 \$13 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.08775
 + AD=0.08775 PS=0.92 PD=0.92
@@ -3301,53 +2517,29 @@ XM$12 \$8 B1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.12675
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__a211oi_2 VGND Y C1 B1 A1 A2 VPWR VPB sky130_gnd
 * device instance $1 r0 *1 2.765,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR A1 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.265 AD=0.14
-+ PS=2.53 PD=1.28
-* device instance $2 r0 *1 3.195,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 \$10 A1 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
+XM$1 VPWR A1 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.405 AD=0.28
++ PS=3.81 PD=2.56
 * device instance $3 r0 *1 3.625,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 VPWR A2 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $4 r0 *1 4.055,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 \$10 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.265
-+ PS=1.28 PD=2.53
+XM$3 VPWR A2 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28 AD=0.405
++ PS=2.56 PD=3.81
 * device instance $5 r0 *1 0.525,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 \$9 C1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.265 AD=0.14
-+ PS=2.53 PD=1.28
-* device instance $6 r0 *1 0.955,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 Y C1 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
+XM$5 \$9 C1 Y VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.405 AD=0.28
++ PS=3.81 PD=2.56
 * device instance $7 r0 *1 1.385,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 \$9 B1 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $8 r0 *1 1.815,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 \$10 B1 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.265
-+ PS=1.28 PD=2.53
+XM$7 \$9 B1 \$10 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.28 AD=0.405
++ PS=2.56 PD=3.81
 * device instance $9 r0 *1 2.765,0.56 sky130_fd_pr__nfet_01v8
-XM$9 \$4 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.17225
-+ AD=0.091 PS=1.83 PD=0.93
-* device instance $10 r0 *1 3.195,0.56 sky130_fd_pr__nfet_01v8
-XM$10 Y A1 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.091 PS=0.93 PD=0.93
+XM$9 \$4 A1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26325
++ AD=0.182 PS=2.76 PD=1.86
 * device instance $11 r0 *1 3.625,0.56 sky130_fd_pr__nfet_01v8
-XM$11 \$4 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.091 PS=0.93 PD=0.93
-* device instance $12 r0 *1 4.055,0.56 sky130_fd_pr__nfet_01v8
-XM$12 VGND A2 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.17225 PS=0.93 PD=1.83
+XM$11 \$4 A2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.182
++ AD=0.26325 PS=1.86 PD=2.76
 * device instance $13 r0 *1 0.525,0.56 sky130_fd_pr__nfet_01v8
-XM$13 VGND C1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.17225
-+ AD=0.091 PS=1.83 PD=0.93
-* device instance $14 r0 *1 0.955,0.56 sky130_fd_pr__nfet_01v8
-XM$14 Y C1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.091 PS=0.93 PD=0.93
+XM$13 VGND C1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26325
++ AD=0.182 PS=2.76 PD=1.86
 * device instance $15 r0 *1 1.385,0.56 sky130_fd_pr__nfet_01v8
-XM$15 VGND B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.091 PS=0.93 PD=0.93
-* device instance $16 r0 *1 1.815,0.56 sky130_fd_pr__nfet_01v8
-XM$16 Y B1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.17225 PS=0.93 PD=1.83
+XM$15 VGND B1 Y sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.182
++ AD=0.26325 PS=1.86 PD=2.76
 .ENDS sky130_fd_sc_hd__a211oi_2
 
 * cell sky130_fd_sc_hd__a211o_2
@@ -3368,28 +2560,22 @@ XM$1 \$7 A2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.195
 XM$2 VPWR A1 \$7 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.195 AD=0.165
 + PS=1.39 PD=1.33
 * device instance $3 r0 *1 2.85,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 \$7 B1 \$13 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.105
+XM$3 \$7 B1 \$12 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.105
 + PS=1.33 PD=1.21
 * device instance $4 r0 *1 3.21,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 \$13 C1 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.105 AD=0.26
+XM$4 \$12 C1 \$9 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.105 AD=0.26
 + PS=1.21 PD=2.52
 * device instance $5 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR \$9 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.26 AD=0.135
-+ PS=2.52 PD=1.27
-* device instance $6 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 X \$9 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.135 AD=0.26
-+ PS=1.27 PD=2.52
+XM$5 VPWR \$9 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.395 AD=0.395
++ PS=3.79 PD=3.79
 * device instance $7 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
-XM$7 VGND \$9 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.169
-+ AD=0.091 PS=1.82 PD=0.93
-* device instance $8 r0 *1 0.9,0.56 sky130_fd_pr__nfet_01v8
-XM$8 X \$9 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.091
-+ AD=0.199875 PS=0.93 PD=1.265
+XM$7 VGND \$9 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.3 AS=0.26
++ AD=0.290875 PS=2.75 PD=2.195
 * device instance $9 r0 *1 1.665,0.56 sky130_fd_pr__nfet_01v8
-XM$9 VGND A2 \$12 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.199875
+XM$9 VGND A2 \$13 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.199875
 + AD=0.13325 PS=1.265 PD=1.06
 * device instance $10 r0 *1 2.225,0.56 sky130_fd_pr__nfet_01v8
-XM$10 \$12 A1 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.13325
+XM$10 \$13 A1 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.13325
 + AD=0.115375 PS=1.06 PD=1.005
 * device instance $11 r0 *1 2.73,0.56 sky130_fd_pr__nfet_01v8
 XM$11 \$9 B1 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.115375
@@ -3408,65 +2594,17 @@ XM$12 VGND C1 \$9 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 AS=0.10725
 * pin sky130_gnd
 .SUBCKT sky130_fd_sc_hd__clkbuf_8 VGND A X VPWR VPB sky130_gnd
 * device instance $1 r0 *1 0.475,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$1 VPWR A \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.265 AD=0.14
-+ PS=2.53 PD=1.28
-* device instance $2 r0 *1 0.905,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 \$2 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
+XM$1 VPWR A \$2 VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=2 AS=0.405 AD=0.28
++ PS=3.81 PD=2.56
 * device instance $3 r0 *1 1.335,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $4 r0 *1 1.765,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 X \$2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $5 r0 *1 2.195,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $6 r0 *1 2.625,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$6 X \$2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $7 r0 *1 3.055,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$7 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $8 r0 *1 3.485,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$8 X \$2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $9 r0 *1 3.915,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$9 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $10 r0 *1 4.345,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$10 X \$2 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.265
-+ PS=1.28 PD=2.53
+XM$3 VPWR \$2 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=8 AS=1.12 AD=1.245
++ PS=10.24 PD=11.49
 * device instance $11 r0 *1 0.475,0.445 sky130_fd_pr__nfet_01v8
-XM$11 VGND A \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1113
-+ AD=0.0588 PS=1.37 PD=0.7
-* device instance $12 r0 *1 0.905,0.445 sky130_fd_pr__nfet_01v8
-XM$12 \$2 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
+XM$11 VGND A \$2 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 AS=0.1701
++ AD=0.1176 PS=2.07 PD=1.4
 * device instance $13 r0 *1 1.335,0.445 sky130_fd_pr__nfet_01v8
-XM$13 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $14 r0 *1 1.765,0.445 sky130_fd_pr__nfet_01v8
-XM$14 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $15 r0 *1 2.195,0.445 sky130_fd_pr__nfet_01v8
-XM$15 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $16 r0 *1 2.625,0.445 sky130_fd_pr__nfet_01v8
-XM$16 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $17 r0 *1 3.055,0.445 sky130_fd_pr__nfet_01v8
-XM$17 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $18 r0 *1 3.485,0.445 sky130_fd_pr__nfet_01v8
-XM$18 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $19 r0 *1 3.915,0.445 sky130_fd_pr__nfet_01v8
-XM$19 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $20 r0 *1 4.345,0.445 sky130_fd_pr__nfet_01v8
-XM$20 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.1134 PS=0.7 PD=1.38
+XM$13 VGND \$2 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=3.36 AS=0.4704
++ AD=0.525 PS=5.6 PD=6.28
 .ENDS sky130_fd_sc_hd__clkbuf_8
 
 * cell sky130_fd_sc_hd__clkbuf_4
@@ -3480,32 +2618,14 @@ XM$20 X \$2 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
 XM$1 \$3 A VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.265 AD=0.165
 + PS=2.53 PD=1.33
 * device instance $2 r0 *1 0.955,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$2 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.165 AD=0.14
-+ PS=1.33 PD=1.28
-* device instance $3 r0 *1 1.385,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$3 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $4 r0 *1 1.815,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$4 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.14
-+ PS=1.28 PD=1.28
-* device instance $5 r0 *1 2.245,1.985 sky130_fd_pr__pfet_01v8_hvt
-XM$5 X \$3 VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 AS=0.14 AD=0.3
-+ PS=1.28 PD=2.6
+XM$2 VPWR \$3 X VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=4 AS=0.585 AD=0.72
++ PS=5.17 PD=6.44
 * device instance $6 r0 *1 0.475,0.445 sky130_fd_pr__nfet_01v8
 XM$6 \$3 A VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.1113
 + AD=0.07035 PS=1.37 PD=0.755
 * device instance $7 r0 *1 0.96,0.445 sky130_fd_pr__nfet_01v8
-XM$7 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.07035
-+ AD=0.0588 PS=0.755 PD=0.7
-* device instance $8 r0 *1 1.39,0.445 sky130_fd_pr__nfet_01v8
-XM$8 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $9 r0 *1 1.82,0.445 sky130_fd_pr__nfet_01v8
-XM$9 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.0588 PS=0.7 PD=0.7
-* device instance $10 r0 *1 2.25,0.445 sky130_fd_pr__nfet_01v8
-XM$10 X \$3 VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0588
-+ AD=0.1218 PS=0.7 PD=1.42
+XM$7 VGND \$3 X sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1.68 AS=0.24675
++ AD=0.2982 PS=2.855 PD=3.52
 .ENDS sky130_fd_sc_hd__clkbuf_4
 
 * cell sky130_fd_sc_hd__decap_3
@@ -3524,17 +2644,16 @@ XM$2 VGND VPWR VGND sky130_gnd sky130_fd_pr__nfet_01v8 L=0.59 W=0.55 AS=0.143
 
 * cell VIA_M1M2_PR
 * pin 
-.SUBCKT VIA_M1M2_PR \$1
-.ENDS VIA_M1M2_PR
+*.SUBCKT VIA_M1M2_PR \$1
+*.ENDS VIA_M1M2_PR
 
 * cell VIA_via5_6_2000_2000_1_1_1600_1600
 * pin 
-.SUBCKT VIA_via5_6_2000_2000_1_1_1600_1600 \$1
-.ENDS VIA_via5_6_2000_2000_1_1_1600_1600
+*.SUBCKT VIA_via5_6_2000_2000_1_1_1600_1600 \$1
+*.ENDS VIA_via5_6_2000_2000_1_1_1600_1600
 
 * cell sky130_fd_sc_hd__tapvpwrvgnd_1
 * pin VPWR
 * pin VGND
 .SUBCKT sky130_fd_sc_hd__tapvpwrvgnd_1 VPWR VGND
 .ENDS sky130_fd_sc_hd__tapvpwrvgnd_1
-
