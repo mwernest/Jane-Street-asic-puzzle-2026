@@ -1,0 +1,10 @@
+X$76 VPWR \$375 VPWR VGND sky130_fd_sc_hd__diode_2
+X$77 \$I13629 \$375 VPWR VGND sky130_fd_sc_hd__diode_2
+X$78 VPWR \$375 VPWR VGND sky130_fd_sc_hd__diode_2
+X$79 \$I13627 \$692 VPWR VGND sky130_fd_sc_hd__diode_2
+X$80 \$I13626 \$692 VPWR VGND sky130_fd_sc_hd__diode_2
+X$81 \$I13625 VGND VPWR VGND sky130_fd_sc_hd__diode_2
+X$82 VPWR \$375 VPWR VGND sky130_fd_sc_hd__diode_2
+X$83 \$I13626 \$692 VPWR VGND sky130_fd_sc_hd__diode_2
+X$84 \$I13622 enable VPWR VGND sky130_fd_sc_hd__diode_2
+X$444 VPWR \$760 VPWR VGND sky130_fd_sc_hd__diode_2

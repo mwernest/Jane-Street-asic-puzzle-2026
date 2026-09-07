@@ -2630,6 +2630,13 @@ logger.info("Starting SONOS EXTRACTION")
 logger.info("Extracting Build space flash special SONOSFET star")
 extract_devices(mos4("sky130_fd_bs_flash__special_sonosfet_star"), { "SD" => sonos_nsd, "G" => sonos_gate, "tS" => sonos_nsd, "tD" => sonos_nsd, "tG" => poly_con, "W" => sub })
 
+#================================================
+#------------ BLackboxing Subcells --------------
+#================================================
+
+#blank_circuit("sky130_fd_sc_hd__*")
+#blank_circuit("sky130_fd_sc_hd__or4b_2")
+
 
 #================================================
 #------------- COMPARISON OPTIONS ---------------

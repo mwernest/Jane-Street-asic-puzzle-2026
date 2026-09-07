@@ -2030,7 +2030,7 @@ XM$30 VGND \$3 \$4 sky130_gnd sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 AS=0.0567
 * pin VGND
 * pin X
 * pin sky130_gnd
-.SUBCKT sky130_fd_sc_hd__and3_2 VPB A B C VGND VPWR X sky130_gnd
+.SUBCKT sky130_fd_sc_hd__and3_2 VPB A VPWR B C VGND X sky130_gnd
 * device instance $1 r0 *1 1.375,1.695 sky130_fd_pr__pfet_01v8_hvt
 XM$1 \$5 C VPWR VPB sky130_fd_pr__pfet_01v8_hvt L=0.15 W=0.42 AS=0.074375
 + AD=0.15075 PS=0.815 PD=1.345

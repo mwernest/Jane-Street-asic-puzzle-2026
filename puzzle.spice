@@ -2,137 +2,70 @@
 *.include "C:/Users/mwern/KLayout/salt/Efabless_sky130/tech/sky130/lvs/standard_cells/include_hd.cdl"
 *.include "include_hd.cdl"
 .include "subckts.spice"
+*.include "layout_only.renamed.spice"
 
 .SUBCKT puzzle I O[0] O[1] O[2] O[3] O[4] O[5] O[6] O[7] VGND VPWR clk enable rst_n success
 
 *clkbuf sch: A VGND VNB VPB VPWR X
 *clkbuf_16 lay: VGND A X VPWR VPB sky130_gnd
-Xclkd VGND clk clkd VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_16
+Xclkd VGND clk \$1271 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_16
 
 * clkbuf_8 sch: A VGND VNB VPB VPWR X
 * clkbuf_8 lay:  VGND A X VPWR VPB sky130_gnd
 
-X$46 VGND clkd \$1875 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$47 VGND clkd \$3890 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$48 VGND clkd \$784 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$49 VGND clkd \$2216 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$50 VGND clkd \$3828 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$51 VGND clkd \$2289 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$52 VGND clkd \$3250 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$53 VGND clkd \$2294 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$54 VGND clkd \$983 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$55 VGND clkd \$1649 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$56 VGND clkd \$1460 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$57 VGND clkd \$2728 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
-X$59 VGND clkd \$3588 VPWR \$I13875 VGND sky130_fd_sc_hd__clkbuf_8
-X$60 VGND clkd \$2155 VPWR \$I13868 VGND sky130_fd_sc_hd__clkbuf_8
-X$61 VGND clkd \$3066 VPWR \$I13866 VGND sky130_fd_sc_hd__clkbuf_8
-X$2135 VGND clkd clkdd16 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$46 VGND \$1271 \$1875 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$47 VGND \$1271 \$3876 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$48 VGND \$1271 \$784 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$49 VGND \$1271 \$2217 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$50 VGND \$1271 \$3881 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$51 VGND \$1271 \$2289 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$52 VGND \$1271 \$3272 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$53 VGND \$1271 \$2295 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$54 VGND \$1271 \$983 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$55 VGND \$1271 \$1649 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$56 VGND \$1271 \$1460 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$57 VGND \$1271 \$2734 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+X$59 VGND \$1271 \$3673 VPWR \$I13875 VGND sky130_fd_sc_hd__clkbuf_8
+X$60 VGND \$1271 \$2156 VPWR \$I13868 VGND sky130_fd_sc_hd__clkbuf_8
+X$61 VGND \$1271 \$3182 VPWR \$I13866 VGND sky130_fd_sc_hd__clkbuf_8
+X$2135 VGND \$1271 \$729 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
 
 
 * cell sky130_fd_sc_hd__dfrtp_2: d flop with reset_b 
 *.SUBCKT sky130_fd_sc_hd__dfrtp_2 VGND RESET_B Q CLK D VPWR VPB sky130_gnd
-X$178 VGND rst_n \$1126 clkdd16 \$1026 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$179 VGND rst_n \$3906 \$3828 \$3951 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$180 VGND rst_n \$3381 \$3066 \$3385 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$181 VGND rst_n \$689 clkdd16 \$686 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$183 VGND rst_n \$1742 \$1460 \$1768 VPWR \$I12730 VGND sky130_fd_sc_hd__dfrtp_2
-X$184 VGND rst_n \$2221 \$2289 \$2267 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$185 VGND rst_n \$2462 \$2295 \$2530 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$186 VGND rst_n \$347 \$784 \$1538 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$187 VGND rst_n \$3158 \$2295 \$3217 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$188 VGND rst_n \$2020 \$2155 \$2140 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$189 VGND rst_n \$416 \$1649 \$1765 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$190 VGND rst_n \$2185 \$1875 \$2135 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$191 VGND rst_n \$1220 \$983 \$1243 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$192 VGND rst_n \$2850 \$2295 \$2793 VPWR \$I12721 VGND sky130_fd_sc_hd__dfrtp_2
-X$193 VGND rst_n \$2265 \$2216 \$2423 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$194 VGND rst_n \$2266 \$2289 \$2438 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$195 VGND rst_n \$1618 \$1460 \$1764 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$196 VGND rst_n \$2732 \$2155 \$2762 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$197 VGND rst_n \$2812 \$2728 \$2826 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$198 VGND rst_n \$1960 \$1875 \$2002 VPWR \$I13390 VGND sky130_fd_sc_hd__dfrtp_2
-X$199 VGND rst_n \$1140 clkdd16 \$1223 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$200 VGND rst_n \$929 \$784 \$975 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$201 VGND rst_n \$4089 \$3890 \$4127 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$202 VGND rst_n \$3387 \$3250 \$3442 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$203 VGND rst_n \$882 \$983 \$879 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$204 VGND rst_n \$3902 \$3890 \$3848 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$205 VGND rst_n \$340 \$2216 \$2490 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$206 VGND rst_n \$1288 clkdd16 \$1302 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$207 VGND rst_n \$3692 \$3250 \$3749 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$208 VGND rst_n \$4168 \$3890 \$4171 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$209 VGND rst_n success \$3588 \$4257 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$210 VGND rst_n \$3475 \$3250 \$3535 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$211 VGND rst_n \$2458 \$2216 \$2524 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$212 VGND rst_n \$3178 \$3066 \$3264 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$213 VGND rst_n \$1555 \$1460 \$1557 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$214 VGND rst_n \$1781 \$1460 \$1937 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$215 VGND rst_n \$2017 \$2155 \$2124 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$216 VGND rst_n \$2657 \$2728 \$3100 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$217 VGND rst_n \$3785 \$3828 \$3788 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$218 VGND rst_n \$425 \$2216 \$2247 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$219 VGND rst_n \$1272 \$983 \$1298 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+X$185 VGND rst_n Q00 \$2295 \$2527 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+X$211 VGND rst_n \$2457 \$2217 \$2522 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+X$247 VGND rst_n \$2544 \$2295 \$2596 VPWR \$I12667 VGND sky130_fd_sc_hd__dfrtp_2
 X$220 VGND rst_n \$2376 \$2289 \$2437 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$221 VGND rst_n \$2021 \$2155 \$2053 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$222 VGND rst_n \$782 \$784 \$734 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$223 VGND rst_n \$980 clkdd16 \$1092 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$224 VGND rst_n \$4317 \$3828 \$4287 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$225 VGND rst_n \$4189 \$3828 \$4188 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$226 VGND rst_n \$2104 \$1875 \$2108 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$227 VGND rst_n \$2052 \$2155 \$2194 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$228 VGND rst_n \$2229 \$2155 \$2254 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$229 VGND rst_n \$2222 \$1875 \$2189 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$230 VGND rst_n \$3481 \$3250 \$3636 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$231 VGND rst_n \$1730 \$1649 \$1776 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$232 VGND rst_n \$1513 \$1649 \$1619 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$233 VGND rst_n \$1281 clkdd16 \$1386 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$234 VGND rst_n \$864 \$2216 \$2542 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$236 VGND rst_n \$1221 \$983 \$1254 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$237 VGND rst_n \$1879 \$1875 \$1878 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$238 VGND rst_n \$27 \$2216 \$2324 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$239 VGND rst_n \$1652 \$1649 \$1571 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$240 VGND rst_n \$4285 \$3890 \$4290 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$241 VGND rst_n \$4031 \$3828 \$4030 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$242 VGND rst_n \$3168 \$3066 \$3176 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+X$193 VGND rst_n \$2265 \$2217 \$2423 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+X$229 VGND rst_n \$2223 \$1875 \$2190 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+X$184 VGND rst_n \$2222 \$2289 \$2267 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+X$226 VGND rst_n \$2103 \$1875 \$2108 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+X$190 VGND rst_n \$2185 \$1875 \$2136 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+X$246 VGND rst_n \$2135 \$1875 \$2138 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
 X$243 VGND rst_n \$2224 \$2289 \$2352 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
 X$244 VGND rst_n \$2377 \$2289 \$2379 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$245 VGND rst_n \$3057 \$2728 \$3054 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$246 VGND rst_n \$2223 \$1875 \$2137 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$247 VGND rst_n \$2548 \$2295 \$2602 VPWR \$I12667 VGND sky130_fd_sc_hd__dfrtp_2
-X$248 VGND rst_n \$1454 \$1460 \$1708 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$249 VGND rst_n \$3791 \$3250 \$3892 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$250 VGND rst_n \$3691 \$3250 \$3700 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$251 VGND rst_n \$4197 \$3890 \$4245 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$252 VGND rst_n \$1048 \$983 \$966 VPWR \$I12662 VGND sky130_fd_sc_hd__dfrtp_2
-X$254 VGND rst_n \$1503 \$983 \$1554 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$255 VGND rst_n \$2211 \$2295 \$2296 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$256 VGND rst_n \$2894 \$2295 \$2973 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$257 VGND rst_n \$688 \$784 \$827 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$258 VGND rst_n \$837 \$784 \$920 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$259 VGND rst_n \$4196 \$3890 \$4192 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$260 VGND rst_n \$418 \$1649 \$1563 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$261 VGND rst_n \$3981 \$3588 \$4214 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$262 VGND rst_n \$3813 \$3588 \$4316 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$263 VGND rst_n \$417 \$1649 \$1791 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
-X$392 VGND rst_n \$609 \$784 \$643 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+
+
+
+
 
 *.SUBCKT sky130_fd_sc_hd__a31o_2 VPB X A3 A2 VPWR A1 VGND B1 sky130_gnd
-X$499 VPWR \$3217 \$933 \$1506 VPWR \$1558 VGND \$3158 VGND sky130_fd_sc_hd__a31o_2
+X$499 VPWR \$3200 select \$1507 VPWR \$1558 VGND \$3143 VGND sky130_fd_sc_hd__a31o_2
 
 *.SUBCKT sky130_fd_sc_hd__mux2_1 VGND X A1 A0 S VPWR VPB sky130_gnd
-X$586 VGND \$2530 I      \$2462 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
-X$595 VGND \$2524 \$2462 \$2458 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
-X$583 VGND \$2602 \$2458 \$2548 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
-X$591 VGND \$2437 \$2548 \$2376 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
-X$593 VGND \$2423 \$2376 \$2265 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
-X$579 VGND \$2189 \$2265 \$2222 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
-X$587 VGND \$2267 \$2222 \$2221 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
-X$580 VGND \$2108 \$2221 \$2104 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
-X$578 VGND \$2135 \$2104 \$2185 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
-X$574 VGND \$2137 \$2185 \$2223 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
-X$581 VGND \$2352 \$2223 \$2224 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
-X$575 VGND \$2379 \$2224 \$2377 \$933 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$586 VGND \$2527 I Q00 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$595 VGND \$2522 Q00 \$2457 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$583 VGND \$2596 \$2457 \$2544 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$591 VGND \$2437 \$2544 \$2376 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$593 VGND \$2423 \$2376 \$2265 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$579 VGND \$2190 \$2265 \$2223 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$587 VGND \$2267 \$2223 \$2222 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$580 VGND \$2108 \$2222 \$2103 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$578 VGND \$2136 \$2103 \$2185 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$574 VGND \$2138 \$2185 \$2135 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$581 VGND \$2352 \$2135 \$2224 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
+X$575 VGND \$2379 \$2224 \$2377 select VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
 
 X$576 VGND \$430 \$306 \$58 \$31 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
 
@@ -145,14 +78,44 @@ X$594 VGND \$558 \$35 \$30 \$51 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
 X$596 VGND \$2048 \$1527 \$1363 \$1362 VPWR \$I13343 VGND sky130_fd_sc_hd__mux2_1
 X$2596 VGND \$83 \$120 \$72 \$49 VPWR VPWR VGND sky130_fd_sc_hd__mux2_1
 
+*** trace Q bus **
 *.SUBCKT sky130_fd_sc_hd__a22o_2 VGND B2 B1 A1 A2 X VPWR VPB sky130_gnd A1A2+B1B2
-X$354 VGND \$2377 \$1787 \$1705 \$2462 \$2286 VPWR VPWR VGND sky130_fd_sc_hd__a22o_2
-*.SUBCKT sky130_fd_sc_hd__a221o_2 VGND C1 B2 B1 A1 A2 X VPWR VPB sky130_gnd
-X$169 VGND \$2286 \$2224 VPWR \$1733 \$2223 \$2419 VPWR VPWR VGND sky130_fd_sc_hd__a221o_2
-
-
-* .SUBCKT sky130_fd_sc_hd__buf_2 VPB VGND X VPWR A sky130_gnd
+X$354 VGND Q11 \$1787 \$1705 Q00 \$2286 VPWR VPWR VGND sky130_fd_sc_hd__a22o_2
 X$585 VPWR VGND \$1787 VPWR \$1705 VGND sky130_fd_sc_hd__buf_2
+*.SUBCKT sky130_fd_sc_hd__or4_2 VPB VGND C B A VPWR X D sky130_gnd
+X$436 VPWR VGND \$425 \$27 \$340 VPWR \$1705 \$864 VGND sky130_fd_sc_hd__or4_2
+*.SUBCKT sky130_fd_sc_hd__or4bb_2 VGND X C_N D_N A VPWR B VPB sky130_gnd
+X$360 VGND \$1733 \$864 \$27 \$340 VPWR \$425 VPWR VGND sky130_fd_sc_hd__or4bb_2
+
+*.SUBCKT sky130_fd_sc_hd__a221o_2 VGND C1 B2 B1 A1 A2 X VPWR VPB sky130_gnd
+X$169 VGND \$2286 Q10 VPWR \$1733 Q09 \$2419 VPWR VPWR VGND sky130_fd_sc_hd__a221o_2
+
+X$205 VGND rst_n \$340 \$2217 \$2491 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+*.SUBCKT sky130_fd_sc_hd__nor2_2 VPB VGND A Y B VPWR sky130_gnd
+X$2548 VPWR VGND \$1558 \$2492 \$2441 VPWR VGND sky130_fd_sc_hd__nor2_2
+
+X$218 VGND rst_n \$425 \$2217 \$2247 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+*.SUBCKT sky130_fd_sc_hd__xor2_2 VGND A B X VPWR VPB sky130_gnd
+X$481 VGND \$425 \$2173 \$2247 VPWR VPWR VGND sky130_fd_sc_hd__xor2_2
+
+X$238 VGND rst_n \$27 \$2217 \$2324 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+*.SUBCKT sky130_fd_sc_hd__a211oi_2 VGND Y C1 B1 A1 A2 VPWR VPB sky130_gnd
+X$23 VGND \$2324 \$2173 \$2406 select \$1558 VPWR VPWR VGND ky130_fd_sc_hd__a221oi_2
+
+X$234 VGND rst_n \$864 \$2217 \$2537 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+*.SUBCKT sky130_fd_sc_hd__a221oi_2 VGND C1 Y B2 B1 A2 A1 VPWR VPB sky130_gnd
+X$235 VGND \$2577 \$2537 \$864 \$2321 \$1558 select VPWR VPWR VGND
+
+*.SUBCKT sky130_fd_sc_hd__a31o_2 VPB X VPWR A3 A2 A1 VGND B1 sky130_gnd
+*X$496 VPWR \$2438 VPWR \$2419 select I VGND \$2266 VGND sky130_fd_sc_hd__a31o_2
+*.SUBCKT sky130_fd_sc_hd__a31o_2 VPB X A3 A2 VPWR A1 VGND B1 sky130_gnd
+X$496 VPWR \$2438 \$2420 select VPWR I VGND \$2266 VGND sky130_fd_sc_hd__a31o_2
+
+*.SUBCKT sky130_fd_sc_hd__a32o_2 VGND X B2 A1 A2 B1 A3 VPWR VPB sky130_gnd
+X$397 VGND \$4214 \$4255 \$4211 \$4203 \$3967 \$4252 VPWR VPWR VGND sky130_fd_sc_hd__a32o_2
+* $4214 is D for flop $261, Q is $3967
+* .SUBCKT sky130_fd_sc_hd__and4bb_2 VGND X C D B_N A_N VPWR VPB sky130_gnd
+X$301 VGND \$1558 \$864 \$27 \$425 \$340 VPWR VPWR VGND sky130_fd_sc_hd__and4bb_2
 
 *.SUBCKT sky130_fd_sc_hd__dfxtp_2 VGND Q CLK D VPWR VPB sky130_gnd
 X$9 VGND \$1363 \$3588 \$3994 VPWR VPWR VGND sky130_fd_sc_hd__dfxtp_2
@@ -169,43 +132,55 @@ X$404 VGND rst_n \$2815 \$2728 \$2743 VPWR VPWR VGND sky130_fd_sc_hd__dfstp_2
 
 * clkbuf_4: drives nothing
 *.SUBCKT sky130_fd_sc_hd__clkbuf_4 VPB VGND VPWR A sky130_gnd
-X$62 VPWR VGND VPWR \$2288 VGND sky130_fd_sc_hd__clkbuf_4
-X$63 \$I13875 VGND VPWR \$3588 VGND sky130_fd_sc_hd__clkbuf_4
-X$64 VPWR VGND VPWR \$3250 VGND sky130_fd_sc_hd__clkbuf_4
+
+
+X$62 VPWR VGND VPWR \$2289 VGND sky130_fd_sc_hd__clkbuf_4
+X$63 \$I13875 VGND VPWR \$3673 VGND sky130_fd_sc_hd__clkbuf_4
+X$64 VPWR VGND VPWR \$3272 VGND sky130_fd_sc_hd__clkbuf_4
 X$65 VPWR VGND VPWR \$1875 VGND sky130_fd_sc_hd__clkbuf_4
 X$66 VPWR VGND VPWR \$1460 VGND sky130_fd_sc_hd__clkbuf_4
-X$67 VPWR VGND VPWR \$3828 VGND sky130_fd_sc_hd__clkbuf_4
+X$67 VPWR VGND VPWR \$3881 VGND sky130_fd_sc_hd__clkbuf_4
 X$68 VPWR VGND VPWR \$983 VGND sky130_fd_sc_hd__clkbuf_4
 X$69 VPWR VGND VPWR \$1649 VGND sky130_fd_sc_hd__clkbuf_4
-X$70 VPWR VGND VPWR \$2728 VGND sky130_fd_sc_hd__clkbuf_4
+X$70 VPWR VGND VPWR \$2734 VGND sky130_fd_sc_hd__clkbuf_4
 X$71 VPWR VGND VPWR \$784 VGND sky130_fd_sc_hd__clkbuf_4
 X$72 \$I13868 VGND VPWR \$2155 VGND sky130_fd_sc_hd__clkbuf_4
-X$73 VPWR VGND VPWR \$3890 VGND sky130_fd_sc_hd__clkbuf_4
-X$74 VPWR VGND VPWR \$2216 VGND sky130_fd_sc_hd__clkbuf_4
-X$75 VPWR VGND VPWR \$2294 VGND sky130_fd_sc_hd__clkbuf_4
-X$2134 VPWR VGND VPWR clkdd16 VGND sky130_fd_sc_hd__clkbuf_4
+X$73 VPWR VGND VPWR \$3876 VGND sky130_fd_sc_hd__clkbuf_4
+X$74 VPWR VGND VPWR \$2217 VGND sky130_fd_sc_hd__clkbuf_4
+X$75 VPWR VGND VPWR \$2295 VGND sky130_fd_sc_hd__clkbuf_4
+X$2134 VPWR VGND VPWR \$729 VGND sky130_fd_sc_hd__clkbuf_4
 
+
+
+*** select ***
+*.SUBCKT sky130_fd_sc_hd__and2b_2 VPB A_N VPWR B VGND X sky130_gnd
+X$386 \$I13622 \$3143 VPWR enable VGND select VGND sky130_fd_sc_hd__and2b_2
+*.SUBCKT sky130_fd_sc_hd__o21a_2 VPB VGND VPWR X B1 A2 A1 sky130_gnd
+X$1734 VPWR VGND VPWR \$3159 \$3156 \$3155 \$3151 VGND sky130_fd_sc_hd__o21a_2
+*.SUBCKT sky130_fd_sc_hd__or4_2 VPB VGND C B A VPWR X D sky130_gnd
+X$441 VPWR VGND \$3158 \$3227 \$3162 VPWR \$3156 \$3157 VGND sky130_fd_sc_hd__or4_2
+*.SUBCKT sky130_fd_sc_hd__a21o_2 VPB VPWR VGND X B1 A1 A2 sky130_gnd
+X$271 VPWR VPWR VGND \$3245 \$3162 \$3151 \$3155 VGND sky130_fd_sc_hd__a21o_2
+X$2558 VPWR VGND \$3158 \$3155 \$3157 VPWR VGND sky130_fd_sc_hd__nor2_2
+X$242 VGND rst_n \$3151 \$3182 \$3159 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
 
 
 * nand4_2 sch: inst A B C D VGND VNB VPB VPWR Y
 * nand4_2 lay: inst VGND D C B A VPWR Y VPB sky130_gnd
 
-X$147 VGND \$1288 \$1287 \$933 I VPWR \$1262 VPWR VGND sky130_fd_sc_hd__nand4_2
-X$148 VGND \$3793 \$3791 \$933 I VPWR \$3824 VPWR VGND sky130_fd_sc_hd__nand4_2
-X$149 VGND \$4032 \$4031 \$933 I VPWR \$4124 VPWR VGND sky130_fd_sc_hd__nand4_2
-X$150 VGND \$4242 \$4197 \$933 I VPWR \$4238 VPWR VGND sky130_fd_sc_hd__nand4_2
-X$151 VGND \$1439 \$1454 \$933 I VPWR \$1582 VPWR VGND sky130_fd_sc_hd__nand4_2
-X$152 VGND \$2018 \$2016 \$933 I VPWR \$2076 VPWR VGND sky130_fd_sc_hd__nand4_2
-X$153 VGND \$2144 \$2212 \$933 I VPWR \$2293 VPWR VGND sky130_fd_sc_hd__nand4_2
-X$154 VGND \$1740 \$1742 \$933 I VPWR \$1743 VPWR VGND sky130_fd_sc_hd__nand4_2
-X$155 VGND \$3575 \$3482 \$933 I VPWR \$3530 VPWR VGND sky130_fd_sc_hd__nand4_2
-X$156 VGND \$4020 \$3906 \$933 I VPWR \$3908 VPWR VGND sky130_fd_sc_hd__nand4_2
-X$157 VGND \$4294 \$4285 \$933 I VPWR \$4352 VPWR VGND sky130_fd_sc_hd__nand4_2
-X$159 VGND \$1960 \$1959 \$933 I VPWR \$1958 \$I13390 VGND sky130_fd_sc_hd__nand4_2
-X$160 VGND \$3116 \$2894 \$933 I VPWR \$2888 \$I13591 VGND sky130_fd_sc_hd__nand4_2
+X$147 VGND \$1288 \$1287 select I VPWR \$1261 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$148 VGND \$3767 \$3765 select I VPWR \$3805 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$149 VGND \$4034 \$4033 select I VPWR \$4124 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$150 VGND \$4242 \$4197 select I VPWR \$4238 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$151 VGND \$1439 \$1454 select I VPWR \$1582 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$152 VGND \$2018 \$2016 select I VPWR \$2076 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$153 VGND \$2145 \$2210 select I VPWR \$2294 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$154 VGND \$1740 \$1742 select I VPWR \$1743 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$155 VGND \$3568 \$3481 select I VPWR \$3529 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$156 VGND \$3960 \$3896 select I VPWR \$3898 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$157 VGND \$4294 \$4285 select I VPWR \$4352 VPWR VGND sky130_fd_sc_hd__nand4_2
 
-*.SUBCKT sky130_fd_sc_hd__and2b_2 VPB A_N VPWR B VGND X sky130_gnd
-X$386 \$I13622 \$3159 VPWR enable VGND \$933 VGND sky130_fd_sc_hd__and2b_2
+X$1758 VPWR VGND VPWR \$3490 \$3906 VGND sky130_fd_sc_hd__inv_2
 
 *.SUBCKT sky130_fd_sc_hd__and3_2 VPB A VPWR B C VGND X sky130_gnd
 X$552 \$I10290 \$3813 VPWR \$3623 \$3868 VGND O[5] VGND sky130_fd_sc_hd__and3_2
@@ -217,18 +192,58 @@ X$569 VPWR \$3813 VPWR \$3515 \$3868 VGND O[7] VGND sky130_fd_sc_hd__and3_2
 X$572 VPWR \$3813 VPWR \$3734 \$3868 VGND O[0] VGND sky130_fd_sc_hd__and3_2
 X$573 VPWR \$3813 VPWR \$3497 \$3868 VGND O[2] VGND sky130_fd_sc_hd__and3_2
 
-*** success output pin (dfrtp above) ***
+*** success output pin  ***
+X$209 VGND rst_n success \$3673 \$4257 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+*.SUBCKT sky130_fd_sc_hd__o21ba_2 VPB VPWR B1_N VGND X A2 A1 sky130_gnd
 X$291 VPWR VPWR \$1103 VGND \$4041 \$3981 success VGND sky130_fd_sc_hd__o21ba_2
+*** success staged $4257 ***
+*.SUBCKT sky130_fd_sc_hd__a32o_2 VGND X B2 A1 A2 B1 A3 VPWR VPB sky130_gnd
 X$396 VGND \$4257 \$4255 \$2270 \$4203 success \$4252 VPWR VPWR VGND sky130_fd_sc_hd__a32o_2
+*.SUBCKT sky130_fd_sc_hd__nand2b_2 VPB B VPWR VGND Y A_N sky130_gnd
+X$331 VPWR \$3143 VPWR VGND \$4255 \$3846 VGND sky130_fd_sc_hd__nand2b_2
+X$187 VGND rst_n \$3143 \$2295 \$3200 VPWR VPWR VGND sky130_fd_sc_hd__dfrtp_2
+X$25 VGND \$3143 \$374 \$4252 \$3846 \$2454 VPWR VPWR VGND sky130_fd_sc_hd__and4b_2
+X$2534 VPWR \$4316 VPWR VGND \$3846 \$3143 VGND sky130_fd_sc_hd__or2_2
+
+
 *.SUBCKT sky130_fd_sc_hd__inv_2 VPB VGND VPWR Y A sky130_gnd
 X$1770 VPWR VGND VPWR \$3954 success VGND sky130_fd_sc_hd__inv_2
 *.SUBCKT sky130_fd_sc_hd__or4b_2 VPB \$2 VGND C B A VPWR X \$9 D_N \$12 \$13 \$14 sky130_gnd
 *X$85 VPWR \$I13766 VGND \$1103 success \$737 VPWR \$3913 \$I13783 \$3981 \$I13713 \$I13721 \$I13745 VGND sky130_fd_sc_hd__or4b_2
+*.SUBCKT sky130_fd_sc_hd__or4b_2_ref A B C D_N VGND VNB VPB VPWR X
+Xref85 or4b_85_a success or4b_85_c  or4b_86_db VGND VGND VPWR VPWR or4b_85_x sky130_fd_sc_hd__or4b_2_ref
+
+*XM$31 \$I13721 success \$I13745 VPWR sky130_fd_pr__pfet_01v8_hvt L=.150000 W=.420000
+*XM$86 \$I13766 success VGND VGND sky130_fd_pr__nfet_01v8 L=.150000 W=.420000
+X$182 VGND \$737 \$689 \$688 \$609 \$730 VPWR VPWR VGND sky130_fd_sc_hd__nor4b_2
+X$2587 VPWR VGND \$737 \$3385 \$4042 VPWR VGND sky130_fd_sc_hd__nor2_2
+
 *** success_b ***
 *.SUBCKT sky130_fd_sc_hd__a211oi_2 VGND Y C1 B1 A1 A2 VPWR VPB sky130_gnd
-X$22 VGND \$3437 \$737 \$1103 \$3954 \$3981 VPWR VPWR VGND sky130_fd_sc_hd__a211oi_2
+X$22 VGND \$3437 \$737 or4b_85_c \$3954 \$3981 VPWR VPWR VGND sky130_fd_sc_hd__a211oi_2
+
+
+
+*.SUBCKT sky130_fd_sc_hd__and3_2 VPB A VPWR B C VGND X sky130_gnd
+X$555 VPWR \$1038 \$1096 \$880 VGND VPWR or4b_85_c VGND sky130_fd_sc_hd__and3_2
+
+
+*** gated inputs **
+*.SUBCKT sky130_fd_sc_hd__nand2_2 VPB VPWR Y B VGND A sky130_gnd
+X$2494 VPWR VPWR \$2079 select VGND I VGND sky130_fd_sc_hd__nand2_2
+X$2495 VPWR VPWR \$4180 select VGND I VGND sky130_fd_sc_hd__nand2_2
+X$2500 VPWR VPWR \$3797 select VGND I VGND sky130_fd_sc_hd__nand2_2
+X$2505 VPWR VPWR \$1403 select VGND I VGND sky130_fd_sc_hd__nand2_2
+X$2511 VPWR VPWR \$3173 select VGND I VGND sky130_fd_sc_hd__nand2_2
+X$2512 VPWR VPWR \$1275 select VGND I VGND sky130_fd_sc_hd__nand2_2
+X$2514 VPWR VPWR \$3388 select VGND I VGND sky130_fd_sc_hd__nand2_2
+X$2520 VPWR VPWR \$1201 select VGND I VGND sky130_fd_sc_hd__nand2_2
+
+X$2526 \$I280 VPWR \$1650 I VGND \$1730 VGND sky130_fd_sc_hd__nand2_2
+
 
 .ENDS puzzle
+
 
 *** Std Cells that need special definition
 * cell sky130_fd_sc_hd__conb_1

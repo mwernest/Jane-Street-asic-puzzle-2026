@@ -1,0 +1,63 @@
+* Handwritten netlist for puzzle
+*.include "C:/Users/mwern/KLayout/salt/Efabless_sky130/tech/sky130/lvs/standard_cells/include_hd.cdl"
+*.include "include_hd.cdl"
+.include "subckts.spice"
+
+.SUBCKT puzzle I O[0] O[1] O[2] O[3] O[4] O[5] O[6] O[7] VGND VPWR clk enable rst_n success
+
+*clkbuf sch: A VGND VNB VPB VPWR X
+*clkbuf_16 lay: VGND A X VPWR VPB sky130_gnd
+Xclkd VGND clk clkd VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_16
+
+* clkbuf_8 sch: A VGND VNB VPB VPWR X
+* clkbuf_8 lay:  VGND A X VPWR VPB sky130_gnd
+
+Xclkdd1  VGND clkd clkdd1  VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd2  VGND clkd clkdd2  VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd3  VGND clkd clkdd3  VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd4  VGND clkd clkdd4  VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd5  VGND clkd clkdd5  VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd6  VGND clkd clkdd6  VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd7  VGND clkd clkdd7  VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd8  VGND clkd clkdd8  VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd9  VGND clkd clkdd9  VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd10 VGND clkd clkdd10 VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd11 VGND clkd clkdd11 VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd12 VGND clkd clkdd12 VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd13 VGND clkd clkdd13 VPWR \$I13875 VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd14 VGND clkd clkdd14 VPWR \$I13868 VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd15 VGND clkd clkdd15 VPWR \$I13866 VGND sky130_fd_sc_hd__clkbuf_8
+*X$2135 VGND clkd \$729 VPWR VPWR VGND sky130_fd_sc_hd__clkbuf_8
+Xclkdd16 VGND clkd clkdd16 VPWR VPWR     VGND sky130_fd_sc_hd__clkbuf_8
+
+X$65 VPWR VGND VPWR clkdd1 VGND sky130_fd_sc_hd__clkbuf_4
+
+* nand4_2 sch: inst A B C D VGND VNB VPB VPWR Y
+* nand4_2 lay: inst VGND D C B A VPWR Y VPB sky130_gnd
+
+X$147 VGND \$1288 \$1287 \$933 I VPWR \$1262 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$148 VGND \$3793 \$3791 \$933 I VPWR \$3824 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$149 VGND \$4032 \$4031 \$933 I VPWR \$4124 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$150 VGND \$4242 \$4197 \$933 I VPWR \$4238 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$151 VGND \$1439 \$1454 \$933 I VPWR \$1582 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$152 VGND \$2018 \$2016 \$933 I VPWR \$2076 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$153 VGND \$2144 \$2212 \$933 I VPWR \$2293 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$154 VGND \$1740 \$1742 \$933 I VPWR \$1743 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$155 VGND \$3575 \$3482 \$933 I VPWR \$3530 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$156 VGND \$4020 \$3906 \$933 I VPWR \$3908 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$157 VGND \$4294 \$4285 \$933 I VPWR \$4352 VPWR VGND sky130_fd_sc_hd__nand4_2
+X$159 VGND \$1960 \$1959 \$933 I VPWR \$1958 \$I13390 VGND sky130_fd_sc_hd__nand4_2
+X$160 VGND \$3116 \$2894 \$933 I VPWR \$2888 \$I13591 VGND sky130_fd_sc_hd__nand4_2
+
+*.SUBCKT sky130_fd_sc_hd__and2b_2 VPB A_N VPWR B VGND X sky130_gnd
+X$386 \$I13622 \$3159 VPWR enable VGND \$933 VGND sky130_fd_sc_hd__and2b_2
+
+.ENDS puzzle
+
+*** Std Cells that need special definition
+* cell sky130_fd_sc_hd__conb_1
+* pin VPB
+* pin HI,VPWR
+* pin LO,VGND
+*.SUBCKT sky130_fd_sc_hd__conb_1 VPB HI LO
+*.ENDS sky130_fd_sc_hd__conb_1
